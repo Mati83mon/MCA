@@ -48,6 +48,9 @@ class DecisionController:
         oracle_refuted = [v for v in t.premise_verdicts if _challengeable(v) and v.oracle]
         nli_refuted = [v for v in t.premise_verdicts if _challengeable(v) and not v.oracle]
         unresolved = [v for v in t.premise_verdicts if v.premise.kind is PremiseKind.REFERENT and v.status is PremiseStatus.UNVERIFIED]
+        if any(v.status is PremiseStatus.SUPPORTED and v.premise.kind is not PremiseKind.REFERENT for v in t.premise_verdicts):
+            # A KB-grounded question: LLM referent hints alone must not trigger an epistemic-void abstention.
+            unresolved = [v for v in unresolved if v.premise.source != "llm"]
 
         if logic.status is LogicStatus.PARADOX_SELF_REF:
             return self._paradox(t, ["R1:z3_paradox_self_ref"], 0.97)

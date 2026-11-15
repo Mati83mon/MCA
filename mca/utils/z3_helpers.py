@@ -21,6 +21,7 @@ checks are safe to run from worker threads.
 from __future__ import annotations
 
 import ast
+import re
 import itertools
 from dataclasses import dataclass, field
 from fractions import Fraction
@@ -30,6 +31,21 @@ import z3
 from pydantic import BaseModel, Field
 
 _SORTS = {"Bool", "Int", "Real"}
+
+_INFIX_FIXES = (
+    (re.compile(r"(?<=[\w)\]])\s+And\s+"), " and "),  # infix only; And(a, b) calls stay intact
+    (re.compile(r"(?<=[\w)\]])\s+Or\s+"), " or "),
+    (re.compile(r"\bNot\s+(?=[^\s(])"), "not "),
+    (re.compile(r"->|=>"), ">>"),
+)
+
+
+def normalize_expr(expr: str) -> str:
+    """Accept the infix spelling small LLMs often emit (``a And b``, ``p -> q``)."""
+    for pattern, repl in _INFIX_FIXES:
+        expr = pattern.sub(repl, expr)
+    return expr.strip()
+
 
 
 class Assertion(BaseModel):
@@ -93,7 +109,7 @@ class _Compiler:
 
     def compile(self, expr: str) -> z3.ExprRef:
         try:
-            tree = ast.parse(expr, mode="eval")
+            tree = ast.parse(normalize_expr(expr), mode="eval")
         except SyntaxError as exc:
             raise DSLError(f"syntax error in {expr!r}: {exc}") from exc
         return self._node(tree.body)
@@ -381,7 +397,7 @@ def kleene_fixed_points(definitions: dict[str, str], logic: str = "kleene") -> F
     if logic not in {"kleene", "lukasiewicz"}:
         raise ValueError("logic must be 'kleene' or 'lukasiewicz'")
     names = list(definitions)
-    trees = {n: ast.parse(expr, mode="eval").body for n, expr in definitions.items()}
+    trees = {n: ast.parse(normalize_expr(expr), mode="eval").body for n, expr in definitions.items()}
     classical: list[dict[str, str]] = []
     three: list[dict[str, str]] = []
     for values in itertools.product((T, U, F), repeat=len(names)):

@@ -188,6 +188,14 @@ class PremiseValidator:
     # -- validation ----------------------------------------------------------------
     def _validate_one(self, premise: Premise, query: str) -> PremiseVerdict:
         if premise.kind is PremiseKind.REFERENT:
+            # Rule-detected referents (possessives, deixis, unknown names) are unresolvable by construction.
+            # LLM-proposed referents are only hints: small models flag almost every noun phrase, so they
+            # count as resolved when the knowledge base grounds them.
+            if premise.source == "llm":
+                grounded = [e for e in self.store.search(premise.text, k=1) if e.score >= self.config.retrieval_min_similarity]
+                if grounded:
+                    return PremiseVerdict(premise=premise, status=PremiseStatus.SUPPORTED, evidence=grounded,
+                                          explanation=f"Odniesienie ugruntowane w bazie wiedzy: „{grounded[0].text}”")
             return PremiseVerdict(premise=premise, status=PremiseStatus.UNVERIFIED,
                                   explanation=f"Nierozwiązane odniesienie: {premise.missing_variable}")
         for oracle in self.oracles:

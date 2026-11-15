@@ -7,6 +7,14 @@ import threading
 from typing import Any, AsyncIterator
 
 DEFAULT_SYSTEM_PROMPT = "Jesteś pomocnym asystentem. Odpowiadaj zwięźle i rzeczowo, w języku pytania."
+THINK_CLOSE = "</think>"
+
+
+def strip_reasoning(text: str) -> str:
+    """Drop a ``<think>…</think>`` trace (DeepSeek-R1 style) and keep the final answer."""
+    if THINK_CLOSE in text:
+        return text.split(THINK_CLOSE, 1)[1].strip()
+    return text.strip()
 
 
 class TransformersLLM:
@@ -54,12 +62,17 @@ class TransformersLLM:
         if move_to is not None:
             self.model = self.model.to(move_to)
         self._lock = threading.Lock()
+        # Reasoning models (R1 distills) ship a chat template that handles </think>.
+        self.reasoning = THINK_CLOSE in (getattr(self.tokenizer, "chat_template", None) or "")
 
     # -- prompt handling -------------------------------------------------------
-    def _encode(self, prompt: str) -> Any:
+    def _encode(self, prompt: str, think: bool = True) -> Any:
         messages = [{"role": "system", "content": self.system_prompt}, {"role": "user", "content": prompt}]
         if getattr(self.tokenizer, "chat_template", None):
             text = self.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+            if self.reasoning and not think:
+                # Prefill an empty reasoning block so the model answers directly.
+                text += "\n</think>\n\n" if text.rstrip().endswith("<think>") else "<think>\n\n</think>\n\n"
         else:
             text = f"{self.system_prompt}\n\nPytanie: {prompt}\nOdpowiedź:"
         return self.tokenizer(text, return_tensors="pt").to(self.model.device)
@@ -72,23 +85,27 @@ class TransformersLLM:
             kw.update(do_sample=False)
         return kw
 
-    def _generate_sync(self, prompt: str, temperature: float, max_new_tokens: int, n: int, seed: int | None) -> list[str]:
+    def _generate_sync(self, prompt: str, temperature: float, max_new_tokens: int, n: int, seed: int | None, think: bool = True) -> list[str]:
         torch = self._torch
-        inputs = self._encode(prompt)
+        inputs = self._encode(prompt, think)
         with self._lock, torch.inference_mode():
             if seed is not None:
                 torch.manual_seed(seed)
             out = self.model.generate(**inputs, num_return_sequences=n, **self._gen_kwargs(temperature if n == 1 else max(temperature, 1e-3), max_new_tokens))
         prompt_len = inputs["input_ids"].shape[1]
-        return [self.tokenizer.decode(seq[prompt_len:], skip_special_tokens=True).strip() for seq in out]
+        return [strip_reasoning(self.tokenizer.decode(seq[prompt_len:], skip_special_tokens=True)) for seq in out]
 
     # -- LLMBackend API ----------------------------------------------------------
     async def generate(self, prompt: str, *, temperature: float = 0.0, max_new_tokens: int = 256, seed: int | None = None) -> str:
         return (await asyncio.to_thread(self._generate_sync, prompt, temperature, max_new_tokens, 1, seed))[0]
 
     async def generate_many(self, prompt: str, n: int, *, temperature: float = 0.8, max_new_tokens: int = 96) -> list[str]:
-        """Batched sampling via ``num_return_sequences`` (one prefill for all samples)."""
-        return await asyncio.to_thread(self._generate_sync, prompt, temperature, max_new_tokens, n, None)
+        """Batched sampling via ``num_return_sequences`` (one prefill for all samples).
+
+        Semantic entropy must compare *answers*: reasoning models are sampled with the
+        thinking phase skipped, otherwise truncated traces land in singleton clusters.
+        """
+        return await asyncio.to_thread(self._generate_sync, prompt, temperature, max_new_tokens, n, None, False)
 
     async def stream(self, prompt: str, *, temperature: float = 0.0, max_new_tokens: int = 256) -> AsyncIterator[str]:
         from transformers import TextIteratorStreamer
