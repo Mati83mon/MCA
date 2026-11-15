@@ -5,6 +5,7 @@ __pycache__/
 .venv/
 build/
 dist/
-results/
+results/*
+!results/kaggle-2xT4/
 mca_results/
 .ipynb_checkpoints/
