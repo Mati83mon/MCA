@@ -19,7 +19,7 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-for candidate in (HERE, HERE.parent):  # Space root holds ./mca; in the repo it's ../mca
+for candidate in (HERE, HERE.parent):  # repo checkout: use ../mca; on the Space mca is pip-installed
     if (candidate / "mca" / "__init__.py").exists():
         sys.path.insert(0, str(candidate))
         break

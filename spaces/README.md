@@ -28,4 +28,4 @@ evidence grounding · deterministic policy gate).
   support ratio, final decision and per-layer latency.
 
 Runs on ZeroGPU (`@spaces.GPU`). Set `MCA_SPACE_OFFLINE=1` to run a zero-download CPU variant.
-Code: the `mca` package in this Space is a copy of the framework repository.
+Code: [Mati83mon/MCA](https://github.com/Mati83mon/MCA) – installed from a pinned commit (see `requirements.txt`).
