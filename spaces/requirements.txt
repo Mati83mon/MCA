@@ -1,0 +1,9 @@
+# MCA framework pinned to a commit of https://github.com/Mati83mon/MCA
+mca-framework @ git+https://github.com/Mati83mon/MCA.git@bd91a2b9de52752c26b99021588ccabca023ee89
+torch>=2.1
+transformers>=4.44
+accelerate>=0.33
+sentencepiece>=0.2
+protobuf>=4.25
+gradio>=4.44,<6
+spaces>=0.30
