@@ -1,0 +1,10 @@
+pydantic>=2.6
+numpy>=1.24
+z3-solver>=4.12
+torch>=2.1
+transformers>=4.44
+accelerate>=0.33
+sentencepiece>=0.2
+protobuf>=4.25
+gradio>=4.44
+spaces>=0.30

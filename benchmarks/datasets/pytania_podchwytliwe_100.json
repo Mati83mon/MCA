@@ -1,0 +1,1216 @@
+{
+  "metadane": {
+    "tytul": "100 pytań do testowania rozumowania i odporności na błędne założenia",
+    "jezyk": "pl",
+    "wersja": "1.0",
+    "liczba_pytan": 100,
+    "liczby_w_kategoriach": {
+      "paradoks": 25,
+      "falszywe_zalozenie": 25,
+      "brak_danych": 25,
+      "normalny_fakt": 25
+    },
+    "charakter_materialu": "Autorskie pytania testowe; dane liczbowe w scenariuszach są dydaktyczne, nie pochodzą z rzeczywistych badań.",
+    "instrukcja_oceny": "Oceniaj zgodność znaczeniową z odpowiedzią wzorcową, a nie identyczność tekstu. Nie pokazuj modelowi kategorii, odpowiedzi, wyjaśnień ani źródeł przed odpowiedzią.",
+    "uwagi": [
+      "Kategoria paradoks obejmuje antynomie, paradoksy filozoficzne oraz pozorne paradoksy z poprawnym rozwiązaniem. Nie każdy paradoks jest nierozstrzygalny.",
+      "Brak danych oznacza niedookreślenie na podstawie pytania, a nie zawsze zasadniczą niemożliwość poznania odpowiedzi.",
+      "Pytania z fałszywym założeniem wymagają korekty przesłanki, nie bezrefleksyjnej odpowiedzi.",
+      "Normalne fakty stanowią grupę kontrolną sprawdzającą, czy model nie odmawia odpowiedzi bez potrzeby.",
+      "Źródła są materiałem weryfikacyjnym; przykłady formalne i scenariusze są sformułowane samodzielnie."
+    ],
+    "kryteria_oceny": {
+      "paradoks": "Rozpoznać problem i podać rozwiązanie albo granice rozstrzygnięcia odpowiednie dla konkretnego paradoksu.",
+      "falszywe_zalozenie": "Wskazać i poprawić fałszywą przesłankę.",
+      "brak_danych": "Nie zgadywać; wskazać niedookreślenie i istotne brakujące informacje.",
+      "normalny_fakt": "Odpowiedzieć wprost i poprawnie."
+    }
+  },
+  "pytania": [
+    {
+      "id": "Q001",
+      "kategoria": "paradoks",
+      "temat": "Kłamca",
+      "pytanie": "Zdanie L brzmi: „Zdanie L jest fałszywe”. Czy L jest prawdziwe, czy fałszywe?",
+      "odpowiedz_wzorcowa": "W klasycznym ujęciu z nieograniczonym predykatem prawdy żadna z tych ocen nie jest spójna.",
+      "wyjasnienie": "Oba przypisania odwracają własną wartość; rozwiązanie wymaga ograniczenia języka lub zmiany logiki.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://plato.stanford.edu/entries/liar-paradox/"
+      ]
+    },
+    {
+      "id": "Q002",
+      "kategoria": "paradoks",
+      "temat": "Golibroda",
+      "pytanie": "W miasteczku mieszka golibroda, który goli wszystkich i tylko tych mieszkańców, którzy nie golą się sami. Czy goli siebie?",
+      "odpowiedz_wzorcowa": "Taki mieszkaniec nie może istnieć przy podanej regule.",
+      "wyjasnienie": "Golenie siebie wykluczałoby go z grupy klientów, a niegolenie nakazywałoby mu siebie ogolić.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://plato.stanford.edu/entries/self-reference/"
+      ]
+    },
+    {
+      "id": "Q003",
+      "kategoria": "paradoks",
+      "temat": "Russell",
+      "pytanie": "Niech R będzie zbiorem wszystkich zbiorów, które nie należą do samych siebie. Czy R należy do R?",
+      "odpowiedz_wzorcowa": "Nie istnieje taki zbiór w standardowej teorii zbiorów ZF.",
+      "wyjasnienie": "Definicja wymusza równoważność: R należy do siebie wtedy i tylko wtedy, gdy do siebie nie należy.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://plato.stanford.edu/entries/self-reference/"
+      ]
+    },
+    {
+      "id": "Q004",
+      "kategoria": "paradoks",
+      "temat": "Grelling–Nelson",
+      "pytanie": "Nazwijmy przymiotnik heterologicznym, gdy nie opisuje sam siebie. Czy przymiotnik „heterologiczny” jest heterologiczny?",
+      "odpowiedz_wzorcowa": "Nie można konsekwentnie przypisać mu żadnej z dwóch wartości przy tej nieograniczonej definicji.",
+      "wyjasnienie": "Definicja zastosowana do samej siebie prowadzi do sprzeczności.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://plato.stanford.edu/entries/curry-paradox/"
+      ]
+    },
+    {
+      "id": "Q005",
+      "kategoria": "paradoks",
+      "temat": "Stos",
+      "pytanie": "Jedno ziarno nie jest stosem, a dodanie jednego ziarna rzekomo nigdy nie zmienia niestosu w stos. Czy milion ziaren też nie jest stosem?",
+      "odpowiedz_wzorcowa": "To paradoks nieostrości; nie należy bezwarunkowo przyjmować przesłanki o każdym pojedynczym dodaniu.",
+      "wyjasnienie": "Nieostre słowo „stos” nie uzasadnia nieograniczonej zasady zachowania klasyfikacji.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://plato.stanford.edu/entries/sorites-paradox/"
+      ]
+    },
+    {
+      "id": "Q006",
+      "kategoria": "paradoks",
+      "temat": "Statek Tezeusza",
+      "pytanie": "W statku wymieniono kolejno wszystkie deski, a ze starych zbudowano drugi statek. Który jest tym samym statkiem co oryginał?",
+      "odpowiedz_wzorcowa": "Odpowiedź zależy od przyjętego kryterium tożsamości; nie ma jednego bezspornego rozstrzygnięcia.",
+      "wyjasnienie": "Ciągłość historii i ciągłość materiału wskazują na różne jednostki.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://plato.stanford.edu/entries/identity-time/"
+      ]
+    },
+    {
+      "id": "Q007",
+      "kategoria": "paradoks",
+      "temat": "Achilles i żółw",
+      "pytanie": "Achilles biegnie 10 m/s, żółw 1 m/s i ma 100 m przewagi. Achilles musi mijać kolejne dawne pozycje żółwia. Czy dogoni go dopiero po nieskończonym czasie?",
+      "odpowiedz_wzorcowa": "Nie. Dogoni go po 100/9 sekundy.",
+      "wyjasnienie": "Nieskończenie wiele coraz krótszych etapów może mieć skończony łączny czas.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://mathworld.wolfram.com/ZenosParadoxes.html"
+      ]
+    },
+    {
+      "id": "Q008",
+      "kategoria": "paradoks",
+      "temat": "Dychotomia",
+      "pytanie": "Przejście drogi wymaga pokonania połowy, potem połowy reszty i tak bez końca. Czy sam ten podział dowodzi, że nie można dotrzeć do celu?",
+      "odpowiedz_wzorcowa": "Nie. Suma długości tych odcinków jest skończona.",
+      "wyjasnienie": "Przy stałej dodatniej prędkości również suma czasów przejścia jest skończona.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://mathworld.wolfram.com/ZenosParadoxes.html"
+      ]
+    },
+    {
+      "id": "Q009",
+      "kategoria": "paradoks",
+      "temat": "Strzała",
+      "pytanie": "Strzała w każdej chwili zajmuje określone położenie. Czy wynika z tego, że przez cały lot spoczywa?",
+      "odpowiedz_wzorcowa": "Nie. Określone położenie w chwili nie oznacza zerowej prędkości.",
+      "wyjasnienie": "Prędkość opisuje zmianę położenia, a nie brak położenia w danym momencie.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://mathworld.wolfram.com/ZenosParadoxes.html"
+      ]
+    },
+    {
+      "id": "Q010",
+      "kategoria": "paradoks",
+      "temat": "Hotel Hilberta",
+      "pytanie": "W hotelu z pokojami 1, 2, 3 i tak dalej wszystkie pokoje są zajęte. Jak przyjąć jeszcze jednego gościa bez wypraszania kogokolwiek?",
+      "odpowiedz_wzorcowa": "Przenieść gościa z pokoju n do pokoju n+1, a nowego umieścić w pokoju 1.",
+      "wyjasnienie": "To własność przeliczalnej nieskończoności w modelu matematycznym, a nie projekt fizycznego hotelu.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://www.britannica.com/science/Hilberts-paradox-of-the-Grand-Hotel"
+      ]
+    },
+    {
+      "id": "Q011",
+      "kategoria": "paradoks",
+      "temat": "Urodziny",
+      "pytanie": "Przy 365 jednakowo prawdopodobnych dniach urodzin i niezależności osób: czy w grupie 23 osób szansa wspólnych urodzin co najmniej jednej pary jest mniejsza niż 50%?",
+      "odpowiedz_wzorcowa": "Nie. Wynosi około 50,73%.",
+      "wyjasnienie": "Liczymy dowolną zgodną parę, nie tylko zgodność z jedną wybraną osobą.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://mathworld.wolfram.com/BirthdayProblem.html"
+      ]
+    },
+    {
+      "id": "Q012",
+      "kategoria": "paradoks",
+      "temat": "Monty Hall",
+      "pytanie": "Są trzy drzwi, za jednymi nagroda. Wybierasz jedne. Prowadzący zna położenie nagrody, zawsze otwiera inne puste drzwi i zawsze proponuje zmianę. Czy zmiana zwiększa szansę?",
+      "odpowiedz_wzorcowa": "Tak: z 1/3 do 2/3.",
+      "wyjasnienie": "Strategia zmiany wygrywa dokładnie wtedy, gdy pierwszy wybór był nietrafiony.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://www.britannica.com/topic/Monty-Hall-problem"
+      ]
+    },
+    {
+      "id": "Q013",
+      "kategoria": "paradoks",
+      "temat": "Simpson",
+      "pytanie": "W grupie łatwej A ma 9 sukcesów na 10, B ma 80 na 100; w trudnej A ma 20 na 100, B ma 1 na 10. Czy A, lepsze w obu grupach, musi mieć lepszy wynik łączny?",
+      "odpowiedz_wzorcowa": "Nie. A ma 29/110 sukcesów, a B 81/110.",
+      "wyjasnienie": "Różne udziały grup mogą odwrócić porównanie po agregacji. Dane w pytaniu są przykładem skonstruowanym.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://plato.stanford.edu/entries/paradox-simpson/"
+      ]
+    },
+    {
+      "id": "Q014",
+      "kategoria": "paradoks",
+      "temat": "Dwie koperty",
+      "pytanie": "Dwie koperty zawierają dodatnie kwoty, jedna dwa razy większą od drugiej. Wybrałeś losowo zamkniętą kopertę. Czy argument „druga ma z szansą 1/2 kwotę dwa razy większą lub o połowę mniejszą” dowodzi, że warto bez końca zmieniać wybór?",
+      "odpowiedz_wzorcowa": "Nie. Ten rachunek nie uzasadnia przewagi zmiany.",
+      "wyjasnienie": "Przypisanie takich prawdopodobieństw warunkowych wymaga modelu rozkładu kwot; symetria zamkniętych kopert nie daje przewagi.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://mathworld.wolfram.com/TwoEnvelopesParadox.html"
+      ]
+    },
+    {
+      "id": "Q015",
+      "kategoria": "paradoks",
+      "temat": "Petersburski",
+      "pytanie": "Rzucasz uczciwą monetą do pierwszego orła w rzucie n i dostajesz 2 do potęgi n złotych. Czy nieskończona wartość oczekiwana dowodzi, że każda skończona opłata jest rozsądną ceną dla każdego gracza?",
+      "odpowiedz_wzorcowa": "Nie. Wartość oczekiwana pieniędzy nie jest uniwersalną miarą rozsądnej decyzji.",
+      "wyjasnienie": "Znaczenie mają użyteczność, budżet i ryzyko; sama gra jest idealizacją z nieograniczonymi wypłatami.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://www.britannica.com/science/St-Petersburg-paradox"
+      ]
+    },
+    {
+      "id": "Q016",
+      "kategoria": "paradoks",
+      "temat": "Dziadek",
+      "pytanie": "Podróżnik wraca do jednej niezmiennej historii i uniemożliwia własne narodziny. Jak może następnie wyruszyć w tę podróż?",
+      "odpowiedz_wzorcowa": "Opis łączący te założenia jest niespójny.",
+      "wyjasnienie": "Nie należy dopisywać rozgałęzień historii, jeśli pytanie zakłada jedną niezmienną przeszłość.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://plato.stanford.edu/entries/time-travel/"
+      ]
+    },
+    {
+      "id": "Q017",
+      "kategoria": "paradoks",
+      "temat": "Pętla informacji",
+      "pytanie": "W fikcyjnej, samospójnej pętli czasu badacz dostaje dowód od swojej przyszłej wersji, przepisuje go i później przekazuje przeszłemu sobie. Kto pierwszy stworzył dowód?",
+      "odpowiedz_wzorcowa": "W opisanej pętli nie ma pierwszego aktu stworzenia dowodu.",
+      "wyjasnienie": "To problem pochodzenia informacji w pętli przyczynowej, a nie dowód rzeczywistego istnienia podróży w czasie.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://plato.stanford.edu/entries/time-travel/"
+      ]
+    },
+    {
+      "id": "Q018",
+      "kategoria": "paradoks",
+      "temat": "Wszechmoc",
+      "pytanie": "Czy wszechmocna istota może stworzyć kamień, którego sama nie może podnieść?",
+      "odpowiedz_wzorcowa": "Odpowiedź wymaga sprecyzowania wszechmocy; pytanie ujawnia napięcie w jej nieograniczonej definicji.",
+      "wyjasnienie": "Przy definicji ograniczonej do możliwości logicznych sprzeczne wymaganie nie stanowi zwykłego zadania do wykonania.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://plato.stanford.edu/entries/omnipotence/"
+      ]
+    },
+    {
+      "id": "Q019",
+      "kategoria": "paradoks",
+      "temat": "Loteria",
+      "pytanie": "Milion losów, dokładnie jeden wygrywa. Każdy konkretny los niemal na pewno przegrywa. Czy wolno stąd uznać z pewnością, że wszystkie przegrają?",
+      "odpowiedz_wzorcowa": "Nie. Wysokie prawdopodobieństwo każdego zdania nie daje pewności ich koniunkcji.",
+      "wyjasnienie": "Wiedza, że istnieje zwycięski los, wyklucza wniosek o przegranej wszystkich.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://plato.stanford.edu/entries/epistemic-paradoxes/"
+      ]
+    },
+    {
+      "id": "Q020",
+      "kategoria": "paradoks",
+      "temat": "Przedmowa",
+      "pytanie": "Autor uznaje każde twierdzenie swojej długiej książki za dobrze uzasadnione, ale sądzi, że co najmniej jedno zawiera błąd. Czy musi świadomie kłamać?",
+      "odpowiedz_wzorcowa": "Nie. To napięcie między uzasadnieniem pojedynczych przekonań a oceną ich całego zbioru.",
+      "wyjasnienie": "Nie należy utożsamiać przekonania o omylności z rozpoznaniem konkretnego fałszu.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://plato.stanford.edu/entries/epistemic-paradoxes/"
+      ]
+    },
+    {
+      "id": "Q021",
+      "kategoria": "paradoks",
+      "temat": "Niespodziewany egzamin",
+      "pytanie": "Nauczyciel zapowiada niezapowiedziany co do dnia sprawdzian w przyszłym tygodniu. Uczeń przez eliminację od piątku do poniedziałku „dowodzi”, że go nie będzie. Czy ten argument bezspornie wyklucza sprawdzian?",
+      "odpowiedz_wzorcowa": "Nie. To paradoks zależny od formalizacji wiedzy i zaskoczenia.",
+      "wyjasnienie": "Eliminacja opiera się na założeniach epistemicznych, których nie wolno traktować jako bezspornych.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://plato.stanford.edu/entries/epistemic-paradoxes/"
+      ]
+    },
+    {
+      "id": "Q022",
+      "kategoria": "paradoks",
+      "temat": "Menon",
+      "pytanie": "Jeżeli znasz odpowiedź, nie musisz jej szukać, a jeżeli jej nie znasz, rzekomo nie rozpoznasz jej po znalezieniu. Czy wynika z tego niemożliwość uczenia się?",
+      "odpowiedz_wzorcowa": "Nie. Nieznajomość odpowiedzi nie oznacza braku kryteriów jej sprawdzenia.",
+      "wyjasnienie": "Można szukać rozwiązania, mając częściową wiedzę i metody weryfikacji.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://plato.stanford.edu/entries/epistemic-paradoxes/"
+      ]
+    },
+    {
+      "id": "Q023",
+      "kategoria": "paradoks",
+      "temat": "Moore",
+      "pytanie": "Ktoś mówi szczerze: „Pada deszcz, ale nie wierzę, że pada”. Czy treść tego zdania ma postać zwykłej sprzeczności logicznej?",
+      "odpowiedz_wzorcowa": "Nie. Dziwność dotyczy aktu szczerego twierdzenia i deklarowanego przekonania.",
+      "wyjasnienie": "Deszcz i brak czyjejś wiary w deszcz mogą współwystępować, choć taka wypowiedź pierwszoosobowa jest pragmatycznie problematyczna.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://plato.stanford.edu/entries/epistemic-paradoxes/"
+      ]
+    },
+    {
+      "id": "Q024",
+      "kategoria": "paradoks",
+      "temat": "Interesująca liczba",
+      "pytanie": "Gdyby istniały nieinteresujące dodatnie liczby całkowite, najmniejsza z nich byłaby interesująca jako najmniejsza. Czy to dowodzi formalnie, że wszystkie liczby są interesujące?",
+      "odpowiedz_wzorcowa": "Nie. „Interesująca” nie otrzymała ścisłej, stabilnej definicji.",
+      "wyjasnienie": "Dowcipne rozumowanie wykorzystuje nieostry i zależny od kontekstu predykat.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://mathworld.wolfram.com/InterestingNumberParadox.html"
+      ]
+    },
+    {
+      "id": "Q025",
+      "kategoria": "paradoks",
+      "temat": "Wzajemne odniesienie",
+      "pytanie": "Zdanie A brzmi: „Zdanie B jest prawdziwe”, a zdanie B: „Zdanie A jest fałszywe”. Czy można nadać obu klasyczne wartości prawdy zgodne z ich treścią?",
+      "odpowiedz_wzorcowa": "Nie. Żadne przypisanie nie spełnia obu zależności jednocześnie.",
+      "wyjasnienie": "A wymaga tej samej wartości co B, a B wartości przeciwnej do A.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://plato.stanford.edu/entries/liar-paradox/"
+      ]
+    },
+    {
+      "id": "Q026",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Arytmetyka",
+      "pytanie": "Która dodatnia liczba całkowita jest mniejsza od zera?",
+      "odpowiedz_wzorcowa": "Żadna.",
+      "wyjasnienie": "Dodatniość wyklucza bycie mniejszym od zera.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q027",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Liczby pierwsze",
+      "pytanie": "Ile dodatnich dzielników ma liczba pierwsza 1?",
+      "odpowiedz_wzorcowa": "1 nie jest liczbą pierwszą; ma jeden dodatni dzielnik.",
+      "wyjasnienie": "Liczba pierwsza musi mieć dokładnie dwa dodatnie dzielniki.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q028",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Dzielenie",
+      "pytanie": "Jaka liczba rzeczywista jest wynikiem 7/0?",
+      "odpowiedz_wzorcowa": "7/0 nie jest zdefiniowane w liczbach rzeczywistych.",
+      "wyjasnienie": "Nie istnieje liczba rzeczywista, której iloczyn z zerem wynosi 7.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q029",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Pierwiastek",
+      "pytanie": "Która liczba rzeczywista podniesiona do kwadratu daje -9?",
+      "odpowiedz_wzorcowa": "Nie ma takiej liczby rzeczywistej.",
+      "wyjasnienie": "Kwadrat liczby rzeczywistej nie jest ujemny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q030",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Geometria",
+      "pytanie": "Jaką długość ma czwarty bok trójkąta?",
+      "odpowiedz_wzorcowa": "Trójkąt nie ma czwartego boku.",
+      "wyjasnienie": "Pytanie przypisuje trójkątowi własność sprzeczną z jego definicją.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q031",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Geometria euklidesowa",
+      "pytanie": "Ile wynosi suma kątów wewnętrznych kwadratu o pięciu bokach na płaszczyźnie euklidesowej?",
+      "odpowiedz_wzorcowa": "Kwadrat o pięciu bokach nie istnieje.",
+      "wyjasnienie": "Kwadrat jest czworokątem; zwykły kwadrat ma sumę kątów 360 stopni.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q032",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Parzystość",
+      "pytanie": "Dlaczego każda liczba nieparzysta jest podzielna przez 2 bez reszty?",
+      "odpowiedz_wzorcowa": "Nie jest; liczba nieparzysta nie dzieli się przez 2 bez reszty.",
+      "wyjasnienie": "Pytanie odwraca definicję parzystości.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q033",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Procenty",
+      "pytanie": "Dlaczego obniżka ceny o 50%, a potem podwyżka nowej ceny o 50% zawsze przywraca cenę początkową?",
+      "odpowiedz_wzorcowa": "Nie przywraca: końcowa cena wynosi 75% początkowej.",
+      "wyjasnienie": "Obie zmiany procentowe mają różne podstawy.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q034",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Prawdopodobieństwo",
+      "pytanie": "Ile wynosi prawdopodobieństwo równe 140% w standardowym rachunku prawdopodobieństwa?",
+      "odpowiedz_wzorcowa": "Takie prawdopodobieństwo nie jest dopuszczalne.",
+      "wyjasnienie": "Prawdopodobieństwo mieści się od 0% do 100%.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q035",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Moneta",
+      "pytanie": "Dlaczego po dziesięciu reszkach uczciwa moneta musi w następnym niezależnym rzucie pokazać orła?",
+      "odpowiedz_wzorcowa": "Nie musi; szansa orła nadal wynosi 1/2.",
+      "wyjasnienie": "Niezależność wyklucza wpływ poprzednich wyników na kolejny rzut.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q036",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Wnioskowanie",
+      "pytanie": "Wiadomo tylko, że wszystkie koty są ssakami. Dlaczego wynika z tego, że wszystkie ssaki są kotami?",
+      "odpowiedz_wzorcowa": "Nie wynika.",
+      "wyjasnienie": "Implikacja w jedną stronę nie uprawnia do jej odwrócenia.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q037",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Pusta lista",
+      "pytanie": "Który element zajmuje pierwszą pozycję w pustej liście?",
+      "odpowiedz_wzorcowa": "Żaden; pusta lista nie ma elementów.",
+      "wyjasnienie": "Pytanie zakłada istnienie elementu mimo jawnej pustki.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q038",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Kolejność",
+      "pytanie": "W wyścigu bez remisów i dublowania wyprzedzasz osobę na drugim miejscu. Dlaczego zajmujesz teraz pierwsze miejsce?",
+      "odpowiedz_wzorcowa": "Nie zajmujesz pierwszego, tylko drugie.",
+      "wyjasnienie": "Przejmujesz pozycję wyprzedzonej osoby.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q039",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Pokrewieństwo",
+      "pytanie": "Ile rodzeństwa ma jedynak, który z definicji nie ma żadnego rodzeństwa?",
+      "odpowiedz_wzorcowa": "Zero; założenie o posiadaniu rodzeństwa jest sprzeczne z opisem.",
+      "wyjasnienie": "Treść sama wyklucza dodatnią liczbę rodzeństwa.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q040",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Zbiory",
+      "pytanie": "Który element należy do zbioru pustego?",
+      "odpowiedz_wzorcowa": "Żaden.",
+      "wyjasnienie": "Zbiór pusty nie zawiera elementów.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q041",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Skończone maksimum",
+      "pytanie": "Jaka jest największa liczba naturalna?",
+      "odpowiedz_wzorcowa": "Nie istnieje największa liczba naturalna.",
+      "wyjasnienie": "Do każdej liczby naturalnej można dodać 1.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q042",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Ułamki",
+      "pytanie": "Dlaczego 1/3 jest większe od 1/2, skoro 3 jest większe od 2?",
+      "odpowiedz_wzorcowa": "1/3 jest mniejsze od 1/2.",
+      "wyjasnienie": "Przy tym samym dodatnim liczniku większy dodatni mianownik oznacza mniejszy ułamek.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q043",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Słońce",
+      "pytanie": "Którą planetą Układu Słonecznego jest Słońce?",
+      "odpowiedz_wzorcowa": "Słońce jest gwiazdą, nie planetą.",
+      "wyjasnienie": "Nie można przypisać mu numeru w szeregu planet.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/sun/"
+      ]
+    },
+    {
+      "id": "Q044",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Planety",
+      "pytanie": "Jak nazywa się dziewiąta planeta w aktualnym standardowym wykazie ośmiu planet Układu Słonecznego?",
+      "odpowiedz_wzorcowa": "Taki wykaz nie zawiera dziewiątej planety.",
+      "wyjasnienie": "Pytanie łączy aktualny ośmioelementowy wykaz z nieistniejącą pozycją.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/planets/"
+      ]
+    },
+    {
+      "id": "Q045",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Położenie Marsa",
+      "pytanie": "Dlaczego Mars jest drugą planetą od Słońca?",
+      "odpowiedz_wzorcowa": "Mars jest czwartą planetą od Słońca; drugą jest Wenus.",
+      "wyjasnienie": "Pytanie przypisuje Marsowi niewłaściwą pozycję.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/planets/"
+      ]
+    },
+    {
+      "id": "Q046",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Jednostki",
+      "pytanie": "Dlaczego kilogram jest podstawową jednostką długości w SI?",
+      "odpowiedz_wzorcowa": "Kilogram jest jednostką masy; jednostką długości jest metr.",
+      "wyjasnienie": "Pomylono wielkości fizyczne.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://www.bipm.org/en/measurement-units/si-base-units"
+      ]
+    },
+    {
+      "id": "Q047",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Python: listy",
+      "pytanie": "Dlaczego w Pythonie każda lista jest niemodyfikowalna?",
+      "odpowiedz_wzorcowa": "Listy w Pythonie są modyfikowalne.",
+      "wyjasnienie": "Nie należy mylić list z niemodyfikowalnymi krotkami.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/builtins/stdtypes.html"
+      ]
+    },
+    {
+      "id": "Q048",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "JSON: wartości logiczne",
+      "pytanie": "Dlaczego standardowy zapis JSON wymaga wartości logicznej True z wielkiej litery?",
+      "odpowiedz_wzorcowa": "JSON używa true i false małymi literami.",
+      "wyjasnienie": "True jest zapisem Pythona, nie standardową wartością logiczną JSON.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/library/json.html"
+      ]
+    },
+    {
+      "id": "Q049",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Python: all",
+      "pytanie": "Dlaczego all([]) w Pythonie zwraca False?",
+      "odpowiedz_wzorcowa": "all([]) zwraca True.",
+      "wyjasnienie": "Funkcja all zwraca True dla pustego obiektu iterowalnego.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/builtins/functions.html"
+      ]
+    },
+    {
+      "id": "Q050",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Python: krotki",
+      "pytanie": "Dlaczego przypisanie t[0] = 7 zmienia pierwszy element krotki t = (1, 2)?",
+      "odpowiedz_wzorcowa": "Nie zmienia go: taka operacja zgłasza TypeError.",
+      "wyjasnienie": "Krotka nie pozwala na przypisanie nowej wartości do swojej pozycji.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/builtins/stdtypes.html"
+      ]
+    },
+    {
+      "id": "Q051",
+      "kategoria": "brak_danych",
+      "temat": "Wiek",
+      "pytanie": "Ile lat ma Anna?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić wieku Anny.",
+      "wyjasnienie": "Nie podano, o którą Annę chodzi ani kiedy się urodziła.",
+      "brakujace_dane": [
+        "Tożsamość Anny",
+        "Data urodzenia",
+        "Data odniesienia"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q052",
+      "kategoria": "brak_danych",
+      "temat": "Prędkość",
+      "pytanie": "Samochód przejechał 120 km. Jaka była jego średnia prędkość?",
+      "odpowiedz_wzorcowa": "Nie da się obliczyć średniej prędkości.",
+      "wyjasnienie": "Sama odległość nie określa ilorazu drogi i czasu.",
+      "brakujace_dane": [
+        "Czas przejazdu"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q053",
+      "kategoria": "brak_danych",
+      "temat": "Prostokąt",
+      "pytanie": "Prostokąt ma obwód 20 cm. Jakie ma pole?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić jednoznacznego pola.",
+      "wyjasnienie": "Różne długości boków mogą dawać ten sam obwód.",
+      "brakujace_dane": [
+        "Długość jednego boku lub równoważne ograniczenie"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q054",
+      "kategoria": "brak_danych",
+      "temat": "Trójkąt",
+      "pytanie": "Trójkąt ma podstawę 10 cm. Jakie jest jego pole?",
+      "odpowiedz_wzorcowa": "Brakuje danych do obliczenia pola.",
+      "wyjasnienie": "Pole zależy także od wysokości opuszczonej na tę podstawę.",
+      "brakujace_dane": [
+        "Wysokość na podaną podstawę"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q055",
+      "kategoria": "brak_danych",
+      "temat": "Średnia",
+      "pytanie": "Średnia wieku pięciu osób wynosi 30 lat. Ile lat ma najmłodsza osoba?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić wieku najmłodszej osoby.",
+      "wyjasnienie": "Średnia nie wyznacza poszczególnych wartości.",
+      "brakujace_dane": [
+        "Indywidualne wieki lub ograniczenia pozwalające wyznaczyć minimum"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q056",
+      "kategoria": "brak_danych",
+      "temat": "Moneta nieznanego typu",
+      "pytanie": "W pudełku jest moneta. Jakie jest prawdopodobieństwo orła w następnym rzucie?",
+      "odpowiedz_wzorcowa": "Nie można podać uzasadnionej wartości liczbowej.",
+      "wyjasnienie": "Nie określono własności monety ani sposobu losowania wyniku.",
+      "brakujace_dane": [
+        "Model monety i rzutu"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q057",
+      "kategoria": "brak_danych",
+      "temat": "Urna",
+      "pytanie": "Losujesz jedną kulę z nieprzezroczystej urny. Jakie jest prawdopodobieństwo czerwonej kuli?",
+      "odpowiedz_wzorcowa": "Nie da się obliczyć prawdopodobieństwa.",
+      "wyjasnienie": "Brakuje składu urny i reguły losowania.",
+      "brakujace_dane": [
+        "Liczba kul poszczególnych kolorów",
+        "Sposób losowania"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q058",
+      "kategoria": "brak_danych",
+      "temat": "Zysk",
+      "pytanie": "Firma miała przychód 100 000 zł. Jaki osiągnęła zysk?",
+      "odpowiedz_wzorcowa": "Nie da się wyliczyć zysku z samego przychodu.",
+      "wyjasnienie": "Przychód nie uwzględnia kosztów ani sposobu definiowania zysku.",
+      "brakujace_dane": [
+        "Koszty",
+        "Rodzaj zysku i okres rozliczenia"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q059",
+      "kategoria": "brak_danych",
+      "temat": "Waluta",
+      "pytanie": "Produkt kosztuje 100. Ile to jest w złotych?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić kwoty w złotych.",
+      "wyjasnienie": "Nie wskazano waluty źródłowej ani kursu.",
+      "brakujace_dane": [
+        "Waluta",
+        "Data i kurs przeliczenia"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q060",
+      "kategoria": "brak_danych",
+      "temat": "Hasło",
+      "pytanie": "Jakie jest hasło do mojego routera?",
+      "odpowiedz_wzorcowa": "Nie znam tego hasła na podstawie podanej treści.",
+      "wyjasnienie": "Nie udostępniono danych routera ani konfiguracji; nie należy zgadywać.",
+      "brakujace_dane": [
+        "Konfiguracja lub wiarygodna informacja o haśle"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q061",
+      "kategoria": "brak_danych",
+      "temat": "Zawartość pliku",
+      "pytanie": "Ile wierszy ma plik dane.csv na moim komputerze?",
+      "odpowiedz_wzorcowa": "Nie mogę tego ustalić bez dostępu do pliku lub wyniku jego zliczenia.",
+      "wyjasnienie": "Nazwa pliku nie ujawnia zawartości.",
+      "brakujace_dane": [
+        "Plik dane.csv lub wynik jego analizy",
+        "Definicja wiersza, np. rekord CSV czy linia tekstu"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q062",
+      "kategoria": "brak_danych",
+      "temat": "Błąd programu",
+      "pytanie": "Mój skrypt się wyłącza. W której linii jest błąd?",
+      "odpowiedz_wzorcowa": "Nie da się wskazać konkretnej linii.",
+      "wyjasnienie": "Brakuje kodu, logów i opisu uruchomienia.",
+      "brakujace_dane": [
+        "Kod",
+        "Komunikat błędu lub traceback",
+        "Warunki uruchomienia"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q063",
+      "kategoria": "brak_danych",
+      "temat": "Model AI",
+      "pytanie": "Model uzyskał 90% trafności. Czy jest lepszy od mojego poprzedniego modelu?",
+      "odpowiedz_wzorcowa": "Nie da się rzetelnie porównać modeli.",
+      "wyjasnienie": "Potrzebny jest wynik bazowy z porównywalnej procedury testowej.",
+      "brakujace_dane": [
+        "Wynik poprzedniego modelu",
+        "Ten sam zbiór i protokół oceny"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q064",
+      "kategoria": "brak_danych",
+      "temat": "Trening",
+      "pytanie": "Ile godzin potrwa trening mojego modelu językowego?",
+      "odpowiedz_wzorcowa": "Nie da się podać wiarygodnego czasu.",
+      "wyjasnienie": "Czas zależy od rozmiaru zadania, sprzętu i wydajności wykonania.",
+      "brakujace_dane": [
+        "Architektura modelu",
+        "Liczba tokenów i kroków",
+        "Sprzęt",
+        "Konfiguracja i zmierzona przepustowość"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q065",
+      "kategoria": "brak_danych",
+      "temat": "Pojemność zbioru",
+      "pytanie": "Mój zbiór zajmuje 10 GB. Ile zawiera rekordów?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić liczby rekordów z samej wielkości pliku.",
+      "wyjasnienie": "Rekordy mogą mieć różne rozmiary, a dane mogą być skompresowane.",
+      "brakujace_dane": [
+        "Format i kompresja",
+        "Rozmiary rekordów lub dostęp do danych"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q066",
+      "kategoria": "brak_danych",
+      "temat": "Wynik meczu",
+      "pytanie": "Jaki był końcowy wynik wczorajszego meczu?",
+      "odpowiedz_wzorcowa": "Nie wiadomo, o który mecz chodzi.",
+      "wyjasnienie": "Nie podano drużyn, rozgrywek ani daty odniesienia.",
+      "brakujace_dane": [
+        "Drużyny lub identyfikator meczu",
+        "Data odniesienia"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q067",
+      "kategoria": "brak_danych",
+      "temat": "Strefy czasowe",
+      "pytanie": "Samolot startuje o 22:00 i leci trzy godziny. Która będzie godzina lokalna po lądowaniu?",
+      "odpowiedz_wzorcowa": "Nie da się określić lokalnej godziny przylotu.",
+      "wyjasnienie": "Nie znamy stref czasowych, daty ani ewentualnej zmiany czasu.",
+      "brakujace_dane": [
+        "Lotnisko wylotu",
+        "Lotnisko przylotu",
+        "Data lotu"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q068",
+      "kategoria": "brak_danych",
+      "temat": "Energia",
+      "pytanie": "Urządzenie działało przez dwie godziny. Ile zużyło energii elektrycznej?",
+      "odpowiedz_wzorcowa": "Nie da się wyliczyć zużycia energii.",
+      "wyjasnienie": "Czas pracy bez pobieranej mocy nie wystarcza.",
+      "brakujace_dane": [
+        "Moc w czasie pracy lub jej średnia"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q069",
+      "kategoria": "brak_danych",
+      "temat": "Paliwo",
+      "pytanie": "Przejechałem 300 km. Ile litrów paliwa zużyłem?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić zużycia paliwa.",
+      "wyjasnienie": "Nie podano rzeczywistego spalania ani pomiaru paliwa.",
+      "brakujace_dane": [
+        "Średnie zużycie paliwa lub stan paliwa przed i po"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q070",
+      "kategoria": "brak_danych",
+      "temat": "Masa zawartości",
+      "pytanie": "Pudełko z zawartością waży 5 kg. Ile waży sama zawartość?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić masy zawartości.",
+      "wyjasnienie": "Masa całkowita obejmuje nieznaną masę pudełka.",
+      "brakujace_dane": [
+        "Masa pustego pudełka"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q071",
+      "kategoria": "brak_danych",
+      "temat": "Równanie",
+      "pytanie": "Liczby rzeczywiste x i y spełniają x + y = 10. Ile wynosi x?",
+      "odpowiedz_wzorcowa": "Nie ma jednej wyznaczonej wartości x.",
+      "wyjasnienie": "Jedno równanie z dwiema takimi niewiadomymi dopuszcza wiele par.",
+      "brakujace_dane": [
+        "Wartość y lub drugie niezależne ograniczenie"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q072",
+      "kategoria": "brak_danych",
+      "temat": "Ciąg",
+      "pytanie": "Ciąg zaczyna się od 2, 4, 8. Jaki jest czwarty wyraz?",
+      "odpowiedz_wzorcowa": "Nie da się jednoznacznie wyznaczyć czwartego wyrazu; 16 wymaga dodatkowej reguły podwajania.",
+      "wyjasnienie": "Skończony początek pasuje do nieskończenie wielu różnych reguł.",
+      "brakujace_dane": [
+        "Reguła definiująca ciąg"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q073",
+      "kategoria": "brak_danych",
+      "temat": "Przyczynowość",
+      "pytanie": "Po zmianie koloru przycisku wzrosła sprzedaż. O ile sama zmiana koloru spowodowała wzrost?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić efektu przyczynowego z samej kolejności zdarzeń.",
+      "wyjasnienie": "Mogły równocześnie zmienić się inne czynniki.",
+      "brakujace_dane": [
+        "Porównanie kontrolne lub wiarygodny projekt przyczynowy",
+        "Wyniki i czynniki zakłócające"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q074",
+      "kategoria": "brak_danych",
+      "temat": "Liczebność",
+      "pytanie": "W ankiecie 60% osób wybrało odpowiedź A. Ile osób ją wybrało?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić liczby osób.",
+      "wyjasnienie": "Nie znamy liczebności próby ani dokładności podanego procentu.",
+      "brakujace_dane": [
+        "Liczebność próby",
+        "Zasady zaokrąglania"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q075",
+      "kategoria": "brak_danych",
+      "temat": "Odległość",
+      "pytanie": "Jak daleko jest stąd do najbliższej stacji kolejowej?",
+      "odpowiedz_wzorcowa": "Nie da się wskazać odległości bez określenia miejsca.",
+      "wyjasnienie": "„Stąd” nie zostało przypisane do lokalizacji, a odległość zależy też od metody pomiaru.",
+      "brakujace_dane": [
+        "Lokalizacja startowa",
+        "Odległość drogowa, piesza lub w linii prostej"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q076",
+      "kategoria": "normalny_fakt",
+      "temat": "Planety",
+      "pytanie": "Ile planet obejmuje standardowy wykaz planet Układu Słonecznego?",
+      "odpowiedz_wzorcowa": "Osiem.",
+      "wyjasnienie": "Nie wlicza się tu planet karłowatych.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/planets/"
+      ]
+    },
+    {
+      "id": "Q077",
+      "kategoria": "normalny_fakt",
+      "temat": "Merkury",
+      "pytanie": "Która planeta jest najbliżej Słońca?",
+      "odpowiedz_wzorcowa": "Merkury.",
+      "wyjasnienie": "Merkury zajmuje pierwszą pozycję od Słońca.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/planets/"
+      ]
+    },
+    {
+      "id": "Q078",
+      "kategoria": "normalny_fakt",
+      "temat": "Wenus",
+      "pytanie": "Która planeta jest druga od Słońca?",
+      "odpowiedz_wzorcowa": "Wenus.",
+      "wyjasnienie": "Wenus znajduje się między orbitami Merkurego i Ziemi.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/planets/"
+      ]
+    },
+    {
+      "id": "Q079",
+      "kategoria": "normalny_fakt",
+      "temat": "Ziemia",
+      "pytanie": "Która planeta jest trzecia od Słońca?",
+      "odpowiedz_wzorcowa": "Ziemia.",
+      "wyjasnienie": "W wykazie kolejności planet Ziemia jest po Wenus.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/planets/"
+      ]
+    },
+    {
+      "id": "Q080",
+      "kategoria": "normalny_fakt",
+      "temat": "Mars",
+      "pytanie": "Która planeta jest czwarta od Słońca?",
+      "odpowiedz_wzorcowa": "Mars.",
+      "wyjasnienie": "Mars znajduje się po Ziemi w kolejności planet.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/planets/"
+      ]
+    },
+    {
+      "id": "Q081",
+      "kategoria": "normalny_fakt",
+      "temat": "Jowisz",
+      "pytanie": "Która planeta jest piąta od Słońca?",
+      "odpowiedz_wzorcowa": "Jowisz.",
+      "wyjasnienie": "Po czterech planetach wewnętrznych następuje Jowisz.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/planets/"
+      ]
+    },
+    {
+      "id": "Q082",
+      "kategoria": "normalny_fakt",
+      "temat": "Saturn",
+      "pytanie": "Która planeta jest szósta od Słońca?",
+      "odpowiedz_wzorcowa": "Saturn.",
+      "wyjasnienie": "Saturn w kolejności planet znajduje się po Jowiszu.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/planets/"
+      ]
+    },
+    {
+      "id": "Q083",
+      "kategoria": "normalny_fakt",
+      "temat": "Neptun",
+      "pytanie": "Która z ośmiu planet jest najdalej od Słońca?",
+      "odpowiedz_wzorcowa": "Neptun.",
+      "wyjasnienie": "Neptun zamyka standardowy wykaz ośmiu planet.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/planets/"
+      ]
+    },
+    {
+      "id": "Q084",
+      "kategoria": "normalny_fakt",
+      "temat": "Słońce",
+      "pytanie": "Czy Słońce jest gwiazdą?",
+      "odpowiedz_wzorcowa": "Tak.",
+      "wyjasnienie": "Słońce jest centralną gwiazdą Układu Słonecznego.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/sun/"
+      ]
+    },
+    {
+      "id": "Q085",
+      "kategoria": "normalny_fakt",
+      "temat": "Metr",
+      "pytanie": "Jaka jest podstawowa jednostka długości w SI?",
+      "odpowiedz_wzorcowa": "Metr, symbol m.",
+      "wyjasnienie": "To jednostka długości, nie masy.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://www.bipm.org/en/measurement-units/si-base-units"
+      ]
+    },
+    {
+      "id": "Q086",
+      "kategoria": "normalny_fakt",
+      "temat": "Sekunda",
+      "pytanie": "Jaka jest podstawowa jednostka czasu w SI?",
+      "odpowiedz_wzorcowa": "Sekunda, symbol s.",
+      "wyjasnienie": "Jest jedną z siedmiu jednostek podstawowych SI.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://www.bipm.org/en/measurement-units/si-base-units"
+      ]
+    },
+    {
+      "id": "Q087",
+      "kategoria": "normalny_fakt",
+      "temat": "Kilogram",
+      "pytanie": "Jaka jest podstawowa jednostka masy w SI?",
+      "odpowiedz_wzorcowa": "Kilogram, symbol kg.",
+      "wyjasnienie": "Nie należy mylić masy z siłą ciężkości.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://www.bipm.org/en/measurement-units/si-base-units"
+      ]
+    },
+    {
+      "id": "Q088",
+      "kategoria": "normalny_fakt",
+      "temat": "Amper",
+      "pytanie": "Jaka jest podstawowa jednostka natężenia prądu elektrycznego w SI?",
+      "odpowiedz_wzorcowa": "Amper, symbol A.",
+      "wyjasnienie": "Jednostka ta dotyczy natężenia prądu.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://www.bipm.org/en/measurement-units/si-base-units"
+      ]
+    },
+    {
+      "id": "Q089",
+      "kategoria": "normalny_fakt",
+      "temat": "Kelwin",
+      "pytanie": "Jaka jest podstawowa jednostka temperatury termodynamicznej w SI?",
+      "odpowiedz_wzorcowa": "Kelwin, symbol K.",
+      "wyjasnienie": "Symbolem jest K, bez znaku stopnia.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://www.bipm.org/en/measurement-units/si-base-units"
+      ]
+    },
+    {
+      "id": "Q090",
+      "kategoria": "normalny_fakt",
+      "temat": "Mol",
+      "pytanie": "Jaka jest podstawowa jednostka liczności materii w SI?",
+      "odpowiedz_wzorcowa": "Mol, symbol mol.",
+      "wyjasnienie": "Liczność materii jest odrębną wielkością podstawową.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://www.bipm.org/en/measurement-units/si-base-units"
+      ]
+    },
+    {
+      "id": "Q091",
+      "kategoria": "normalny_fakt",
+      "temat": "Kandela",
+      "pytanie": "Jaka jest podstawowa jednostka światłości w SI?",
+      "odpowiedz_wzorcowa": "Kandela, symbol cd.",
+      "wyjasnienie": "Światłość nie jest tym samym co strumień świetlny.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://www.bipm.org/en/measurement-units/si-base-units"
+      ]
+    },
+    {
+      "id": "Q092",
+      "kategoria": "normalny_fakt",
+      "temat": "Światło",
+      "pytanie": "Jaka jest dokładna prędkość światła w próżni w metrach na sekundę?",
+      "odpowiedz_wzorcowa": "299 792 458 m/s.",
+      "wyjasnienie": "W SI ta wartość jest ustalona dokładnie.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://www.bipm.org/en/measurement-units/si-defining-constants"
+      ]
+    },
+    {
+      "id": "Q093",
+      "kategoria": "normalny_fakt",
+      "temat": "Python: lista",
+      "pytanie": "Czy lista w Pythonie jest modyfikowalna?",
+      "odpowiedz_wzorcowa": "Tak.",
+      "wyjasnienie": "Jej elementy można zmieniać bez tworzenia nowej listy.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/builtins/stdtypes.html"
+      ]
+    },
+    {
+      "id": "Q094",
+      "kategoria": "normalny_fakt",
+      "temat": "Python: krotka",
+      "pytanie": "Czy można przypisać nową wartość bezpośrednio do pozycji istniejącej krotki w Pythonie?",
+      "odpowiedz_wzorcowa": "Nie.",
+      "wyjasnienie": "Nie wyklucza to modyfikacji obiektu modyfikowalnego przechowywanego wewnątrz krotki.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/builtins/stdtypes.html"
+      ]
+    },
+    {
+      "id": "Q095",
+      "kategoria": "normalny_fakt",
+      "temat": "Python: bool",
+      "pytanie": "Jakie dwie wartości ma typ bool w Pythonie?",
+      "odpowiedz_wzorcowa": "True i False.",
+      "wyjasnienie": "Są to dwie stałe instancje tego typu.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/builtins/stdtypes.html"
+      ]
+    },
+    {
+      "id": "Q096",
+      "kategoria": "normalny_fakt",
+      "temat": "Python: pusta lista",
+      "pytanie": "Jaką wartość zwraca bool([]) w Pythonie?",
+      "odpowiedz_wzorcowa": "False.",
+      "wyjasnienie": "Pusta lista jest fałszywa w kontekście logicznym.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/builtins/stdtypes.html"
+      ]
+    },
+    {
+      "id": "Q097",
+      "kategoria": "normalny_fakt",
+      "temat": "Python: all",
+      "pytanie": "Jaką wartość zwraca all([]) w Pythonie?",
+      "odpowiedz_wzorcowa": "True.",
+      "wyjasnienie": "Dla pustego obiektu iterowalnego nie istnieje element obalający warunek all.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/builtins/functions.html"
+      ]
+    },
+    {
+      "id": "Q098",
+      "kategoria": "normalny_fakt",
+      "temat": "Python: any",
+      "pytanie": "Jaką wartość zwraca any([]) w Pythonie?",
+      "odpowiedz_wzorcowa": "False.",
+      "wyjasnienie": "Pusty obiekt iterowalny nie ma elementu o prawdziwej wartości logicznej.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/builtins/functions.html"
+      ]
+    },
+    {
+      "id": "Q099",
+      "kategoria": "normalny_fakt",
+      "temat": "JSON: brak wartości",
+      "pytanie": "Jaki literał JSON odpowiada pythonowemu None?",
+      "odpowiedz_wzorcowa": "null.",
+      "wyjasnienie": "To nie jest napis w cudzysłowie ani pythonowy zapis None.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/library/json.html"
+      ]
+    },
+    {
+      "id": "Q100",
+      "kategoria": "normalny_fakt",
+      "temat": "JSON: serializacja",
+      "pytanie": "Jaki wynik daje json.dumps(True) w Pythonie?",
+      "odpowiedz_wzorcowa": "Napis o treści true.",
+      "wyjasnienie": "Wygenerowany tekst JSON zapisuje wartość logiczną małymi literami.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/library/json.html"
+      ]
+    }
+  ]
+}

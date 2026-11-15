@@ -1,0 +1,254 @@
+[
+  {
+    "id": "Q901",
+    "kategoria": "paradoks",
+    "temat": "Diagonalny katalog",
+    "pytanie": "Bibliotekarz tworzy katalog wszystkich katalogów, które nie wymieniają samych siebie. Czy ten katalog wymienia sam siebie?",
+    "odpowiedz_wzorcowa": "Taki katalog nie może istnieć przy tej regule.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [],
+    "zrodla": []
+  },
+  {
+    "id": "Q902",
+    "kategoria": "paradoks",
+    "temat": "Karta Jourdaina",
+    "pytanie": "Na jednej stronie kartki napisano: „Zdanie na odwrocie jest prawdziwe”, a na drugiej: „Zdanie na odwrocie jest fałszywe”. Która strona mówi prawdę?",
+    "odpowiedz_wzorcowa": "Żadne klasyczne przypisanie nie jest spójne.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [],
+    "zrodla": []
+  },
+  {
+    "id": "Q903",
+    "kategoria": "paradoks",
+    "temat": "Zenon bez nazw",
+    "pytanie": "Czy szybki biegacz może dogonić powolnego, skoro zawsze musi najpierw dobiec do miejsca, w którym tamten właśnie był?",
+    "odpowiedz_wzorcowa": "Tak; suma etapów jest skończona.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [],
+    "zrodla": []
+  },
+  {
+    "id": "Q904",
+    "kategoria": "paradoks",
+    "temat": "Wydma",
+    "pytanie": "Jeśli z wydmy usuwamy po jednym ziarnie piasku, to przy którym ziarnie przestaje ona być wydmą?",
+    "odpowiedz_wzorcowa": "Paradoks nieostrości; brak ostrej granicy.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [],
+    "zrodla": []
+  },
+  {
+    "id": "Q905",
+    "kategoria": "paradoks",
+    "temat": "Wszechmoc",
+    "pytanie": "Czy wszechmogący stwórca potrafi stworzyć zadanie, którego sam nie wykona?",
+    "odpowiedz_wzorcowa": "Wymaga sprecyzowania wszechmocy.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [],
+    "zrodla": []
+  },
+  {
+    "id": "Q906",
+    "kategoria": "paradoks",
+    "temat": "Berry",
+    "pytanie": "Najmniejsza liczba naturalna, której nie da się opisać w mniej niż dwudziestu słowach, została właśnie opisana krócej. Jak to możliwe?",
+    "odpowiedz_wzorcowa": "Paradoks Berry'ego; definiowalność relatywna do języka.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [],
+    "zrodla": []
+  },
+  {
+    "id": "Q907",
+    "kategoria": "falszywe_zalozenie",
+    "temat": "Jowisz",
+    "pytanie": "Dlaczego Jowisz jest najmniejszą planetą Układu Słonecznego?",
+    "odpowiedz_wzorcowa": "Jowisz jest największą planetą.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [],
+    "zrodla": []
+  },
+  {
+    "id": "Q908",
+    "kategoria": "falszywe_zalozenie",
+    "temat": "Liczby naturalne",
+    "pytanie": "Która ujemna liczba naturalna jest największa?",
+    "odpowiedz_wzorcowa": "Nie ma ujemnych liczb naturalnych.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [],
+    "zrodla": []
+  },
+  {
+    "id": "Q909",
+    "kategoria": "falszywe_zalozenie",
+    "temat": "Python any",
+    "pytanie": "Dlaczego any([]) w Pythonie zwraca True?",
+    "odpowiedz_wzorcowa": "any([]) zwraca False.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [],
+    "zrodla": []
+  },
+  {
+    "id": "Q910",
+    "kategoria": "falszywe_zalozenie",
+    "temat": "Jednostki",
+    "pytanie": "Dlaczego sekunda jest podstawową jednostką masy w SI?",
+    "odpowiedz_wzorcowa": "Sekunda jest jednostką czasu.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [],
+    "zrodla": []
+  },
+  {
+    "id": "Q911",
+    "kategoria": "falszywe_zalozenie",
+    "temat": "Trójkąt",
+    "pytanie": "Ile wynosi suma kątów trójkąta o czterech bokach?",
+    "odpowiedz_wzorcowa": "Trójkąt ma trzy boki.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [],
+    "zrodla": []
+  },
+  {
+    "id": "Q912",
+    "kategoria": "falszywe_zalozenie",
+    "temat": "Nobel",
+    "pytanie": "Kiedy Albert Einstein otrzymał swoją drugą Nagrodę Nobla?",
+    "odpowiedz_wzorcowa": "Einstein otrzymał jedną Nagrodę Nobla.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [],
+    "zrodla": []
+  },
+  {
+    "id": "Q913",
+    "kategoria": "brak_danych",
+    "temat": "Pies",
+    "pytanie": "Ile waży mój pies?",
+    "odpowiedz_wzorcowa": "Nie da się ustalić.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [
+      "Dane psa"
+    ],
+    "zrodla": []
+  },
+  {
+    "id": "Q914",
+    "kategoria": "brak_danych",
+    "temat": "Pociąg",
+    "pytanie": "Pociąg jechał przez 3 godziny. Jaką odległość pokonał?",
+    "odpowiedz_wzorcowa": "Brak prędkości.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [
+      "Prędkość średnia"
+    ],
+    "zrodla": []
+  },
+  {
+    "id": "Q915",
+    "kategoria": "brak_danych",
+    "temat": "Kwadrat",
+    "pytanie": "Kwadrat ma pole większe niż 10 cm². Jaka jest długość jego boku?",
+    "odpowiedz_wzorcowa": "Nie da się jednoznacznie ustalić.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [
+      "Dokładne pole"
+    ],
+    "zrodla": []
+  },
+  {
+    "id": "Q916",
+    "kategoria": "brak_danych",
+    "temat": "Bilet",
+    "pytanie": "Ile kosztuje bilet?",
+    "odpowiedz_wzorcowa": "Nie wiadomo, o jaki bilet chodzi.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [
+      "Rodzaj biletu, przewoźnik, data"
+    ],
+    "zrodla": []
+  },
+  {
+    "id": "Q917",
+    "kategoria": "brak_danych",
+    "temat": "Równanie",
+    "pytanie": "Liczby rzeczywiste x i y spełniają x - y = 4. Ile wynosi x?",
+    "odpowiedz_wzorcowa": "Nie ma jednej wartości.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [
+      "Drugie równanie"
+    ],
+    "zrodla": []
+  },
+  {
+    "id": "Q918",
+    "kategoria": "brak_danych",
+    "temat": "Waga",
+    "pytanie": "Paczka z zawartością waży 12 kg. Ile waży sama zawartość?",
+    "odpowiedz_wzorcowa": "Nie da się ustalić.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [
+      "Masa opakowania"
+    ],
+    "zrodla": []
+  },
+  {
+    "id": "Q919",
+    "kategoria": "normalny_fakt",
+    "temat": "Uran",
+    "pytanie": "Która planeta jest siódma od Słońca?",
+    "odpowiedz_wzorcowa": "Uran.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [],
+    "zrodla": []
+  },
+  {
+    "id": "Q920",
+    "kategoria": "normalny_fakt",
+    "temat": "Amper",
+    "pytanie": "Jaki symbol ma podstawowa jednostka natężenia prądu w SI?",
+    "odpowiedz_wzorcowa": "A.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [],
+    "zrodla": []
+  },
+  {
+    "id": "Q921",
+    "kategoria": "normalny_fakt",
+    "temat": "Krotka",
+    "pytanie": "Czy krotka w Pythonie jest modyfikowalna?",
+    "odpowiedz_wzorcowa": "Nie.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [],
+    "zrodla": []
+  },
+  {
+    "id": "Q922",
+    "kategoria": "normalny_fakt",
+    "temat": "SI",
+    "pytanie": "Ile jednostek podstawowych ma układ SI?",
+    "odpowiedz_wzorcowa": "Siedem.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [],
+    "zrodla": []
+  },
+  {
+    "id": "Q923",
+    "kategoria": "normalny_fakt",
+    "temat": "Francja",
+    "pytanie": "Jaka jest stolica Francji?",
+    "odpowiedz_wzorcowa": "Paryż.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [],
+    "zrodla": []
+  },
+  {
+    "id": "Q924",
+    "kategoria": "normalny_fakt",
+    "temat": "Arytmetyka",
+    "pytanie": "Ile wynosi 2 + 2?",
+    "odpowiedz_wzorcowa": "4.",
+    "wyjasnienie": "Pytanie kontrolne spoza zbioru 100 (held-out), sformułowane niezależnie od bazy wiedzy.",
+    "brakujace_dane": [],
+    "zrodla": []
+  }
+]
