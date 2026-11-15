@@ -1,0 +1,5 @@
+,accuracy,macro_f1,FAR,FAR_abstain,over_refusal,paradox_identification_accuracy,ECE,latency_ms_p50
+raw/Qwen2.5-7B-Instruct,0.48,0.4508,0.56,0.44,0.04,0.28,,4045.62
+mca/Qwen2.5-7B-Instruct,0.75,0.6667,0.0,0.0,1.0,1.0,0.2049,18043.45
+raw/DeepSeek-R1-Distill-Qwen-7B,0.41,0.3925,0.5333,0.64,0.2,0.2,,16576.67
+mca/DeepSeek-R1-Distill-Qwen-7B,0.8,0.7702,0.0,0.0,0.76,1.0,0.1299,50338.7

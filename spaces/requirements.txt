@@ -1,5 +1,5 @@
 # MCA framework pinned to a commit of https://github.com/Mati83mon/MCA
-mca-framework @ git+https://github.com/Mati83mon/MCA.git@bd91a2b9de52752c26b99021588ccabca023ee89
+mca-framework @ git+https://github.com/Mati83mon/MCA.git@213da5d0a7e2b50aa8a5b88d08bce80c6a29a275
 torch>=2.1
 transformers>=4.44
 accelerate>=0.33

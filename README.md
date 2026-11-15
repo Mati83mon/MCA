@@ -91,6 +91,43 @@ semantic entropy over real samples – which the Kaggle notebook measures on GPU
 `cross-encoder/nli-deberta-v3-large` is English-only; for the Polish benchmark use a multilingual NLI model
 (the Space and notebook use `MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7`).
 
+## Results on GPU (Kaggle 2×T4, real LLMs, mDeBERTa XNLI, n=5 entropy samples)
+
+Same 100-item benchmark, each model evaluated raw (direct answer, classified into PASS/CHALLENGE/ABSTAIN/
+EXPLAIN_PARADOX) and wrapped by MCA. fp16 sharded over 2×T4, `max_new_tokens=256`. Raw per-item outputs:
+[`results/kaggle-2xT4/`](results/kaggle-2xT4/), notebook: [`kaggle/mca_gpu_evaluator.ipynb`](kaggle/mca_gpu_evaluator.ipynb).
+
+| Run | Accuracy | Macro-F1 | FAR | FAR (abstain) | Over-refusal | Paradox ID | ECE | p50 latency |
+|---|---|---|---|---|---|---|---|---|
+| raw Qwen2.5-7B-Instruct | 0.48 | 0.45 | 0.56 | 0.44 | 0.04 | 0.28 | – | 4.1 s |
+| **MCA + Qwen2.5-7B** | **0.94** | **0.94** | **0.00** | **0.00** | 0.20 | 0.96 | 0.05 | 17.6 s |
+| raw DeepSeek-R1-Distill-Qwen-7B | 0.36 | 0.30 | 0.65 | 0.92 | 0.08 | 0.16 | – | 16.7 s |
+| **MCA + DeepSeek-R1-7B** | **0.90** | **0.90** | **0.00** | **0.00** | 0.36 | 1.00 | 0.10 | 44.6 s |
+| raw Meta-Llama-3-8B-Instruct | 0.30 | 0.20 | 0.89 | 0.92 | 0.00 | 0.04 | – | 1.8 s |
+| **MCA + Llama-3-8B** | **0.85** | **0.84** | **0.01** | **0.04** | 0.52 | 1.00 | 0.09 | 19.8 s |
+
+Per category (MCA, correct / 25 – fact · paradox · false premise · missing data):
+Qwen 20·24·25·25, DeepSeek 16·25·24·25, Llama-3 12·25·24·24.
+
+What the numbers say:
+
+- **The wrapper removes almost all false acceptance.** Raw models answer 56–89 % of the 75 trap questions
+  as if the premise were fine; with MCA that drops to 0 / 0 / 1 item (Llama-3 accepted Q048, a JSON
+  `True` capitalisation premise that the KB does not cover).
+- **The price is over-refusal on ordinary facts** (raw models: 0–8 %). The remaining refusals come from
+  two rules: R8 semantic entropy with only 5 samples (Qwen 4, DeepSeek 9, Llama-3 7 facts) and, for
+  Llama-3, R5 NLI contradiction against its own verbose answers (6 facts). Threshold calibration on these
+  logs is the next step; no GPU needed.
+- **Latency is 4–10× raw** (entropy sampling + NLI + Z3), so the fast/slow orchestrator's fast path matters
+  in production.
+- Same caveat as the CPU table: the KB and paradox catalog were written with these topics in view.
+
+**Before the fixes (first GPU run, v3)** MCA+Qwen scored acc 0.75 with over-refusal **1.00** (every LLM-
+extracted referent hit R7) and MCA+DeepSeek acc 0.80 / over-refusal 0.76 (entropy computed on truncated
+`<think>` traces, plus LLM formal specs with infix `And`/`Or` failing to parse). Commit `05084ba` grounds
+LLM referents in the KB, skips/strips reasoning traces for sampling and normalises the DSL; metrics of
+that run are kept in [`results/kaggle-2xT4/v3-prefix/`](results/kaggle-2xT4/v3-prefix/).
+
 ## Metrics (`benchmarks/metrics.py`)
 
 * **FAR** – share of trap items (gold ≠ PASS) answered as ordinary questions.
