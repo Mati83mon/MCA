@@ -48,3 +48,21 @@ def test_audit_run_is_uncensored(path: Path):
     """audit_all_layers=True: entropy (hence R8/R8b) is observed on every item, not only on fast-path PASSes."""
     tab = table(_rows(path))
     assert all(row["R8"] is not None and row["R8b"] is not None for row in tab)
+
+
+def _stage_row(rid: str, gold: str, entropy: float) -> dict:
+    from mca.telemetry.schemas import UncertaintyReport
+    t = MetacognitiveTelemetry(query=f"q {rid}", uncertainty=UncertaintyReport(n_samples=5, normalized_entropy=entropy))
+    return {"id": rid, "category": "x", "gold": gold, "pred": "PASS", "confidence": 0.5, "latency_ms": 0.0,
+            "telemetry": t.model_dump(mode="json")}
+
+
+def test_calibrate_stage_picks_highest_tau_that_separates():
+    from benchmarks.rule_table import calibrate_stage
+    tune = [_stage_row(f"t{i}", "ABSTAIN", e) for i, e in enumerate((0.72, 0.8, 0.9, 1.0))]
+    tune += [_stage_row(f"c{i}", "PASS", e) for i, e in enumerate((0.0, 0.2, 0.4, 0.55))]
+    res = calibrate_stage(tune, test=tune)
+    assert res["n_stage_traps"] == 4 and res["n_stage_controls"] == 4
+    # every τ in [0.55, 0.72) separates perfectly; ties go to the highest grid value, 0.70
+    assert res["chosen"]["entropy_tau"] == 0.7 and res["chosen"]["balanced"] == 1.0
+    assert res["test_chosen"]["accuracy"] >= res["test_default"]["accuracy"]

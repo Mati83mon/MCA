@@ -169,6 +169,20 @@ What the uncensored sample shows:
 * **Calibrating τ on the benchmark overfits.** The grid picked τ = 0.9 for DeepSeek: 0.99 on the benchmark, but held-out FAR rises from 0.00 to 0.22. That happens because the benchmark has almost no trap that only R8 can catch, so raising τ costs nothing there. For Qwen the calibrated config (τ = 0.5) gives identical held-out results. For Llama the calibrated τ = 0.6 / similarity 0.5 / entailment 0.8 improves held-out accuracy from 0.71 to 0.75 and lowers over-refusal from 0.67 to 0.50. The defaults stay unchanged.
 * **Remaining errors:** the dominant held-out error is R7 (unresolved referents outside the KB), and Llama's in-distribution errors are R5 (6 control facts flagged by NLI). With only 6 control and 18 trap held-out items per model (one item = 0.17 over-refusal), these are directional signals, not estimates.
 
+**Stage-restricted calibration of τ (pre-registered, run pending).** Only traps that R1–R7 let through can
+vote on τ (suggested by a reviewer on the HF forum thread). [`rebuilt_traps_v1.json`](benchmarks/datasets/rebuilt_traps_v1.json)
+holds 33 benchmark traps rewritten so that only the feature the catching rule keys on changes: the paradox
+catalog's wording, the Z3 formalisation, KB facts, or proper names, possessives and deixis. Each item
+stays unanswerable and is paired with a twin control fact from the same domain. Offline, 30/33 reach the entropy
+stage, against 0/75 of the originals. The procedure is fixed in `benchmarks/rule_table.calibrate_stage`
+before any GPU result is seen:
+
+1. Keep only items on which R1–R7 stay silent.
+2. On a τ grid from 0.30 to 0.95, take the mean of the trap catch rate and the control pass rate.
+3. Choose the highest τ with the best score.
+4. Evaluate it once, against the default, on held-out v1 + v2 (88 items):
+   `python -m benchmarks.rule_table calibrate-stage rebuilt__X.jsonl --test heldout__X.jsonl heldout_v2__X.jsonl`.
+
 **Before the fixes (first GPU run, v3)** MCA+Qwen scored acc 0.75 with over-refusal **1.00** (every LLM-
 extracted referent hit R7) and MCA+DeepSeek acc 0.80 / over-refusal 0.76 (entropy computed on truncated
 `<think>` traces, plus LLM formal specs with infix `And`/`Or` failing to parse). Commit `05084ba` grounds

@@ -93,6 +93,49 @@ def calibrate(rows: list[dict[str, Any]], heldout: list[dict[str, Any]] | None =
     return result
 
 
+STAGE_TAUS = tuple(round(0.30 + 0.05 * i, 2) for i in range(14))  # 0.30 … 0.95
+EARLY_RULES = ("R1", "R2", "R3", "R4", "R5", "R6", "R7")
+
+
+def at_entropy_stage(t: MetacognitiveTelemetry, ctl: DecisionController) -> bool:
+    """True when no rule before R8 fires, i.e. the item is decided by R8b/R8/R9 alone."""
+    verdicts = ctl.rule_verdicts(t)
+    return not any(verdicts[r] for r in EARLY_RULES)
+
+
+def calibrate_stage(tune: list[dict[str, Any]], test: list[dict[str, Any]] | None = None) -> dict[str, Any]:
+    """Stage-restricted calibration of τ (fixed before any audit result was seen).
+
+    1. Stage set = items of ``tune`` on which R1–R7 all stay silent under the default config.
+    2. For each τ in :data:`STAGE_TAUS`: trap catch rate (decision ≠ PASS on stage traps) and control
+       pass rate (decision = PASS on stage controls); objective = their mean (balanced accuracy).
+    3. Pick the best τ; ties go to the higher τ (fewer refusals). R8b thresholds stay at their defaults.
+    4. Evaluate the chosen τ and the default τ exactly once on ``test`` with the full pipeline.
+    """
+    ctl0 = DecisionController(_base_config())
+    stage = [r for r in tune if at_entropy_stage(MetacognitiveTelemetry.model_validate(r["telemetry"]), ctl0)]
+    traps = [r for r in stage if r["gold"] != "PASS"]
+    ctrls = [r for r in stage if r["gold"] == "PASS"]
+    curve = []
+    for tau in STAGE_TAUS:
+        ctl = DecisionController(_base_config(entropy_tau=tau))
+        dec = {r["id"]: ctl.decide(MetacognitiveTelemetry.model_validate(r["telemetry"])).decision.value for r in stage}
+        catch = sum(dec[r["id"]] != "PASS" for r in traps) / len(traps) if traps else float("nan")
+        passed = sum(dec[r["id"]] == "PASS" for r in ctrls) / len(ctrls) if ctrls else float("nan")
+        curve.append({"entropy_tau": tau, "trap_catch": round(catch, 4), "control_pass": round(passed, 4),
+                      "balanced": round((catch + passed) / 2, 4)})
+    usable = [c for c in curve if c["balanced"] == c["balanced"]]  # drop NaN
+    chosen = max(usable, key=lambda c: (c["balanced"], c["entropy_tau"])) if traps and ctrls else None
+    default_tau = _base_config().entropy_tau
+    result: dict[str, Any] = {"n_tune": len(tune), "n_stage_traps": len(traps), "n_stage_controls": len(ctrls),
+                              "curve": curve, "chosen": chosen, "default_tau": default_tau,
+                              "default_on_stage": next((c for c in curve if abs(c["entropy_tau"] - default_tau) < 1e-9), None)}
+    if test is not None and chosen is not None:
+        result["test_chosen"] = _evaluate(test, _base_config(entropy_tau=chosen["entropy_tau"]))
+        result["test_default"] = _evaluate(test, _base_config())
+    return result
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -104,7 +147,28 @@ def main(argv: list[str] | None = None) -> int:
     pc.add_argument("--heldout", default=None)
     pc.add_argument("--far-budget", type=float, default=0.0)
     pc.add_argument("--out", default=None, help="optional JSON with the full grid")
+    ps = sub.add_parser("calibrate-stage", help="stage-restricted τ calibration on rebuilt traps")
+    ps.add_argument("jsonl", nargs="+", help="tuning telemetry (rebuilt traps + their controls)")
+    ps.add_argument("--test", nargs="*", default=None, help="untouched held-out telemetry, evaluated once")
+    ps.add_argument("--out", default=None)
     args = p.parse_args(argv)
+
+    if args.cmd == "calibrate-stage":
+        tune = [r for f in args.jsonl for r in _load(f)]
+        test = [r for f in args.test for r in _load(f)] if args.test else None
+        res = calibrate_stage(tune, test)
+        print(f"stage set: {res['n_stage_traps']} traps, {res['n_stage_controls']} controls (of {res['n_tune']} tuning items)")
+        for c in res["curve"]:
+            print(f"  τ={c['entropy_tau']:.2f}  catch={c['trap_catch']:.2f}  pass={c['control_pass']:.2f}  balanced={c['balanced']:.2f}")
+        print("chosen:", res["chosen"], "| default τ:", res["default_tau"])
+        keys = ("accuracy", "FAR", "over_refusal")
+        if "test_chosen" in res:
+            print("test, chosen :", {k: res["test_chosen"][k] for k in keys})
+            print("test, default:", {k: res["test_default"][k] for k in keys})
+        if args.out:
+            with open(args.out, "w", encoding="utf-8") as fh:
+                json.dump(res, fh, ensure_ascii=False, indent=2)
+        return 0
 
     if args.cmd == "table":
         tab = table(_load(args.jsonl))
