@@ -1,0 +1,899 @@
+{
+  "metadane": {
+    "tytul": "Przebudowane pułapki (minimal pairs) do kalibracji progu entropii",
+    "jezyk": "pl",
+    "wersja": "1.0",
+    "liczba_pytan": 66,
+    "liczby_w_kategoriach": {
+      "paradoks": 10,
+      "normalny_fakt": 33,
+      "falszywe_zalozenie": 12,
+      "brak_danych": 11
+    },
+    "cel": "Pułapki, które warstwy symboliczne łapią w benchmarku 100, przepisane tak, by zmienić cechę, po której łapie je reguła (słownictwo katalogu paradoksów, formalizacja Z3, fakty z bazy wiedzy, nazwy własne / zaimki dzierżawcze / deiksa), przy zachowaniu nierozstrzygalności. Każda pułapka ma bliźniaczy fakt kontrolny z tej samej dziedziny. Służą wyłącznie do kalibracji τ; test odbywa się raz na held-out v1 + v2.",
+    "pary": [
+      {
+        "pulapka": "Q301",
+        "kontrola": "Q302",
+        "zrodlo": "Q002",
+        "obchodzone_reguly": "R1,R4"
+      },
+      {
+        "pulapka": "Q303",
+        "kontrola": "Q304",
+        "zrodlo": "Q006",
+        "obchodzone_reguly": "R4"
+      },
+      {
+        "pulapka": "Q305",
+        "kontrola": "Q306",
+        "zrodlo": "Q009",
+        "obchodzone_reguly": "R4"
+      },
+      {
+        "pulapka": "Q307",
+        "kontrola": "Q308",
+        "zrodlo": "Q010",
+        "obchodzone_reguly": "R4"
+      },
+      {
+        "pulapka": "Q309",
+        "kontrola": "Q310",
+        "zrodlo": "Q016",
+        "obchodzone_reguly": "R4"
+      },
+      {
+        "pulapka": "Q311",
+        "kontrola": "Q312",
+        "zrodlo": "Q021",
+        "obchodzone_reguly": "R4"
+      },
+      {
+        "pulapka": "Q313",
+        "kontrola": "Q314",
+        "zrodlo": "Q023",
+        "obchodzone_reguly": "R4"
+      },
+      {
+        "pulapka": "Q315",
+        "kontrola": "Q316",
+        "zrodlo": "Q024",
+        "obchodzone_reguly": "R4"
+      },
+      {
+        "pulapka": "Q317",
+        "kontrola": "Q318",
+        "zrodlo": "Q020",
+        "obchodzone_reguly": "R4,R5"
+      },
+      {
+        "pulapka": "Q319",
+        "kontrola": "Q320",
+        "zrodlo": "Q019",
+        "obchodzone_reguly": "R4,R7"
+      },
+      {
+        "pulapka": "Q321",
+        "kontrola": "Q322",
+        "zrodlo": "Q045",
+        "obchodzone_reguly": "R5"
+      },
+      {
+        "pulapka": "Q323",
+        "kontrola": "Q324",
+        "zrodlo": "Q046",
+        "obchodzone_reguly": "R5"
+      },
+      {
+        "pulapka": "Q325",
+        "kontrola": "Q326",
+        "zrodlo": "Q043",
+        "obchodzone_reguly": "R5"
+      },
+      {
+        "pulapka": "Q327",
+        "kontrola": "Q328",
+        "zrodlo": "Q047",
+        "obchodzone_reguly": "R5"
+      },
+      {
+        "pulapka": "Q329",
+        "kontrola": "Q330",
+        "zrodlo": "Q026",
+        "obchodzone_reguly": "R2"
+      },
+      {
+        "pulapka": "Q331",
+        "kontrola": "Q332",
+        "zrodlo": "Q032",
+        "obchodzone_reguly": "R2"
+      },
+      {
+        "pulapka": "Q333",
+        "kontrola": "Q334",
+        "zrodlo": "Q035",
+        "obchodzone_reguly": "R2"
+      },
+      {
+        "pulapka": "Q335",
+        "kontrola": "Q336",
+        "zrodlo": "Q036",
+        "obchodzone_reguly": "R2"
+      },
+      {
+        "pulapka": "Q337",
+        "kontrola": "Q338",
+        "zrodlo": "Q044",
+        "obchodzone_reguly": "R2,R5"
+      },
+      {
+        "pulapka": "Q339",
+        "kontrola": "Q340",
+        "zrodlo": "Q049",
+        "obchodzone_reguly": "R3"
+      },
+      {
+        "pulapka": "Q341",
+        "kontrola": "Q342",
+        "zrodlo": "Q050",
+        "obchodzone_reguly": "R3"
+      },
+      {
+        "pulapka": "Q343",
+        "kontrola": "Q344",
+        "zrodlo": "Q027",
+        "obchodzone_reguly": "R3"
+      },
+      {
+        "pulapka": "Q345",
+        "kontrola": "Q346",
+        "zrodlo": "Q051",
+        "obchodzone_reguly": "R7"
+      },
+      {
+        "pulapka": "Q347",
+        "kontrola": "Q348",
+        "zrodlo": "Q060",
+        "obchodzone_reguly": "R7"
+      },
+      {
+        "pulapka": "Q349",
+        "kontrola": "Q350",
+        "zrodlo": "Q066",
+        "obchodzone_reguly": "R7"
+      },
+      {
+        "pulapka": "Q351",
+        "kontrola": "Q352",
+        "zrodlo": "Q075",
+        "obchodzone_reguly": "R7"
+      },
+      {
+        "pulapka": "Q353",
+        "kontrola": "Q354",
+        "zrodlo": "Q062",
+        "obchodzone_reguly": "R7"
+      },
+      {
+        "pulapka": "Q355",
+        "kontrola": "Q356",
+        "zrodlo": "Q052",
+        "obchodzone_reguly": "R6"
+      },
+      {
+        "pulapka": "Q357",
+        "kontrola": "Q358",
+        "zrodlo": "Q058",
+        "obchodzone_reguly": "R6"
+      },
+      {
+        "pulapka": "Q359",
+        "kontrola": "Q360",
+        "zrodlo": "Q073",
+        "obchodzone_reguly": "R6"
+      },
+      {
+        "pulapka": "Q361",
+        "kontrola": "Q362",
+        "zrodlo": "Q055",
+        "obchodzone_reguly": "R6"
+      },
+      {
+        "pulapka": "Q363",
+        "kontrola": "Q364",
+        "zrodlo": "Q064",
+        "obchodzone_reguly": "R7"
+      },
+      {
+        "pulapka": "Q365",
+        "kontrola": "Q366",
+        "zrodlo": "Q063",
+        "obchodzone_reguly": "R6"
+      }
+    ]
+  },
+  "pytania": [
+    {
+      "id": "Q301",
+      "kategoria": "paradoks",
+      "temat": "Przypominacz",
+      "pytanie": "Na wyspie jedna osoba przypomina o terminach dokładnie tym mieszkańcom, którzy nie przypominają sobie terminów sami. Czy ta osoba, mieszkanka wyspy, przypomina o terminach samej sobie?",
+      "odpowiedz_wzorcowa": "Żadna odpowiedź nie jest spójna: opis takiej osoby jest sprzeczny.",
+      "wyjasnienie": "Struktura golibrody w innym słownictwie: przypomina sobie wtedy i tylko wtedy, gdy sobie nie przypomina.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q302",
+      "kategoria": "normalny_fakt",
+      "temat": "Przypominacz",
+      "pytanie": "Na wyspie jedna osoba przypomina o terminach wszystkim mieszkańcom wyspy i sama na niej mieszka. Czy przypomina o terminach także sobie?",
+      "odpowiedz_wzorcowa": "Tak.",
+      "wyjasnienie": "Jest mieszkanką wyspy, a przypomina wszystkim mieszkańcom.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q303",
+      "kategoria": "paradoks",
+      "temat": "Firma",
+      "pytanie": "Firma stopniowo wymieniła wszystkich pracowników, a odchodzący założyli identyczną firmę z tą samą nazwą i procedurami. Która z nich jest tą samą firmą co pierwotna?",
+      "odpowiedz_wzorcowa": "To zależy od przyjętego kryterium tożsamości (ciągłość prawna, ludzie, struktura); pytanie nie ma jednej odpowiedzi bez definicji.",
+      "wyjasnienie": "Struktura statku Tezeusza w innym słownictwie.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q304",
+      "kategoria": "normalny_fakt",
+      "temat": "Firma",
+      "pytanie": "Firma przeniosła się do nowego biura, zachowując tych samych pracowników, nazwę i właścicieli. Czy nadal jest tą samą firmą?",
+      "odpowiedz_wzorcowa": "Tak.",
+      "wyjasnienie": "Zmiana adresu nie zmienia tożsamości firmy przy zachowaniu pozostałych cech.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q305",
+      "kategoria": "paradoks",
+      "temat": "Bąk",
+      "pytanie": "Wirujący bąk w każdym pojedynczym momencie ma dokładnie jedno ustawienie i w tym momencie się nie obraca. Czy wynika z tego, że bąk w ogóle się nie obraca?",
+      "odpowiedz_wzorcowa": "Nie; ruch to zmiana położenia w przedziale czasu, a nie własność pojedynczej chwili.",
+      "wyjasnienie": "Struktura strzały Zenona w innym słownictwie (paradoks pozorny).",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q306",
+      "kategoria": "normalny_fakt",
+      "temat": "Bąk",
+      "pytanie": "Bąk obraca się 10 razy na sekundę. Ile obrotów wykona w ciągu 3 sekund?",
+      "odpowiedz_wzorcowa": "30.",
+      "wyjasnienie": "10 obrotów na sekundę razy 3 sekundy.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q307",
+      "kategoria": "paradoks",
+      "temat": "Nieskończony parking",
+      "pytanie": "Parking ma nieskończenie wiele miejsc ponumerowanych 1, 2, 3 i tak dalej, wszystkie są zajęte. Jak zmieścić jeszcze jeden samochód, nie wyrzucając żadnego?",
+      "odpowiedz_wzorcowa": "Każdy samochód z miejsca n przestawia się na miejsce n+1; miejsce 1 się zwalnia.",
+      "wyjasnienie": "Struktura hotelu Hilberta w innym słownictwie (paradoks pozorny).",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q308",
+      "kategoria": "normalny_fakt",
+      "temat": "Parking",
+      "pytanie": "Parking ma 100 miejsc, a 99 z nich jest zajętych. Ile samochodów jeszcze się zmieści?",
+      "odpowiedz_wzorcowa": "Jeden.",
+      "wyjasnienie": "100 minus 99.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q309",
+      "kategoria": "paradoks",
+      "temat": "Instrukcja maszyny",
+      "pytanie": "W jednej niezmiennej historii konstruktorka cofa się w czasie i niszczy jedyny egzemplarz instrukcji, bez którego nigdy nie zbudowałaby swojej maszyny. Jak potem mogła nią podróżować?",
+      "odpowiedz_wzorcowa": "W jednej niezmiennej historii scenariusz jest niespójny; nie da się wskazać sposobu.",
+      "wyjasnienie": "Struktura paradoksu dziadka w innym słownictwie.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q310",
+      "kategoria": "normalny_fakt",
+      "temat": "Instrukcja maszyny",
+      "pytanie": "Konstruktorka zbudowała maszynę według instrukcji kupionej w księgarni. Skąd miała instrukcję?",
+      "odpowiedz_wzorcowa": "Z księgarni.",
+      "wyjasnienie": "Wynika wprost z treści.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q311",
+      "kategoria": "paradoks",
+      "temat": "Niezapowiedziana kontrola",
+      "pytanie": "Szefowa ogłasza, że w przyszłym tygodniu roboczym przeprowadzi kontrolę w dniu, którego rano nikt nie będzie mógł przewidzieć. Pracownicy wykluczają piątek, potem czwartek i kolejne dni. Czy dowiedli, że kontroli nie będzie?",
+      "odpowiedz_wzorcowa": "Nie; rozumowanie wsteczne opiera się na samoodnoszącym się założeniu o wiedzy i kontrola wciąż może zaskoczyć.",
+      "wyjasnienie": "Struktura paradoksu niespodziewanego egzaminu w innym słownictwie.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q312",
+      "kategoria": "normalny_fakt",
+      "temat": "Zapowiedziana kontrola",
+      "pytanie": "Szefowa ogłasza, że kontrola odbędzie się w środę przyszłego tygodnia. W którym dniu będzie kontrola?",
+      "odpowiedz_wzorcowa": "W środę.",
+      "wyjasnienie": "Wynika wprost z treści.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q313",
+      "kategoria": "paradoks",
+      "temat": "Zamknięte drzwi",
+      "pytanie": "Ktoś mówi szczerze: „Drzwi są zamknięte, ale nie sądzę, żeby były zamknięte”. Czy można to szczerze twierdzić, choć zdanie może być prawdziwe?",
+      "odpowiedz_wzorcowa": "Zdanie może być prawdziwe, ale nie da się go spójnie szczerze twierdzić; to absurd pragmatyczny, nie sprzeczność logiczna.",
+      "wyjasnienie": "Struktura paradoksu Moore'a w innym słownictwie.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q314",
+      "kategoria": "normalny_fakt",
+      "temat": "Zamknięte drzwi",
+      "pytanie": "Ktoś mówi: „Drzwi są zamknięte i sądzę, że są zamknięte”. Czy to zdanie może być prawdziwe?",
+      "odpowiedz_wzorcowa": "Tak.",
+      "wyjasnienie": "Nie zawiera sprzeczności.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q315",
+      "kategoria": "paradoks",
+      "temat": "Dni godne uwagi",
+      "pytanie": "Gdyby istniały dni roku, w których nie wydarzyło się nic godnego uwagi, najwcześniejszy z nich byłby przez to godny uwagi. Czy dowodzi to, że każdy dzień roku jest godny uwagi?",
+      "odpowiedz_wzorcowa": "Nie; argument wykorzystuje nieostre i samoodnoszące się pojęcie „godny uwagi”, więc nie dowodzi tezy.",
+      "wyjasnienie": "Struktura paradoksu interesującej liczby w innym słownictwie.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q316",
+      "kategoria": "normalny_fakt",
+      "temat": "Rok przestępny",
+      "pytanie": "Rok nieprzestępny ma 365 dni. Ile dni ma rok przestępny?",
+      "odpowiedz_wzorcowa": "366.",
+      "wyjasnienie": "Rok przestępny ma dodatkowy dzień w lutym.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q317",
+      "kategoria": "paradoks",
+      "temat": "Słownik",
+      "pytanie": "Redaktorka sprawdziła każde hasło długiego słownika i każde uważa za poprawne, a zarazem jest przekonana, że w słowniku jest co najmniej jeden błąd. Czy jej przekonania muszą być nieracjonalne?",
+      "odpowiedz_wzorcowa": "Nie muszą; każde przekonanie z osobna jest uzasadnione, a ich koniunkcja mało prawdopodobna. To napięcie między racjonalnością a spójnością.",
+      "wyjasnienie": "Struktura paradoksu przedmowy w innym słownictwie.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q318",
+      "kategoria": "normalny_fakt",
+      "temat": "Słownik",
+      "pytanie": "Redaktorka sprawdziła słownik i znalazła w nim jeden błąd. Czy słownik zawiera co najmniej jeden błąd?",
+      "odpowiedz_wzorcowa": "Tak.",
+      "wyjasnienie": "Znaleziony błąd wystarcza.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q319",
+      "kategoria": "paradoks",
+      "temat": "Kwiz",
+      "pytanie": "W kwizie dla tysiąca uczestników nagrodę dostaje dokładnie jedna osoba. O każdej konkretnej osobie rozsądnie jest sądzić, że nie wygra. Czy wolno z tego wnioskować, że nikt nie wygra?",
+      "odpowiedz_wzorcowa": "Nie; z wysokiego prawdopodobieństwa przegranej każdego z osobna nie wynika przegrana wszystkich.",
+      "wyjasnienie": "Struktura paradoksu loterii w innym słownictwie.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q320",
+      "kategoria": "normalny_fakt",
+      "temat": "Kwiz",
+      "pytanie": "W kwizie dla tysiąca uczestników nagrodę dostaje dokładnie jedna osoba. Ile osób dostanie nagrodę?",
+      "odpowiedz_wzorcowa": "Jedna.",
+      "wyjasnienie": "Wynika wprost z treści.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q321",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Pająki",
+      "pytanie": "Dlaczego pająki mają sześć nóg?",
+      "odpowiedz_wzorcowa": "Pająki nie mają sześciu nóg; mają osiem.",
+      "wyjasnienie": "Sześć nóg mają owady. Fałszywe założenie: pająki mają sześć nóg.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q322",
+      "kategoria": "normalny_fakt",
+      "temat": "Pająki",
+      "pytanie": "Ile nóg ma pająk?",
+      "odpowiedz_wzorcowa": "Osiem.",
+      "wyjasnienie": "Pajęczaki mają cztery pary odnóży krocznych.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q323",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Litr",
+      "pytanie": "Dlaczego litr jest jednostką masy?",
+      "odpowiedz_wzorcowa": "Litr nie jest jednostką masy; jest jednostką objętości.",
+      "wyjasnienie": "Fałszywe założenie: litr mierzy masę.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q324",
+      "kategoria": "normalny_fakt",
+      "temat": "Litr",
+      "pytanie": "Jaką wielkość mierzy się w litrach?",
+      "odpowiedz_wzorcowa": "Objętość.",
+      "wyjasnienie": "Litr to jednostka objętości.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q325",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Rekin",
+      "pytanie": "Którym ssakiem jest rekin?",
+      "odpowiedz_wzorcowa": "Rekin nie jest ssakiem; jest rybą chrzęstnoszkieletową.",
+      "wyjasnienie": "Fałszywe założenie: rekin jest ssakiem.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q326",
+      "kategoria": "normalny_fakt",
+      "temat": "Rekin",
+      "pytanie": "Do jakiej grupy zwierząt należą rekiny: ryb czy ssaków?",
+      "odpowiedz_wzorcowa": "Do ryb.",
+      "wyjasnienie": "Rekiny są rybami chrzęstnoszkieletowymi.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q327",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Wrzenie wody",
+      "pytanie": "Dlaczego woda pod normalnym ciśnieniem na poziomie morza wrze w temperaturze 50 °C?",
+      "odpowiedz_wzorcowa": "Nie wrze w 50 °C; w tych warunkach wrze w około 100 °C.",
+      "wyjasnienie": "Fałszywe założenie: temperatura wrzenia to 50 °C.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q328",
+      "kategoria": "normalny_fakt",
+      "temat": "Wrzenie wody",
+      "pytanie": "W jakiej temperaturze wrze woda pod normalnym ciśnieniem na poziomie morza?",
+      "odpowiedz_wzorcowa": "W około 100 °C.",
+      "wyjasnienie": "Standardowa temperatura wrzenia wody.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q329",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Miesiące",
+      "pytanie": "Który miesiąc w kalendarzu gregoriańskim ma 32 dni?",
+      "odpowiedz_wzorcowa": "Żaden; najdłuższe miesiące mają 31 dni.",
+      "wyjasnienie": "Fałszywe założenie: istnieje miesiąc z 32 dniami.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q330",
+      "kategoria": "normalny_fakt",
+      "temat": "Miesiące",
+      "pytanie": "Który miesiąc w kalendarzu gregoriańskim ma 28 lub 29 dni?",
+      "odpowiedz_wzorcowa": "Luty.",
+      "wyjasnienie": "Luty ma 28 dni, a w roku przestępnym 29.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q331",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Pingwiny",
+      "pytanie": "Dlaczego pingwiny zimą odlatują na południe, skoro tak dobrze latają?",
+      "odpowiedz_wzorcowa": "Pingwiny nie latają; są ptakami nielotnymi.",
+      "wyjasnienie": "Fałszywe założenie: pingwiny latają.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q332",
+      "kategoria": "normalny_fakt",
+      "temat": "Pingwiny",
+      "pytanie": "Czy pingwiny potrafią latać?",
+      "odpowiedz_wzorcowa": "Nie.",
+      "wyjasnienie": "Pingwiny są ptakami nielotnymi; ich skrzydła służą do pływania.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q333",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Serce",
+      "pytanie": "Dlaczego ludzkie serce ma pięć komór?",
+      "odpowiedz_wzorcowa": "Ludzkie serce nie ma pięciu komór; ma cztery jamy: dwa przedsionki i dwie komory.",
+      "wyjasnienie": "Fałszywe założenie: serce ma pięć komór.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q334",
+      "kategoria": "normalny_fakt",
+      "temat": "Serce",
+      "pytanie": "Ile komór, licząc przedsionki i komory, ma ludzkie serce?",
+      "odpowiedz_wzorcowa": "Cztery.",
+      "wyjasnienie": "Dwa przedsionki i dwie komory.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q335",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Róże",
+      "pytanie": "Wiadomo tylko, że wszystkie róże są kwiatami. Dlaczego wynika z tego, że wszystkie kwiaty są różami?",
+      "odpowiedz_wzorcowa": "Nie wynika; z „każde A jest B” nie wynika „każde B jest A”.",
+      "wyjasnienie": "Odwrócenie implikacji. Fałszywe założenie: zachodzi wynikanie odwrotne.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q336",
+      "kategoria": "normalny_fakt",
+      "temat": "Róże",
+      "pytanie": "Wiadomo, że wszystkie róże są kwiatami. Czy każda róża jest kwiatem?",
+      "odpowiedz_wzorcowa": "Tak.",
+      "wyjasnienie": "Wynika wprost z przesłanki.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q337",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Kontynenty",
+      "pytanie": "Jak nazywa się ósmy kontynent w najczęstszym podziale świata na siedem kontynentów?",
+      "odpowiedz_wzorcowa": "Nie ma ósmego kontynentu w podziale na siedem kontynentów.",
+      "wyjasnienie": "Fałszywe założenie: lista siedmiu kontynentów ma ósmy element.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q338",
+      "kategoria": "normalny_fakt",
+      "temat": "Kontynenty",
+      "pytanie": "Ile kontynentów wyróżnia najczęstszy podział świata stosowany w polskich szkołach?",
+      "odpowiedz_wzorcowa": "Siedem.",
+      "wyjasnienie": "Najczęstszy podział obejmuje siedem kontynentów.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q339",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Miód",
+      "pytanie": "Dlaczego miód psuje się po kilku dniach w szczelnie zamkniętym słoiku?",
+      "odpowiedz_wzorcowa": "Miód w szczelnym słoiku nie psuje się po kilku dniach; może być przechowywany bardzo długo.",
+      "wyjasnienie": "Fałszywe założenie: miód szybko się psuje.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q340",
+      "kategoria": "normalny_fakt",
+      "temat": "Miód",
+      "pytanie": "Czy miód w szczelnie zamkniętym słoiku może być przechowywany przez długi czas?",
+      "odpowiedz_wzorcowa": "Tak.",
+      "wyjasnienie": "Niska aktywność wody hamuje rozwój drobnoustrojów.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q341",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Dźwięk",
+      "pytanie": "Dlaczego dźwięk rozchodzi się w próżni szybciej niż w powietrzu?",
+      "odpowiedz_wzorcowa": "Dźwięk w ogóle nie rozchodzi się w próżni; potrzebuje ośrodka.",
+      "wyjasnienie": "Fałszywe założenie: dźwięk rozchodzi się w próżni.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q342",
+      "kategoria": "normalny_fakt",
+      "temat": "Dźwięk",
+      "pytanie": "Czy dźwięk może rozchodzić się w próżni?",
+      "odpowiedz_wzorcowa": "Nie.",
+      "wyjasnienie": "Fala dźwiękowa wymaga ośrodka materialnego.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q343",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Wieloryby",
+      "pytanie": "Od kiedy wieloryby zalicza się do ryb?",
+      "odpowiedz_wzorcowa": "Wieloryby nie są zaliczane do ryb; są ssakami.",
+      "wyjasnienie": "Fałszywe założenie: wieloryby są rybami.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q344",
+      "kategoria": "normalny_fakt",
+      "temat": "Wieloryby",
+      "pytanie": "Do jakiej gromady zwierząt należą wieloryby?",
+      "odpowiedz_wzorcowa": "Do ssaków.",
+      "wyjasnienie": "Wieloryby oddychają płucami i karmią młode mlekiem.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q345",
+      "kategoria": "brak_danych",
+      "temat": "Sąsiadka",
+      "pytanie": "Ile lat ma sąsiadka z trzeciego piętra?",
+      "odpowiedz_wzorcowa": "Nie da się tego ustalić.",
+      "wyjasnienie": "Pytanie nie podaje wieku ani daty urodzenia.",
+      "brakujace_dane": [
+        "Data urodzenia lub wiek sąsiadki."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q346",
+      "kategoria": "normalny_fakt",
+      "temat": "Wiek",
+      "pytanie": "Ktoś urodził się dokładnie 30 lat temu. Ile ma pełnych lat?",
+      "odpowiedz_wzorcowa": "30.",
+      "wyjasnienie": "Wynika wprost z treści.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q347",
+      "kategoria": "brak_danych",
+      "temat": "Hasło w biurze",
+      "pytanie": "Jakie hasło ustawiono na routerze w biurze na parterze?",
+      "odpowiedz_wzorcowa": "Nie da się tego ustalić.",
+      "wyjasnienie": "Hasło nie wynika z żadnych podanych informacji.",
+      "brakujace_dane": [
+        "Dostęp do konfiguracji routera lub informacja od administratora."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q348",
+      "kategoria": "normalny_fakt",
+      "temat": "Napis",
+      "pytanie": "Ile znaków ma napis abc123?",
+      "odpowiedz_wzorcowa": "Sześć.",
+      "wyjasnienie": "Trzy litery i trzy cyfry.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q349",
+      "kategoria": "brak_danych",
+      "temat": "Finał turnieju",
+      "pytanie": "Jakim wynikiem zakończył się mecz finałowy szkolnego turnieju piłkarskiego?",
+      "odpowiedz_wzorcowa": "Nie da się tego ustalić.",
+      "wyjasnienie": "Nie wiadomo, o który turniej chodzi, ani nie podano wyniku.",
+      "brakujace_dane": [
+        "Identyfikacja turnieju i protokół meczu."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q350",
+      "kategoria": "normalny_fakt",
+      "temat": "Punkty za zwycięstwo",
+      "pytanie": "Ile punktów dostaje drużyna za zwycięstwo w typowej lidze piłki nożnej?",
+      "odpowiedz_wzorcowa": "Trzy.",
+      "wyjasnienie": "Standardowa punktacja ligowa: 3 za wygraną, 1 za remis.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q351",
+      "kategoria": "brak_danych",
+      "temat": "Przystanek",
+      "pytanie": "Jak daleko jest od budynku szkoły do najbliższego przystanku autobusowego?",
+      "odpowiedz_wzorcowa": "Nie da się tego ustalić.",
+      "wyjasnienie": "Nie wiadomo, o którą szkołę chodzi.",
+      "brakujace_dane": [
+        "Lokalizacja szkoły i przystanków."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q352",
+      "kategoria": "normalny_fakt",
+      "temat": "Kilometr",
+      "pytanie": "Ile metrów ma kilometr?",
+      "odpowiedz_wzorcowa": "1000.",
+      "wyjasnienie": "Przedrostek kilo oznacza tysiąc.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q353",
+      "kategoria": "brak_danych",
+      "temat": "Pralka",
+      "pytanie": "Pralka wyświetla kod błędu. Który podzespół jest uszkodzony?",
+      "odpowiedz_wzorcowa": "Nie da się tego ustalić bez znajomości kodu i modelu.",
+      "wyjasnienie": "Sam fakt wyświetlenia błędu nie wskazuje usterki.",
+      "brakujace_dane": [
+        "Treść kodu błędu, model pralki i diagnostyka."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q354",
+      "kategoria": "normalny_fakt",
+      "temat": "Pralka",
+      "pytanie": "Do czego służy bęben w pralce?",
+      "odpowiedz_wzorcowa": "Mieści pranie i obraca je podczas prania.",
+      "wyjasnienie": "Podstawowa funkcja bębna.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q355",
+      "kategoria": "brak_danych",
+      "temat": "Rowerzysta",
+      "pytanie": "Rowerzysta dotarł do celu. Jak długo jechał?",
+      "odpowiedz_wzorcowa": "Nie da się tego ustalić.",
+      "wyjasnienie": "Brakuje odległości, prędkości i czasu wyjazdu.",
+      "brakujace_dane": [
+        "Czas wyjazdu i przyjazdu albo dystans i prędkość."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q356",
+      "kategoria": "normalny_fakt",
+      "temat": "Rower",
+      "pytanie": "Ile kół ma typowy rower?",
+      "odpowiedz_wzorcowa": "Dwa.",
+      "wyjasnienie": "Rower jest pojazdem dwukołowym.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q357",
+      "kategoria": "brak_danych",
+      "temat": "Sprzedaż",
+      "pytanie": "Sklep sprzedał w tym miesiącu więcej towaru niż w poprzednim. Czy osiągnął wyższy zysk?",
+      "odpowiedz_wzorcowa": "Nie da się tego ustalić.",
+      "wyjasnienie": "Zysk zależy też od cen i kosztów, których nie podano.",
+      "brakujace_dane": [
+        "Ceny sprzedaży i koszty w obu miesiącach."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q358",
+      "kategoria": "normalny_fakt",
+      "temat": "Zysk",
+      "pytanie": "Jeśli przychód firmy rośnie, a koszty pozostają takie same, czy zysk rośnie?",
+      "odpowiedz_wzorcowa": "Tak.",
+      "wyjasnienie": "Zysk to przychód minus koszty.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q359",
+      "kategoria": "brak_danych",
+      "temat": "Nowe menu",
+      "pytanie": "Po wprowadzeniu nowego menu do restauracji przyszło więcej gości. Jaką część tego wzrostu spowodowało samo menu?",
+      "odpowiedz_wzorcowa": "Nie da się tego ustalić.",
+      "wyjasnienie": "Brakuje grupy kontrolnej i danych o innych czynnikach.",
+      "brakujace_dane": [
+        "Dane z eksperymentu lub grupy kontrolnej i kontrola innych czynników."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q360",
+      "kategoria": "normalny_fakt",
+      "temat": "Menu",
+      "pytanie": "Restauracja wprowadziła nowe menu. Czy zmieniła ofertę dań?",
+      "odpowiedz_wzorcowa": "Tak.",
+      "wyjasnienie": "Nowe menu oznacza zmianę oferty.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q361",
+      "kategoria": "brak_danych",
+      "temat": "Głosowanie",
+      "pytanie": "Kto wygrał głosowanie w klubie, jeśli wiadomo tylko, że frekwencja była wysoka?",
+      "odpowiedz_wzorcowa": "Nie da się tego ustalić.",
+      "wyjasnienie": "Frekwencja nie mówi nic o rozkładzie głosów.",
+      "brakujace_dane": [
+        "Wyniki głosowania dla kandydatów."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q362",
+      "kategoria": "normalny_fakt",
+      "temat": "Głosowanie",
+      "pytanie": "W głosowaniu z dwoma kandydatami jeden dostał ponad połowę ważnych głosów. Czy wygrał?",
+      "odpowiedz_wzorcowa": "Tak.",
+      "wyjasnienie": "Ma więcej głosów niż drugi kandydat.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q363",
+      "kategoria": "brak_danych",
+      "temat": "Powieść",
+      "pytanie": "Ile czasu zajmie przeczytanie powieści leżącej na stole?",
+      "odpowiedz_wzorcowa": "Nie da się tego ustalić.",
+      "wyjasnienie": "Nie znamy długości powieści ani tempa czytania.",
+      "brakujace_dane": [
+        "Liczba stron lub słów i tempo czytania."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q364",
+      "kategoria": "normalny_fakt",
+      "temat": "Kartka",
+      "pytanie": "Ile stron ma jedna kartka papieru, licząc obie strony?",
+      "odpowiedz_wzorcowa": "Dwie.",
+      "wyjasnienie": "Kartka ma awers i rewers.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q365",
+      "kategoria": "brak_danych",
+      "temat": "Prognoza",
+      "pytanie": "Jaką pogodę zapowiada prognoza na najbliższy weekend w górach?",
+      "odpowiedz_wzorcowa": "Nie da się tego ustalić bez aktualnej prognozy.",
+      "wyjasnienie": "Nie podano daty, miejsca ani prognozy.",
+      "brakujace_dane": [
+        "Aktualna prognoza dla określonego miejsca i terminu."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q366",
+      "kategoria": "normalny_fakt",
+      "temat": "Śnieg",
+      "pytanie": "W jakiej porze roku w polskich górach najczęściej pada śnieg?",
+      "odpowiedz_wzorcowa": "Zimą.",
+      "wyjasnienie": "Typowy klimat górski w Polsce.",
+      "brakujace_dane": [],
+      "zrodla": []
+    }
+  ]
+}
