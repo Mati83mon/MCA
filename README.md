@@ -169,7 +169,7 @@ What the uncensored sample shows:
 * **Calibrating τ on the benchmark overfits.** The grid picked τ = 0.9 for DeepSeek: 0.99 on the benchmark, but held-out FAR rises from 0.00 to 0.22. That happens because the benchmark has almost no trap that only R8 can catch, so raising τ costs nothing there. For Qwen the calibrated config (τ = 0.5) gives identical held-out results. For Llama the calibrated τ = 0.6 / similarity 0.5 / entailment 0.8 improves held-out accuracy from 0.71 to 0.75 and lowers over-refusal from 0.67 to 0.50. The defaults stay unchanged.
 * **Remaining errors:** the dominant held-out error is R7 (unresolved referents outside the KB), and Llama's in-distribution errors are R5 (6 control facts flagged by NLI). With only 6 control and 18 trap held-out items per model (one item = 0.17 over-refusal), these are directional signals, not estimates.
 
-**Stage-restricted calibration of τ (pre-registered, run pending).** Only traps that R1–R7 let through can
+**Stage-restricted calibration of τ (pre-registered; result below).** Only traps that R1–R7 let through can
 vote on τ (suggested by a reviewer on the HF forum thread). [`rebuilt_traps_v1.json`](benchmarks/datasets/rebuilt_traps_v1.json)
 holds 33 benchmark traps rewritten so that only the feature the catching rule keys on changes: the paradox
 catalog's wording, the Z3 formalisation, KB facts, or proper names, possessives and deixis. Each item
@@ -182,6 +182,27 @@ before any GPU result is seen:
 3. Choose the highest τ with the best score.
 4. Evaluate it once, against the default, on held-out v1 + v2 (88 items):
    `python -m benchmarks.rule_table calibrate-stage rebuilt__X.jsonl --test heldout__X.jsonl heldout_v2__X.jsonl`.
+
+**Result (Kaggle v12, 2×T4, [`results/kaggle-2xT4/stage-calib-v12/`](results/kaggle-2xT4/stage-calib-v12/)).**
+The test set is held-out v1 + v2: 88 items, of which 65 are traps and 23 are control facts. One trap shifts FAR by 0.015 and one control shifts over-refusal by 0.043.
+
+| Model | Stage set (traps / controls) | Chosen τ | Test, chosen τ: acc / FAR / over-refusal | Test, default τ = 0.6 |
+|---|---|---|---|---|
+| Qwen2.5-7B | 3 / 2 | 0.95 | 0.545 / 0.138 / 0.435 | 0.557 / 0.092 / 0.478 |
+| DeepSeek-R1-7B | 20 / 25 | 0.55 | 0.545 / 0.077 / 0.478 | 0.545 / 0.092 / 0.478 |
+| Llama-3-8B | 14 / 17 | 0.80 | 0.523 / 0.046 / 0.609 | 0.523 / 0.031 / 0.609 |
+
+| Held-out v1 + v2, raw → MCA | FAR | over-refusal |
+|---|---|---|
+| Qwen2.5-7B | 0.615 → 0.092 | 0.087 → 0.478 |
+| DeepSeek-R1-7B | 0.862 → 0.092 | 0.087 → 0.478 |
+| Llama-3-8B | 0.923 → 0.031 | 0.000 → 0.609 |
+
+* **The calibrated τ does not beat the default.** It changes the decision on 4, 1 and 1 test items. For Qwen, 3 traps go through and 1 control is rescued. For DeepSeek, 1 more trap is caught. For Llama, 1 trap goes through. The default τ = 0.6 stays unchanged.
+  - For DeepSeek and Llama, 0.6 lies on or next to the plateau of the stage curve. The balanced score at the default is 0.76 vs 0.79 at the best τ for DeepSeek, and 0.82 at both for Llama.
+  - The Qwen choice rests on 5 items and is not meaningful.
+* **The stage set is far smaller on GPU than offline** (offline 30/33 traps reach it; on GPU 3, 20 and 14). The cause is R7. With an LLM premise extractor, ordinary common nouns become "referents" ("bąk", "samochód", "róża", "próżnia"), and anything outside the KB counts as unresolved. R7 fires first on 31/33 rebuilt control facts for Qwen, 8/33 for DeepSeek and 16/33 for Llama.
+* **R7 is the dominant over-refusal source on held-out**: it refuses 9, 5 and 11 of the 23 held-out control facts. Held-out v2 over-refusal is 0.59 for all three models. R7 precision, not τ, is the next thing to fix: restrict it to proper names, possessives and deixis, as the offline extractor does.
 
 **Before the fixes (first GPU run, v3)** MCA+Qwen scored acc 0.75 with over-refusal **1.00** (every LLM-
 extracted referent hit R7) and MCA+DeepSeek acc 0.80 / over-refusal 0.76 (entropy computed on truncated
