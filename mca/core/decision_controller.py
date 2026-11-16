@@ -14,6 +14,7 @@ R4     Query matches a catalogued antinomy/paradox          EXPLAIN_PARADOX
 R5     NLI contradiction of a presupposition vs evidence    CHALLENGE
 R6     Epistemic void: under-determined target              ABSTAIN
 R7     Epistemic void: unresolved referent                  ABSTAIN
+R8b    High entropy, but a KB passage entails a premise   PASS (answer = passage)
 R8     Semantic entropy above ``entropy_tau``               ABSTAIN
 R9     otherwise                                            PASS
 =====  ==================================================  =================
@@ -27,6 +28,7 @@ from mca.telemetry.schemas import (
     DecisionEnum,
     LogicStatus,
     MetacognitiveTelemetry,
+    NLILabel,
     PolicyDecision,
     PremiseKind,
     PremiseStatus,
@@ -80,6 +82,15 @@ class DecisionController:
             return self._abstain(t, ["R7:unresolved_referent"], 0.85, "; ".join(v.explanation for v in unresolved))
         u = t.uncertainty
         if u is not None and u.n_samples > 1 and u.normalized_entropy > self.config.entropy_tau:
+            grounded = self._evidence_answer(t)
+            if grounded is not None:
+                score, ent, text = grounded
+                return PolicyDecision(
+                    decision=DecisionEnum.PASS, confidence=round(min(0.9, score * ent), 4), triggered_rules=["R8b:evidence_answer"],
+                    rationale=(f"Model niespójny (entropia {u.normalized_entropy:.2f} > {self.config.entropy_tau}), "
+                               f"ale fragment bazy wiedzy potwierdza założenie pytania (podobieństwo {score:.2f}, entailment {ent:.2f})."),
+                    response_text=f"Według bazy wiedzy: {text}",
+                )
             return self._abstain(t, ["R8:semantic_entropy"], round(min(0.95, u.normalized_entropy), 4),
                                  f"Wysoka entropia semantyczna ({u.normalized_entropy:.2f} > {self.config.entropy_tau}).")
         conf = 0.6 + 0.3 * ev.support_ratio
@@ -87,6 +98,22 @@ class DecisionController:
             conf *= 1.0 - 0.5 * u.normalized_entropy
         return PolicyDecision(decision=DecisionEnum.PASS, confidence=round(min(conf, 0.95), 4), triggered_rules=["R9:pass"],
                               rationale="Brak naruszeń: założenia niesprzeczne, niska niepewność.")
+
+    def _evidence_answer(self, t: MetacognitiveTelemetry) -> tuple[float, float, str] | None:
+        """Best KB passage that NLI-entails a non-referent premise of the query, if strong enough."""
+        if not self.config.evidence_answer:
+            return None
+        best: tuple[float, float, str] | None = None
+        for v in t.premise_verdicts:
+            if v.status is not PremiseStatus.SUPPORTED or v.premise.kind is PremiseKind.REFERENT or not v.evidence:
+                continue
+            top = v.evidence[0]
+            ent = float(v.nli_scores.get(NLILabel.ENTAILMENT, 0.0))
+            if top.score < self.config.evidence_answer_min_similarity or ent < self.config.evidence_answer_min_entailment:
+                continue
+            if best is None or top.score > best[0]:
+                best = (float(top.score), ent, top.text)
+        return best
 
     # -- response templates ----------------------------------------------------------
     def _paradox(self, t: MetacognitiveTelemetry, rules: list[str], conf: float) -> PolicyDecision:

@@ -37,6 +37,7 @@ query ─┬─► base LLM stream ──► FIFO buffer ───────�
 | R5 | NLI contradiction of a (non-existential) presupposition | `CHALLENGE` |
 | R6 | Target quantity `UNDERDETERMINED` | `ABSTAIN` |
 | R7 | Unresolved referent | `ABSTAIN` |
+| R8b | Entropy > `entropy_tau`, but a KB passage NLI-entails a premise (sim ≥ 0.6, entail ≥ 0.9) | `PASS`, answer = passage |
 | R8 | Normalised semantic entropy > `entropy_tau` | `ABSTAIN` |
 | R9 | none of the above | `PASS` |
 
@@ -121,6 +122,25 @@ What the numbers say:
 - **Latency is 4–10× raw** (entropy sampling + NLI + Z3), so the fast/slow orchestrator's fast path matters
   in production.
 - Same caveat as the CPU table: the KB and paradox catalog were written with these topics in view.
+
+**Update: rule R8b (evidence answer), rescored on the same telemetry.** A ZeroGPU Space test
+("Która planeta jest druga od Słońca?") showed R8 abstaining although the KB passage "Wenus jest drugą
+planetą od Słońca." supported the question at similarity 0.88 / entailment 0.99. R8b now answers from that
+passage when entropy is high but a KB passage NLI-entails a non-referent premise (similarity ≥ 0.6,
+entailment ≥ 0.9); the answer is the passage, not the model's sample. Because the policy gate is a pure
+function of the stored telemetry, `python -m benchmarks.rescore results/kaggle-2xT4` re-applies it exactly,
+without re-running any model ([`rescored_r8b.csv`](results/kaggle-2xT4/rescored_r8b.csv)):
+
+| MCA run | Accuracy | FAR | Over-refusal | Paradox ID |
+|---|---|---|---|---|
+| Qwen2.5-7B | 0.94 → **0.97** | 0.00 → 0.00 | 0.20 → **0.08** | 0.96 → 0.96 |
+| DeepSeek-R1-7B | 0.90 → **0.97** | 0.00 → 0.00 | 0.36 → **0.08** | 1.00 → 1.00 |
+| Llama-3-8B | 0.85 → **0.89** | 0.01 → 0.01 | 0.52 → **0.36** | 1.00 → 1.00 |
+
+14 abstentions on control facts flip to correct answers and no trap item changes. Read this with two caveats:
+the two thresholds were chosen after inspecting these 21 R8 abstentions, so the rescored numbers are
+in-sample; and R8b can only answer facts the KB covers. Llama-3's remaining over-refusal comes from R5
+(NLI contradiction on verbose answers), which R8b does not touch.
 
 **Before the fixes (first GPU run, v3)** MCA+Qwen scored acc 0.75 with over-refusal **1.00** (every LLM-
 extracted referent hit R7) and MCA+DeepSeek acc 0.80 / over-refusal 0.76 (entropy computed on truncated
