@@ -151,6 +151,24 @@ end-to-end logs are a censored sample: in the runs above semantic entropy was re
 rule table and grid-searches the thresholds offline. It tunes on the 100 items and evaluates the chosen
 config exactly once on the held-out probes. (Suggested by a reviewer on the HF forum thread.)
 
+**Audit run (Kaggle v10, R8b live, `audit_all_layers=True`)** – entropy observed on 100/100 benchmark and
+24/24 held-out items per model. Data: [`results/kaggle-2xT4/audit-v10/`](results/kaggle-2xT4/audit-v10/)
+(per-item rule tables and calibration results in `rule_tables/`).
+
+| Model | Benchmark acc / FAR / over-refusal | Held-out MCA acc / FAR / over-refusal | Held-out raw acc / FAR |
+|---|---|---|---|
+| Qwen2.5-7B | 0.96 / 0.00 / 0.12 | 0.79 / 0.06 / 0.17 | 0.46 / 0.67 |
+| DeepSeek-R1-7B | 0.98 / 0.00 / 0.04 | 0.83 / 0.00 / 0.17 | 0.33 / 0.78 |
+| Llama-3-8B | 0.89 / 0.00 / 0.36 | 0.71 / 0.00 / 0.67 | 0.25 / 0.89 |
+
+What the uncensored sample shows:
+
+* **The fresh run confirms the R8b rescoring** (predicted 0.97 / 0.97 / 0.89, observed 0.96 / 0.98 / 0.89, FAR 0 for all three).
+* **On the 100 items R8 is nearly redundant as a trap detector.** Traps that pass R1–R7 are 0 (Qwen), 1 (DeepSeek) and 1 (Llama). In-distribution its net effect is over-refusal. On held-out it does real work: for DeepSeek 4 traps reach the entropy stage and R8 catches all 4.
+* **Entropy separates traps from control facts only moderately**: AUROC 0.68 / 0.80 / 0.76 on the benchmark and 0.79 / 0.87 / 0.85 on held-out (n = 5 samples). Llama-3 has high entropy on 13/25 control facts; R8b rescues 10 of them.
+* **Calibrating τ on the benchmark overfits.** The grid picked τ = 0.9 for DeepSeek: 0.99 on the benchmark, but held-out FAR rises from 0.00 to 0.22. That happens because the benchmark has almost no trap that only R8 can catch, so raising τ costs nothing there. For Qwen the calibrated config (τ = 0.5) gives identical held-out results. For Llama the calibrated τ = 0.6 / similarity 0.5 / entailment 0.8 improves held-out accuracy from 0.71 to 0.75 and lowers over-refusal from 0.67 to 0.50. The defaults stay unchanged.
+* **Remaining errors:** the dominant held-out error is R7 (unresolved referents outside the KB), and Llama's in-distribution errors are R5 (6 control facts flagged by NLI). With only 6 control and 18 trap held-out items per model (one item = 0.17 over-refusal), these are directional signals, not estimates.
+
 **Before the fixes (first GPU run, v3)** MCA+Qwen scored acc 0.75 with over-refusal **1.00** (every LLM-
 extracted referent hit R7) and MCA+DeepSeek acc 0.80 / over-refusal 0.76 (entropy computed on truncated
 `<think>` traces, plus LLM formal specs with infix `And`/`Or` failing to parse). Commit `05084ba` grounds

@@ -10,7 +10,10 @@ from mca.config import MCAConfig
 from mca.core.decision_controller import DecisionController
 from mca.telemetry.schemas import MetacognitiveTelemetry
 
-RUNS = sorted(Path(__file__).resolve().parents[1].joinpath("results", "kaggle-2xT4").glob("mca__*.jsonl"))
+RESULTS = Path(__file__).resolve().parents[1].joinpath("results", "kaggle-2xT4")
+RUNS = sorted(RESULTS.glob("mca__*.jsonl"))
+AUDIT = sorted(RESULTS.joinpath("audit-v10").glob("*.jsonl"))
+AUDIT_MCA = [p for p in AUDIT if not p.name.startswith("raw")]
 
 
 def _rows(path: Path) -> list[dict]:
@@ -18,7 +21,7 @@ def _rows(path: Path) -> list[dict]:
 
 
 @pytest.mark.skipif(not RUNS, reason="stored GPU telemetry not present")
-@pytest.mark.parametrize("path", RUNS, ids=lambda p: p.stem)
+@pytest.mark.parametrize("path", RUNS + AUDIT_MCA, ids=lambda p: f"{p.parent.name}/{p.stem}")
 def test_rule_verdicts_agree_with_decide(path: Path):
     ctl = DecisionController(MCAConfig(nli_backend="lexical", embedding_backend="hashing"))
     for r in _rows(path):
@@ -37,3 +40,11 @@ def test_table_and_calibration_run_offline():
     res = calibrate(rows[:60], heldout=rows[60:])
     assert res["chosen"]["FAR"] <= 0.0 + 1e-9 or res["chosen"] is not None
     assert "heldout_chosen" in res
+
+
+@pytest.mark.skipif(not AUDIT_MCA, reason="audit telemetry not present")
+@pytest.mark.parametrize("path", AUDIT_MCA, ids=lambda p: p.stem)
+def test_audit_run_is_uncensored(path: Path):
+    """audit_all_layers=True: entropy (hence R8/R8b) is observed on every item, not only on fast-path PASSes."""
+    tab = table(_rows(path))
+    assert all(row["R8"] is not None and row["R8b"] is not None for row in tab)

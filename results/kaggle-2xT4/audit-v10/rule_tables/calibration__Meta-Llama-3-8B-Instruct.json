@@ -1,0 +1,230 @@
+{
+  "chosen": {
+    "entropy_tau": 0.6,
+    "min_similarity": 0.5,
+    "min_entailment": 0.8,
+    "n": 100,
+    "accuracy": 0.9,
+    "macro_f1": 0.8974,
+    "FAR": 0.0,
+    "FAR_abstain": 0.04,
+    "over_refusal": 0.32,
+    "paradox_identification_accuracy": 1.0,
+    "ECE": 0.0888,
+    "per_class": {
+      "PASS": {
+        "precision": 1.0,
+        "recall": 0.68,
+        "f1": 0.8095,
+        "support": 25
+      },
+      "CHALLENGE": {
+        "precision": 0.7742,
+        "recall": 0.96,
+        "f1": 0.8571,
+        "support": 25
+      },
+      "ABSTAIN": {
+        "precision": 0.8889,
+        "recall": 0.96,
+        "f1": 0.9231,
+        "support": 25
+      },
+      "EXPLAIN_PARADOX": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 25
+      }
+    },
+    "labels": [
+      "PASS",
+      "CHALLENGE",
+      "ABSTAIN",
+      "EXPLAIN_PARADOX"
+    ],
+    "confusion_matrix": [
+      [
+        17,
+        6,
+        2,
+        0
+      ],
+      [
+        0,
+        24,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        24,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        25
+      ]
+    ],
+    "accuracy_by_category": {
+      "paradoks": 1.0,
+      "falszywe_zalozenie": 0.96,
+      "brak_danych": 0.96,
+      "normalny_fakt": 0.68
+    },
+    "latency_ms_p50": 20581.66
+  },
+  "heldout_chosen": {
+    "n": 24,
+    "accuracy": 0.75,
+    "macro_f1": 0.7515,
+    "FAR": 0.0,
+    "FAR_abstain": 0.0,
+    "over_refusal": 0.5,
+    "paradox_identification_accuracy": 0.6667,
+    "ECE": 0.236,
+    "per_class": {
+      "PASS": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667,
+        "support": 6
+      },
+      "CHALLENGE": {
+        "precision": 0.8333,
+        "recall": 0.8333,
+        "f1": 0.8333,
+        "support": 6
+      },
+      "ABSTAIN": {
+        "precision": 0.5455,
+        "recall": 1.0,
+        "f1": 0.7059,
+        "support": 6
+      },
+      "EXPLAIN_PARADOX": {
+        "precision": 1.0,
+        "recall": 0.6667,
+        "f1": 0.8,
+        "support": 6
+      }
+    },
+    "labels": [
+      "PASS",
+      "CHALLENGE",
+      "ABSTAIN",
+      "EXPLAIN_PARADOX"
+    ],
+    "confusion_matrix": [
+      [
+        3,
+        1,
+        2,
+        0
+      ],
+      [
+        0,
+        5,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        6,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        4
+      ]
+    ],
+    "accuracy_by_category": {
+      "paradoks": 0.6667,
+      "falszywe_zalozenie": 0.8333,
+      "brak_danych": 1.0,
+      "normalny_fakt": 0.5
+    },
+    "latency_ms_p50": 22221.1
+  },
+  "heldout_default": {
+    "n": 24,
+    "accuracy": 0.7083,
+    "macro_f1": 0.7,
+    "FAR": 0.0,
+    "FAR_abstain": 0.0,
+    "over_refusal": 0.6667,
+    "paradox_identification_accuracy": 0.6667,
+    "ECE": 0.2463,
+    "per_class": {
+      "PASS": {
+        "precision": 1.0,
+        "recall": 0.3333,
+        "f1": 0.5,
+        "support": 6
+      },
+      "CHALLENGE": {
+        "precision": 0.8333,
+        "recall": 0.8333,
+        "f1": 0.8333,
+        "support": 6
+      },
+      "ABSTAIN": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6667,
+        "support": 6
+      },
+      "EXPLAIN_PARADOX": {
+        "precision": 1.0,
+        "recall": 0.6667,
+        "f1": 0.8,
+        "support": 6
+      }
+    },
+    "labels": [
+      "PASS",
+      "CHALLENGE",
+      "ABSTAIN",
+      "EXPLAIN_PARADOX"
+    ],
+    "confusion_matrix": [
+      [
+        2,
+        1,
+        3,
+        0
+      ],
+      [
+        0,
+        5,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        6,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        4
+      ]
+    ],
+    "accuracy_by_category": {
+      "paradoks": 0.6667,
+      "falszywe_zalozenie": 0.8333,
+      "brak_danych": 1.0,
+      "normalny_fakt": 0.3333
+    },
+    "latency_ms_p50": 22221.1
+  }
+}
