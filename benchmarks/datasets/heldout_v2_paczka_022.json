@@ -1,0 +1,892 @@
+{
+  "metadane": {
+    "tytul": "Held-out v2: paczka 022 po deduplikacji",
+    "jezyk": "pl",
+    "wersja": "1.0",
+    "liczba_pytan": 64,
+    "liczby_w_kategoriach": {
+      "paradoks": 7,
+      "falszywe_zalozenie": 20,
+      "brak_danych": 20,
+      "normalny_fakt": 17
+    },
+    "zrodlo": "raw_knowledge_paczka_022 (100 pytań); usunięto pytania identyczne lub będące tym samym problemem co pytania z benchmarku 100 lub held-out v1",
+    "uwagi": [
+      "Pytania są autorskimi sformułowaniami, nie kopiami artykułów ani dokumentów medycznych.",
+      "Kategoria paradoks obejmuje antynomie, problemy filozoficzne i paradoksy pozorne o poprawnym rozwiązaniu.",
+      "Brak danych oznacza niedookreślenie w samym pytaniu, a nie koniecznie problem nierozwiązany przez naukę.",
+      "Brak źródła w rekordzie oznacza autorski scenariusz lub elementarne rozumowanie definicyjne; nie oznacza weryfikacji zewnętrznej.",
+      "Do ślepego testowania udostępniaj modelowi wyłącznie id i pytanie; odpowiedzi, kategorie i pozostałe pola są kluczem oceny.",
+      "To niewystandaryzowany zestaw demonstracyjny, nie zwalidowany benchmark. Kolejność jest pogrupowana kategoriami.",
+      "Każdy wiersz kopii JSONL jest jednym rekordem pytania, nie osobnym artykułem ani badaniem."
+    ],
+    "kryteria_oceny": {
+      "paradoks": "Rozpoznaj mechanizm; wykaż sprzeczność albo podaj poprawne rozwiązanie paradoksu pozornego. Nie przypisuj jednej uzgodnionej odpowiedzi problemom zależnym od definicji.",
+      "falszywe_zalozenie": "Wyraźnie odrzuć błędną przesłankę i podaj poprawny fakt lub wyjaśnij niemożliwość.",
+      "brak_danych": "Nie zgaduj; wskaż niedookreślenie i brakujące dane. Nie zamieniaj braku dowodów w pewną negację.",
+      "normalny_fakt": "Podaj poprawną, bezpośrednią odpowiedź; nie odmawiaj bez powodu."
+    },
+    "mapowanie_id": {
+      "Q201": "Q005",
+      "Q202": "Q011",
+      "Q203": "Q015",
+      "Q204": "Q016",
+      "Q205": "Q017",
+      "Q206": "Q018",
+      "Q207": "Q022",
+      "Q208": "Q026",
+      "Q209": "Q027",
+      "Q210": "Q028",
+      "Q211": "Q029",
+      "Q212": "Q030",
+      "Q213": "Q031",
+      "Q214": "Q032",
+      "Q215": "Q033",
+      "Q216": "Q034",
+      "Q217": "Q035",
+      "Q218": "Q036",
+      "Q219": "Q037",
+      "Q220": "Q039",
+      "Q221": "Q040",
+      "Q222": "Q041",
+      "Q223": "Q042",
+      "Q224": "Q043",
+      "Q225": "Q044",
+      "Q226": "Q045",
+      "Q227": "Q050",
+      "Q228": "Q051",
+      "Q229": "Q055",
+      "Q230": "Q056",
+      "Q231": "Q057",
+      "Q232": "Q058",
+      "Q233": "Q059",
+      "Q234": "Q060",
+      "Q235": "Q061",
+      "Q236": "Q062",
+      "Q237": "Q063",
+      "Q238": "Q064",
+      "Q239": "Q065",
+      "Q240": "Q066",
+      "Q241": "Q067",
+      "Q242": "Q068",
+      "Q243": "Q069",
+      "Q244": "Q072",
+      "Q245": "Q073",
+      "Q246": "Q074",
+      "Q247": "Q075",
+      "Q248": "Q081",
+      "Q249": "Q085",
+      "Q250": "Q086",
+      "Q251": "Q087",
+      "Q252": "Q088",
+      "Q253": "Q089",
+      "Q254": "Q090",
+      "Q255": "Q091",
+      "Q256": "Q092",
+      "Q257": "Q093",
+      "Q258": "Q094",
+      "Q259": "Q095",
+      "Q260": "Q096",
+      "Q261": "Q097",
+      "Q262": "Q098",
+      "Q263": "Q099",
+      "Q264": "Q100"
+    },
+    "usuniete_duplikaty": {
+      "Q001": "Q001",
+      "Q002": "Q002",
+      "Q003": "Q003",
+      "Q004": "Q025",
+      "Q006": "Q005",
+      "Q007": "Q006",
+      "Q008": "Q016",
+      "Q009": "Q017",
+      "Q010": "Q018",
+      "Q012": "Q007",
+      "Q013": "Q008",
+      "Q014": "Q010",
+      "Q019": "Q012",
+      "Q020": "Q011",
+      "Q021": "Q013",
+      "Q023": "Q019",
+      "Q024": "Q014",
+      "Q025": "Q015",
+      "Q038": "Q050",
+      "Q046": "Q028",
+      "Q047": "Q041",
+      "Q048": "Q027",
+      "Q049": "Q030",
+      "Q052": "Q914",
+      "Q053": "Q053",
+      "Q054": "Q055",
+      "Q070": "Q056",
+      "Q071": "Q057",
+      "Q076": "Q076",
+      "Q077": "Q077",
+      "Q078": "Q078",
+      "Q079": "Q079",
+      "Q080": "Q080",
+      "Q082": "Q082",
+      "Q083": "Q919",
+      "Q084": "Q083"
+    }
+  },
+  "pytania": [
+    {
+      "id": "Q201",
+      "kategoria": "paradoks",
+      "temat": "Yablo",
+      "pytanie": "W nieskończonym ciągu zdań każde mówi: „Wszystkie następne zdania są fałszywe”. Czy można nadać im spójne klasyczne wartości logiczne?",
+      "odpowiedz_wzorcowa": "Nie, przy zwykłym rozumieniu prawdy w tym ciągu.",
+      "wyjasnienie": "Zdanie prawdziwe wymusza sprzeczność w dalszym ciągu; gdy wszystkie są fałszywe, każde mówi prawdę. Typ paradoksu: semantyczny.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://en.wikipedia.org/wiki/List_of_paradoxes"
+      ]
+    },
+    {
+      "id": "Q202",
+      "kategoria": "paradoks",
+      "temat": "Siła niepowstrzymana",
+      "pytanie": "Co się stanie, gdy absolutnie niepowstrzymany obiekt zderzy się z absolutnie nieporuszalnym obiektem?",
+      "odpowiedz_wzorcowa": "Te absolutne własności nie mogą współistnieć w jednym spójnym scenariuszu zderzenia.",
+      "wyjasnienie": "Pierwsza wyklucza zatrzymanie, a druga wyklucza ustąpienie. Typ paradoksu: sprzeczne idealizacje.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://en.wikipedia.org/wiki/List_of_paradoxes"
+      ]
+    },
+    {
+      "id": "Q203",
+      "kategoria": "paradoks",
+      "temat": "Galileusz: kwadraty",
+      "pytanie": "Dodatnie kwadraty są tylko częścią dodatnich liczb całkowitych. Czy musi być ich mniej w sensie mocy zbioru?",
+      "odpowiedz_wzorcowa": "Nie; zbiory mają tę samą moc.",
+      "wyjasnienie": "Przyporządkowanie n do n² jest bijekcją między tymi zbiorami. Typ paradoksu: pozorny nieskonczonosc.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://en.wikipedia.org/wiki/List_of_paradoxes"
+      ]
+    },
+    {
+      "id": "Q204",
+      "kategoria": "paradoks",
+      "temat": "Róg Gabriela",
+      "pytanie": "Czy obrót wykresu y=1/x dla x od 1 do nieskończoności wokół osi x daje nieskończoną objętość, skoro powierzchnia boczna jest nieskończona?",
+      "odpowiedz_wzorcowa": "Nie; objętość wynosi pi, a powierzchnia boczna jest nieskończona.",
+      "wyjasnienie": "Zbieżność całki objętościowej nie wymusza zbieżności całki powierzchniowej. Typ paradoksu: pozorny geometryczny.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://en.wikipedia.org/wiki/List_of_paradoxes"
+      ]
+    },
+    {
+      "id": "Q205",
+      "kategoria": "paradoks",
+      "temat": "Banach–Tarski",
+      "pytanie": "Czy paradoks Banacha–Tarskiego daje przepis na fizyczne skopiowanie złotej kuli przez zwykłe cięcie?",
+      "odpowiedz_wzorcowa": "Nie; chodzi o abstrakcyjne rozkłady na niemierzalne części w teorii mnogości z aksjomatem wyboru.",
+      "wyjasnienie": "Nie jest to procedura cięcia materialnych brył na zwykłe kawałki. Typ paradoksu: pozorny geometryczny.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://en.wikipedia.org/wiki/List_of_paradoxes"
+      ]
+    },
+    {
+      "id": "Q206",
+      "kategoria": "paradoks",
+      "temat": "Ziemniaki",
+      "pytanie": "100 kg ziemniaków zawiera 99% wody. Po suszeniu woda stanowi 98% masy, a sucha masa nie zmienia się. Ile ważą ziemniaki?",
+      "odpowiedz_wzorcowa": "50 kg.",
+      "wyjasnienie": "Sucha masa to 1 kg i po suszeniu stanowi 2% całości. Typ paradoksu: pozorny arytmetyczny.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://en.wikipedia.org/wiki/List_of_paradoxes"
+      ]
+    },
+    {
+      "id": "Q207",
+      "kategoria": "paradoks",
+      "temat": "Paradoks przyjaźni",
+      "pytanie": "W niepustym skończonym grafie prostym z co najmniej jedną krawędzią porównujemy średni stopień losowego wierzchołka ze stopniem końca losowo wybranej zorientowanej krawędzi. Czy druga średnia może być większa?",
+      "odpowiedz_wzorcowa": "Tak; jest co najmniej tak duża, ze ścisłą nierównością przy niejednakowych stopniach.",
+      "wyjasnienie": "Wybór przez krawędź częściej trafia do wierzchołków o wielu znajomych. Typ paradoksu: pozorny statystyczny.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://en.wikipedia.org/wiki/List_of_paradoxes"
+      ]
+    },
+    {
+      "id": "Q208",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Merkury",
+      "pytanie": "Dlaczego Merkury jest największą planetą Układu Słonecznego?",
+      "odpowiedz_wzorcowa": "Nie jest największy; jest najmniejszą planetą Układu Słonecznego.",
+      "wyjasnienie": "Największą planetą jest Jowisz. Fałszywe założenie: Merkury jest największą planetą.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/planets/"
+      ]
+    },
+    {
+      "id": "Q209",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Kolejność planet",
+      "pytanie": "Która planeta krąży między Ziemią a Marsem w standardowej kolejności ośmiu planet od Słońca?",
+      "odpowiedz_wzorcowa": "Żadna.",
+      "wyjasnienie": "Ziemia jest trzecia, a Mars czwarty. Fałszywe założenie: Między Ziemią a Marsem znajduje się inna z ośmiu planet.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/planets/"
+      ]
+    },
+    {
+      "id": "Q210",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Pluton",
+      "pytanie": "W którym roku Pluton został przeklasyfikowany z planety karłowatej na jedną z ośmiu planet?",
+      "odpowiedz_wzorcowa": "Nie nastąpiła taka zmiana; w 2006 roku został przeklasyfikowany na planetę karłowatą.",
+      "wyjasnienie": "Pytanie odwraca kierunek klasyfikacji. Fałszywe założenie: Pluton awansował do grona ośmiu planet.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/planets/"
+      ]
+    },
+    {
+      "id": "Q211",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Neptun",
+      "pytanie": "Dlaczego Neptun jest najbliższą Słońcu planetą?",
+      "odpowiedz_wzorcowa": "Neptun nie jest najbliższą, lecz najdalszą z ośmiu planet.",
+      "wyjasnienie": "Najbliżej Słońca znajduje się Merkury. Fałszywe założenie: Neptun jest najbliżej Słońca.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/planets/"
+      ]
+    },
+    {
+      "id": "Q212",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Jowisz",
+      "pytanie": "Jaki jest numer Jowisza od Słońca, skoro jest czwartą planetą?",
+      "odpowiedz_wzorcowa": "Jowisz jest piątą planetą od Słońca.",
+      "wyjasnienie": "Czwarty jest Mars. Fałszywe założenie: Jowisz jest czwartą planetą.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/planets/"
+      ]
+    },
+    {
+      "id": "Q213",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Ceres",
+      "pytanie": "Dlaczego Ceres znajduje się w pasie Kuipera?",
+      "odpowiedz_wzorcowa": "Ceres nie znajduje się w pasie Kuipera, lecz w pasie planetoid między Marsem a Jowiszem.",
+      "wyjasnienie": "Pytanie przypisuje jej niewłaściwy region Układu Słonecznego. Fałszywe założenie: Ceres znajduje się w pasie Kuipera.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/planets/"
+      ]
+    },
+    {
+      "id": "Q214",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Wenus",
+      "pytanie": "Jak nazywa się księżyc będący planetą Wenus?",
+      "odpowiedz_wzorcowa": "Wenus nie jest księżycem; jest planetą.",
+      "wyjasnienie": "Pytanie myli kategorie obiektów. Fałszywe założenie: Wenus jest księżycem.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/planets/"
+      ]
+    },
+    {
+      "id": "Q215",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Lodowe olbrzymy",
+      "pytanie": "Dlaczego Uran i Neptun zalicza się do planet skalistych takich jak Ziemia?",
+      "odpowiedz_wzorcowa": "Nie zalicza się ich do planet skalistych; są lodowymi olbrzymami.",
+      "wyjasnienie": "Ich klasyfikacja różni się od klasyfikacji Ziemi. Fałszywe założenie: Uran i Neptun są planetami skalistymi.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/planets/"
+      ]
+    },
+    {
+      "id": "Q216",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Stolica Australii",
+      "pytanie": "Od kiedy Sydney jest stolicą Australii?",
+      "odpowiedz_wzorcowa": "Sydney nie jest stolicą Australii; stolicą jest Canberra.",
+      "wyjasnienie": "Nie ma właściwej daty dla zdarzenia przyjętego w pytaniu. Fałszywe założenie: Sydney jest stolicą Australii.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://www.britannica.com/place/Australia"
+      ]
+    },
+    {
+      "id": "Q217",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Stolica Turcji",
+      "pytanie": "Dlaczego Stambuł jest obecną stolicą Turcji?",
+      "odpowiedz_wzorcowa": "Obecną stolicą Turcji jest Ankara, nie Stambuł.",
+      "wyjasnienie": "Znaczenie i wielkość miasta nie przesądzają o funkcji stołecznej. Fałszywe założenie: Stambuł jest obecną stolicą Turcji.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://www.britannica.com/place/Turkey"
+      ]
+    },
+    {
+      "id": "Q218",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Python: dzielenie",
+      "pytanie": "Dlaczego Python 3 zwraca liczbę całkowitą z wyrażenia 8 / 4?",
+      "odpowiedz_wzorcowa": "Nie zwraca liczby całkowitej typu int; wynik to 2.0 typu float.",
+      "wyjasnienie": "Dla tych wbudowanych liczb operator / wykonuje zwykłe dzielenie. Fałszywe założenie: 8 / 4 zwraca int.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/tutorial/introduction.html"
+      ]
+    },
+    {
+      "id": "Q219",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Python: indeksowanie",
+      "pytanie": "Jaką liczbą całkowitą jest pierwszy indeks napisu w Pythonie 3, skoro indeksowanie zaczyna się od 1?",
+      "odpowiedz_wzorcowa": "Pierwszy indeks to 0.",
+      "wyjasnienie": "Pytanie narzuca błędny początek indeksowania. Fałszywe założenie: Indeksowanie napisów zaczyna się od 1.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/tutorial/introduction.html"
+      ]
+    },
+    {
+      "id": "Q220",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Python: pusty zbiór",
+      "pytanie": "Dlaczego pusty zbiór zapisuje się w Pythonie 3 jako {}?",
+      "odpowiedz_wzorcowa": "{} tworzy pusty słownik; pusty zbiór tworzy set().",
+      "wyjasnienie": "Nawiasy klamrowe bez elementów mają znaczenie słownika. Fałszywe założenie: {} jest pustym zbiorem.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/tutorial/datastructures.html"
+      ]
+    },
+    {
+      "id": "Q221",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Python: set",
+      "pytanie": "Ile duplikatów zachowa set([1, 1, 1]) w Pythonie 3, skoro zbiory przechowują duplikaty?",
+      "odpowiedz_wzorcowa": "Nie zachowa powtórzeń; wynikowy zbiór ma jeden element.",
+      "wyjasnienie": "Zbiór przechowuje unikalne elementy. Fałszywe założenie: Zbiory zachowują duplikaty.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/tutorial/datastructures.html"
+      ]
+    },
+    {
+      "id": "Q222",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Python: append",
+      "pytanie": "Dlaczego list.append(x) zwraca zmodyfikowaną listę?",
+      "odpowiedz_wzorcowa": "Zwykła metoda list.append zwraca None, a listę modyfikuje w miejscu.",
+      "wyjasnienie": "Wartość zwracana i efekt uboczny to różne rzeczy. Fałszywe założenie: list.append zwraca listę.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/tutorial/datastructures.html"
+      ]
+    },
+    {
+      "id": "Q223",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Python: słownik",
+      "pytanie": "Jaką wartość zwróci d[\"x\"] dla pustego zwykłego słownika d, skoro brakujący klucz automatycznie daje None?",
+      "odpowiedz_wzorcowa": "To wyrażenie zgłosi KeyError.",
+      "wyjasnienie": "d.get(\"x\") zwróciłoby None, ale indeksowanie działa inaczej. Fałszywe założenie: Indeksowanie brakującego klucza daje None.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/tutorial/datastructures.html"
+      ]
+    },
+    {
+      "id": "Q224",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Python: krotka jednoelementowa",
+      "pytanie": "Dlaczego (7) jest jednoelementową krotką w Pythonie 3?",
+      "odpowiedz_wzorcowa": "(7) nie jest krotką, tylko liczbą 7; jednoelementowa krotka to (7,).",
+      "wyjasnienie": "O jednoelementowej krotce decyduje przecinek. Fałszywe założenie: Same nawiasy tworzą jednoelementową krotkę.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/tutorial/datastructures.html"
+      ]
+    },
+    {
+      "id": "Q225",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Python: potęgowanie",
+      "pytanie": "Dlaczego operator ** w Pythonie 3 wykonuje mnożenie dwóch liczb?",
+      "odpowiedz_wzorcowa": "** oznacza potęgowanie, a * mnożenie.",
+      "wyjasnienie": "To odrębne operatory. Fałszywe założenie: ** wykonuje mnożenie.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/tutorial/introduction.html"
+      ]
+    },
+    {
+      "id": "Q226",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Python: sorted",
+      "pytanie": "Dlaczego sorted(a) zawsze zmienia listę a w miejscu?",
+      "odpowiedz_wzorcowa": "sorted(a) zwraca nową posortowaną listę, nie zmieniając zwykłej listy a.",
+      "wyjasnienie": "Sortowanie w miejscu zapewnia metoda a.sort(). Fałszywe założenie: sorted zmienia listę w miejscu.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/tutorial/datastructures.html"
+      ]
+    },
+    {
+      "id": "Q227",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Parzystość",
+      "pytanie": "Dlaczego każda liczba parzysta jest dodatnia?",
+      "odpowiedz_wzorcowa": "Nie każda; 0 i -2 są liczbami parzystymi, które nie są dodatnie.",
+      "wyjasnienie": "Parzystość oznacza podzielność przez 2, a nie dodatniość. Fałszywe założenie: Każda liczba parzysta jest dodatnia.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q228",
+      "kategoria": "brak_danych",
+      "temat": "Kolor piłki",
+      "pytanie": "W zamkniętym pudełku jest jedna piłka. Jakiego jest koloru?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić koloru z podanych danych.",
+      "wyjasnienie": "Sam fakt obecności piłki nie określa jej koloru.",
+      "brakujace_dane": [
+        "Opis koloru lub wynik obserwacji."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q229",
+      "kategoria": "brak_danych",
+      "temat": "Recall",
+      "pytanie": "Model osiągnął 95% accuracy. Jaki ma recall dla klasy pozytywnej?",
+      "odpowiedz_wzorcowa": "Nie można wyliczyć recall z samego accuracy.",
+      "wyjasnienie": "Ten sam odsetek poprawnych klasyfikacji może odpowiadać różnym liczbom TP i FN.",
+      "brakujace_dane": [
+        "Liczby TP i FN lub macierz pomyłek."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q230",
+      "kategoria": "brak_danych",
+      "temat": "Fałszywe alarmy",
+      "pytanie": "Model ma 90% recall. Ile popełnił fałszywych alarmów?",
+      "odpowiedz_wzorcowa": "Nie wiadomo.",
+      "wyjasnienie": "Recall dotyczy TP i FN, a nie liczby FP.",
+      "brakujace_dane": [
+        "Liczba FP albo dane pozwalające ją obliczyć."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q231",
+      "kategoria": "brak_danych",
+      "temat": "HTTP 500",
+      "pytanie": "Serwer zwrócił HTTP 500. Która dokładnie linia kodu spowodowała błąd?",
+      "odpowiedz_wzorcowa": "Sam kod odpowiedzi nie pozwala wskazać linii.",
+      "wyjasnienie": "Ten sam status może mieć wiele przyczyn.",
+      "brakujace_dane": [
+        "Logi błędu, stos wywołań i odpowiednia wersja kodu."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q232",
+      "kategoria": "brak_danych",
+      "temat": "Pamięć RAM",
+      "pytanie": "Program zakończył się błędem. Czy zabrakło pamięci RAM?",
+      "odpowiedz_wzorcowa": "Nie da się potwierdzić tej przyczyny.",
+      "wyjasnienie": "Informacja o błędzie nie identyfikuje jego źródła.",
+      "brakujace_dane": [
+        "Komunikat błędu, logi i dane o pamięci w chwili awarii."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q233",
+      "kategoria": "brak_danych",
+      "temat": "Plik CSV",
+      "pytanie": "Plik ma nazwę dane.csv. Ile zawiera wierszy danych?",
+      "odpowiedz_wzorcowa": "Nie wiadomo bez treści lub metadanych pliku.",
+      "wyjasnienie": "Nazwa nie określa liczby rekordów.",
+      "brakujace_dane": [
+        "Zawartość pliku i zasady rozpoznawania nagłówka oraz rekordów."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q234",
+      "kategoria": "brak_danych",
+      "temat": "Rozmiar bazy",
+      "pytanie": "Baza ma milion rekordów. Ile miejsca zajmuje na dysku?",
+      "odpowiedz_wzorcowa": "Nie można tego określić na podstawie samej liczby rekordów.",
+      "wyjasnienie": "Rozmiar zależy m.in. od danych, indeksów, kompresji i silnika.",
+      "brakujace_dane": [
+        "Schemat, rozmiary danych i parametry przechowywania."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q235",
+      "kategoria": "brak_danych",
+      "temat": "Bateria",
+      "pytanie": "Laptop działa na baterii. Ile minut pozostało do wyłączenia?",
+      "odpowiedz_wzorcowa": "Nie da się tego ustalić.",
+      "wyjasnienie": "Brakuje stanu baterii i poboru mocy.",
+      "brakujace_dane": [
+        "Pozostała użyteczna energia i profil zużycia."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q236",
+      "kategoria": "brak_danych",
+      "temat": "Obniżka",
+      "pytanie": "Telefon kosztuje 300 funtów. Ile kosztował przed obniżką?",
+      "odpowiedz_wzorcowa": "Nie wiadomo.",
+      "wyjasnienie": "Cena końcowa nie określa wysokości rabatu.",
+      "brakujace_dane": [
+        "Kwota albo procent obniżki."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q237",
+      "kategoria": "brak_danych",
+      "temat": "Podwyżka",
+      "pytanie": "Cena produktu wzrosła o 20%. Ile funtów wynosi podwyżka?",
+      "odpowiedz_wzorcowa": "Nie da się podać kwoty bez ceny bazowej.",
+      "wyjasnienie": "Procent odnosi się do niepodanej wartości.",
+      "brakujace_dane": [
+        "Cena przed podwyżką."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q238",
+      "kategoria": "brak_danych",
+      "temat": "Wynagrodzenie netto",
+      "pytanie": "Pracownik otrzymał 2000 funtów brutto. Ile dostał netto?",
+      "odpowiedz_wzorcowa": "Nie można ustalić jednej kwoty netto.",
+      "wyjasnienie": "Potrzebne są zasady rozliczenia i indywidualne potrącenia.",
+      "brakujace_dane": [
+        "Okres wypłaty, jurysdykcja podatkowa, kod podatkowy i potrącenia."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q239",
+      "kategoria": "brak_danych",
+      "temat": "Czas przyjazdu",
+      "pytanie": "Pociąg wyjechał o 14:00. O której dotarł do celu?",
+      "odpowiedz_wzorcowa": "Nie wiadomo.",
+      "wyjasnienie": "Godzina odjazdu nie określa czasu podróży.",
+      "brakujace_dane": [
+        "Czas podróży oraz ewentualne różnice stref czasowych."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q240",
+      "kategoria": "brak_danych",
+      "temat": "Opady",
+      "pytanie": "W miejscowości padał deszcz. Ile milimetrów opadu zmierzono?",
+      "odpowiedz_wzorcowa": "Nie podano danych pozwalających określić sumę opadu.",
+      "wyjasnienie": "Sam fakt deszczu nie określa jego ilości.",
+      "brakujace_dane": [
+        "Miejsce, przedział czasu i wynik pomiaru."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q241",
+      "kategoria": "brak_danych",
+      "temat": "Godzina z Księżyca",
+      "pytanie": "Widzimy Księżyc na niebie. Która jest godzina lokalna?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić godziny z tej informacji.",
+      "wyjasnienie": "Widoczność Księżyca nie wyznacza jednej godziny.",
+      "brakujace_dane": [
+        "Dodatkowe dane astronomiczne, data i miejsce lub pomiar czasu."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q242",
+      "kategoria": "brak_danych",
+      "temat": "Wiek Ali",
+      "pytanie": "Ala jest starsza od Oli. Ile lat ma Ala?",
+      "odpowiedz_wzorcowa": "Nie wiadomo.",
+      "wyjasnienie": "Relacja wieku nie daje jego wartości.",
+      "brakujace_dane": [
+        "Wiek Ali lub dane pozwalające go obliczyć."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q243",
+      "kategoria": "brak_danych",
+      "temat": "Wiek w sekundach",
+      "pytanie": "Znamy rok urodzenia człowieka. Jaki jest jego dokładny wiek w sekundach?",
+      "odpowiedz_wzorcowa": "Sam rok urodzenia nie wystarcza.",
+      "wyjasnienie": "Brakuje dokładnych chwil początku i końca obliczenia.",
+      "brakujace_dane": [
+        "Dokładna chwila urodzenia i chwila odniesienia wraz ze strefami czasu."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q244",
+      "kategoria": "brak_danych",
+      "temat": "pH",
+      "pytanie": "Dwie próbki mają takie samo pH. Czy mają identyczny skład chemiczny?",
+      "odpowiedz_wzorcowa": "Nie można tego stwierdzić na podstawie samego pH.",
+      "wyjasnienie": "Jedna właściwość nie wyznacza pełnego składu próbki.",
+      "brakujace_dane": [
+        "Wyniki analizy składu i sprecyzowane znaczenie identyczności."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q245",
+      "kategoria": "brak_danych",
+      "temat": "Gorączka",
+      "pytanie": "Pacjent ma gorączkę. Jaki dokładnie patogen ją wywołał?",
+      "odpowiedz_wzorcowa": "Nie można wskazać patogenu na podstawie samej gorączki ani zakładać, że przyczyna jest zakaźna.",
+      "wyjasnienie": "Opis nie zawiera danych rozstrzygających przyczynę.",
+      "brakujace_dane": [
+        "Wywiad, badanie i odpowiednie wyniki diagnostyczne."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q246",
+      "kategoria": "brak_danych",
+      "temat": "Most",
+      "pytanie": "Na zdjęciu jest most, ale zdjęcia nie załączono. W jakim mieście go zbudowano?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić miasta na podstawie tego opisu.",
+      "wyjasnienie": "Nie udostępniono zdjęcia ani danych identyfikujących most.",
+      "brakujace_dane": [
+        "Zdjęcie lub jednoznaczna identyfikacja mostu."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q247",
+      "kategoria": "brak_danych",
+      "temat": "VRAM",
+      "pytanie": "Sieć neuronowa ma miliard parametrów. Ile dokładnie GB VRAM zużyje podczas treningu?",
+      "odpowiedz_wzorcowa": "Nie da się tego wyznaczyć z samej liczby parametrów.",
+      "wyjasnienie": "Zużycie obejmuje także aktywacje, gradienty, stany optymalizatora i narzut wykonania.",
+      "brakujace_dane": [
+        "Precyzja, architektura, optymalizator, batch size, długość sekwencji i strategia treningu."
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q248",
+      "kategoria": "normalny_fakt",
+      "temat": "Największa planeta",
+      "pytanie": "Która planeta jest największa w Układzie Słonecznym?",
+      "odpowiedz_wzorcowa": "Jowisz.",
+      "wyjasnienie": "NASA klasyfikuje go jako największą planetę.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/planets/"
+      ]
+    },
+    {
+      "id": "Q249",
+      "kategoria": "normalny_fakt",
+      "temat": "Pluton",
+      "pytanie": "W którym roku Pluton został przeklasyfikowany na planetę karłowatą?",
+      "odpowiedz_wzorcowa": "W 2006 roku.",
+      "wyjasnienie": "Zmianę powiązano z przyjęciem definicji planety przez IAU.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/planets/"
+      ]
+    },
+    {
+      "id": "Q250",
+      "kategoria": "normalny_fakt",
+      "temat": "Python: //",
+      "pytanie": "Jaki wynik daje 17 // 3 w Pythonie 3?",
+      "odpowiedz_wzorcowa": "5.",
+      "wyjasnienie": "Dla tych dodatnich argumentów całkowitych // daje iloraz zaokrąglony w dół.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/tutorial/introduction.html"
+      ]
+    },
+    {
+      "id": "Q251",
+      "kategoria": "normalny_fakt",
+      "temat": "Python: %",
+      "pytanie": "Jaki wynik daje 17 % 3 w Pythonie 3?",
+      "odpowiedz_wzorcowa": "2.",
+      "wyjasnienie": "Jest to reszta z dzielenia 17 przez 3.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/tutorial/introduction.html"
+      ]
+    },
+    {
+      "id": "Q252",
+      "kategoria": "normalny_fakt",
+      "temat": "Python: **",
+      "pytanie": "Jaki wynik daje 2 ** 7 w Pythonie 3?",
+      "odpowiedz_wzorcowa": "128.",
+      "wyjasnienie": "** jest operatorem potęgowania.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/tutorial/introduction.html"
+      ]
+    },
+    {
+      "id": "Q253",
+      "kategoria": "normalny_fakt",
+      "temat": "Python: indeks napisu",
+      "pytanie": "Jaki indeks ma pierwszy znak niepustego napisu w Pythonie 3?",
+      "odpowiedz_wzorcowa": "0.",
+      "wyjasnienie": "Indeksowanie zaczyna się od zera.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/tutorial/introduction.html"
+      ]
+    },
+    {
+      "id": "Q254",
+      "kategoria": "normalny_fakt",
+      "temat": "Python: len",
+      "pytanie": "Jaki wynik daje len(\"kot\") w Pythonie 3?",
+      "odpowiedz_wzorcowa": "3.",
+      "wyjasnienie": "Ten napis składa się z trzech znaków.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/tutorial/introduction.html"
+      ]
+    },
+    {
+      "id": "Q255",
+      "kategoria": "normalny_fakt",
+      "temat": "Python: pop",
+      "pytanie": "Jaki wynik daje [10, 20, 30].pop() w Pythonie 3?",
+      "odpowiedz_wzorcowa": "30.",
+      "wyjasnienie": "Bez argumentu pop usuwa i zwraca ostatni element listy.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/tutorial/datastructures.html"
+      ]
+    },
+    {
+      "id": "Q256",
+      "kategoria": "normalny_fakt",
+      "temat": "Python: {}",
+      "pytanie": "Jaki typ obiektu tworzy {} w Pythonie 3?",
+      "odpowiedz_wzorcowa": "dict, czyli słownik.",
+      "wyjasnienie": "Pusty zbiór wymaga set().",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/tutorial/datastructures.html"
+      ]
+    },
+    {
+      "id": "Q257",
+      "kategoria": "normalny_fakt",
+      "temat": "Python: krotka (7,)",
+      "pytanie": "Jak zapisać jednoelementową krotkę zawierającą 7 w Pythonie 3?",
+      "odpowiedz_wzorcowa": "(7,).",
+      "wyjasnienie": "Przecinek odróżnia krotkę od liczby w nawiasach.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/tutorial/datastructures.html"
+      ]
+    },
+    {
+      "id": "Q258",
+      "kategoria": "normalny_fakt",
+      "temat": "Python: set",
+      "pytanie": "Jaki wynik daje len(set([1, 1, 2])) w Pythonie 3?",
+      "odpowiedz_wzorcowa": "2.",
+      "wyjasnienie": "Zbiór zawiera dwa różne elementy: 1 i 2.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/tutorial/datastructures.html"
+      ]
+    },
+    {
+      "id": "Q259",
+      "kategoria": "normalny_fakt",
+      "temat": "Python: dict.get",
+      "pytanie": "Jaki wynik daje {}.get(\"brak\") w Pythonie 3?",
+      "odpowiedz_wzorcowa": "None.",
+      "wyjasnienie": "get bez podanej wartości domyślnej zwraca None dla brakującego klucza.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://docs.python.org/3/tutorial/datastructures.html"
+      ]
+    },
+    {
+      "id": "Q260",
+      "kategoria": "normalny_fakt",
+      "temat": "Liczby pierwsze",
+      "pytanie": "Jaka jest najmniejsza liczba pierwsza?",
+      "odpowiedz_wzorcowa": "2.",
+      "wyjasnienie": "Ma dokładnie dwa dodatnie dzielniki: 1 i 2.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q261",
+      "kategoria": "normalny_fakt",
+      "temat": "Suma kątów trójkąta",
+      "pytanie": "Ile stopni ma suma kątów wewnętrznych trójkąta w geometrii euklidesowej?",
+      "odpowiedz_wzorcowa": "180 stopni.",
+      "wyjasnienie": "Warunek geometrii euklidesowej jest istotny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q262",
+      "kategoria": "normalny_fakt",
+      "temat": "Sześcian",
+      "pytanie": "Ile krawędzi ma sześcian?",
+      "odpowiedz_wzorcowa": "12.",
+      "wyjasnienie": "Dwie przeciwległe kwadratowe ściany mają razem osiem krawędzi, a cztery pozostałe je łączą.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q263",
+      "kategoria": "normalny_fakt",
+      "temat": "Pierwiastek",
+      "pytanie": "Jaki jest dodatni pierwiastek kwadratowy z 144?",
+      "odpowiedz_wzorcowa": "12.",
+      "wyjasnienie": "12 pomnożone przez 12 daje 144.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q264",
+      "kategoria": "normalny_fakt",
+      "temat": "Jednostki długości",
+      "pytanie": "Ile milimetrów ma jeden centymetr?",
+      "odpowiedz_wzorcowa": "10 milimetrów.",
+      "wyjasnienie": "Przedrostki centy- i mili- wyznaczają stosunek 10 do 1.",
+      "brakujace_dane": [],
+      "zrodla": []
+    }
+  ]
+}
