@@ -136,7 +136,7 @@ class MCAOrchestrator:
                 with contextlib.suppress(asyncio.CancelledError):
                     await base_task
         telemetry.latency_ms["total"] = _ms(t0)
-        final = base if decision.decision is DecisionEnum.PASS else decision.response_text
+        final = decision.response_text if decision.response_text else base
         return MCAResult(query=query, decision=decision, telemetry=telemetry, base_response=base,
                          final_response=final, aborted_generation=decision.decision is not DecisionEnum.PASS)
 
@@ -218,6 +218,9 @@ class MCAOrchestrator:
             decision = self.controller.decide(telemetry)
             if decision.decision is DecisionEnum.ABSTAIN:
                 yield StreamEvent("correction", "\n\n[MCA: niska pewność] " + decision.response_text,
+                                  {"decision": decision.model_dump(mode="json")}, _ms(t0))
+            elif decision.decision is DecisionEnum.PASS and decision.response_text:
+                yield StreamEvent("correction", "\n\n[MCA: odpowiedź z bazy wiedzy] " + decision.response_text,
                                   {"decision": decision.model_dump(mode="json")}, _ms(t0))
         if ttft is not None:
             telemetry.latency_ms["ttft"] = ttft

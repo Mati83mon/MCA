@@ -49,6 +49,9 @@ class MCAConfig(BaseModel):
     retrieval_min_similarity: float = Field(0.35, ge=-1.0, le=1.0)
     paradox_similarity: float = Field(0.30, ge=-1.0, le=1.0)
     evidence_support_threshold: float = Field(0.5, ge=0.0, le=1.0)
+    evidence_answer: bool = Field(True, description="R8b: when entropy is high but a KB passage entails a premise, answer from that passage.")
+    evidence_answer_min_similarity: float = Field(0.6, ge=-1.0, le=1.0)
+    evidence_answer_min_entailment: float = Field(0.9, ge=0.0, le=1.0)
 
     # --- Orchestrator --------------------------------------------------------
     flush_window_ms: int = Field(250, ge=0)
