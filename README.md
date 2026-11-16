@@ -165,6 +165,14 @@ duplicates (normalised question text) are skipped, colliding IDs are renumbered,
 * Dataset: [`Mati83moni/mca-adversarial-benchmarks`](https://huggingface.co/datasets/Mati83moni/mca-adversarial-benchmarks)
 * Space: [`Mati83moni/mca-metacognitive-explorer`](https://huggingface.co/spaces/Mati83moni/mca-metacognitive-explorer)
 
+## Community
+
+* Kaggle notebook: [`mateuszpiesiak/mca-gpu-evaluator`](https://www.kaggle.com/code/mateuszpiesiak/mca-gpu-evaluator)
+* Kaggle discussion: <https://www.kaggle.com/discussions/general/759501>
+* Hugging Face post: <https://huggingface.co/posts/Mati83moni/245309888731952>
+
+Feedback, adversarial questions that fool MCA and results on other models are welcome. Open an issue or reply in either thread.
+
 ## Security
 
 Formal specs (including LLM-produced ones) are compiled from an AST whitelist, never `eval`-ed. The Python
