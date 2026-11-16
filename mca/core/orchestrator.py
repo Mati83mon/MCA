@@ -119,7 +119,7 @@ class MCAOrchestrator:
         telemetry = await self.fast_path(query)
         pre = self.controller.decide(telemetry)
         if slow_task is not None:
-            if pre.decision is DecisionEnum.PASS:
+            if pre.decision is DecisionEnum.PASS or self.config.audit_all_layers:
                 report, ms = await slow_task
                 telemetry.uncertainty, telemetry.latency_ms["uncertainty"] = report, ms
             else:

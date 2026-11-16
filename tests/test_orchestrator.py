@@ -67,3 +67,13 @@ async def test_run_returns_typed_result(orchestrator):
     assert result.aborted_generation and result.base_response == ""
     assert "Anna" in result.final_response
     assert result.telemetry.latency_ms["fast_path_total"] > 0
+
+
+async def test_audit_mode_records_entropy_even_when_fast_path_decides(store, nli):
+    query = "Dlaczego Mars jest drugą planetą od Słońca?"
+    for audit, expect_entropy in ((False, False), (True, True)):
+        orch = make(ScriptedLLM(["Bo tak.", "Nie wiem."]), store, nli, audit_all_layers=audit)
+        result = await orch.run(query)
+        assert result.decision.decision is DecisionEnum.CHALLENGE, "audit mode must not change the decision"
+        assert (result.telemetry.uncertainty is not None) is expect_entropy
+        orch.close()

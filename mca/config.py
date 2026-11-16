@@ -57,6 +57,7 @@ class MCAConfig(BaseModel):
     flush_window_ms: int = Field(250, ge=0)
     ttft_budget_ms: int = Field(400, ge=1)
     max_new_tokens: int = Field(256, ge=1)
+    audit_all_layers: bool = Field(False, description="Always run the slow path (entropy) even when the fast path already decided, so every rule can be audited offline.")
 
     @classmethod
     def from_env(cls, **overrides: object) -> "MCAConfig":
