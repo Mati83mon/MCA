@@ -99,6 +99,37 @@ class DecisionController:
         return PolicyDecision(decision=DecisionEnum.PASS, confidence=round(min(conf, 0.95), 4), triggered_rules=["R9:pass"],
                               rationale="Brak naruszeń: założenia niesprzeczne, niska niepewność.")
 
+    # -- audit -------------------------------------------------------------------------
+    RULE_ORDER = ("R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8b", "R8")
+
+    def rule_verdicts(self, t: MetacognitiveTelemetry) -> dict[str, bool | None]:
+        """Each rule's own verdict on ``t``, independent of rule order (``None`` = not observable).
+
+        ``decide`` returns the first rule that is ``True`` in :attr:`RULE_ORDER` (R9/PASS if none);
+        this view exposes the rules that ``decide`` never reaches, so thresholds can be studied on an
+        uncensored sample. R8/R8b are ``None`` when no semantic-entropy samples were taken.
+        """
+        oracle_refuted = any(_challengeable(v) and v.oracle for v in t.premise_verdicts)
+        nli_refuted = any(_challengeable(v) and not v.oracle for v in t.premise_verdicts)
+        unresolved = [v for v in t.premise_verdicts if v.premise.kind is PremiseKind.REFERENT and v.status is PremiseStatus.UNVERIFIED]
+        if any(v.status is PremiseStatus.SUPPORTED and v.premise.kind is not PremiseKind.REFERENT for v in t.premise_verdicts):
+            unresolved = [v for v in unresolved if v.premise.source != "llm"]
+        u = t.uncertainty
+        observed = u is not None and u.n_samples > 1
+        high = observed and u.normalized_entropy > self.config.entropy_tau
+        grounded = self._evidence_answer(t) is not None
+        return {
+            "R1": t.logic.status is LogicStatus.PARADOX_SELF_REF,
+            "R2": t.logic.status is LogicStatus.UNSAT,
+            "R3": oracle_refuted,
+            "R4": t.evidence.paradox_match is not None,
+            "R5": nli_refuted,
+            "R6": t.logic.status is LogicStatus.UNDERDETERMINED,
+            "R7": bool(unresolved),
+            "R8b": (high and grounded) if observed else None,
+            "R8": (high and not grounded) if observed else None,
+        }
+
     def _evidence_answer(self, t: MetacognitiveTelemetry) -> tuple[float, float, str] | None:
         """Best KB passage that NLI-entails a non-referent premise of the query, if strong enough."""
         if not self.config.evidence_answer:

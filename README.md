@@ -142,6 +142,15 @@ the two thresholds were chosen after inspecting these 21 R8 abstentions, so the 
 in-sample; and R8b can only answer facts the KB covers. Llama-3's remaining over-refusal comes from R5
 (NLI contradiction on verbose answers), which R8b does not touch.
 
+**Auditing every rule (uncensored calibration).** The ordered gate logs only the first rule that fires, so
+end-to-end logs are a censored sample: in the runs above semantic entropy was recorded for only 20–26 of
+100 items, because the slow path is cancelled once the fast path decides. With
+`MCAConfig(audit_all_layers=True)` every layer runs on every item without changing the decision, and
+`DecisionController.rule_verdicts()` returns each rule's own verdict (a test checks it reproduces
+`decide()` on all stored rows). `python -m benchmarks.rule_table table|calibrate` then builds the per-item
+rule table and grid-searches the thresholds offline. It tunes on the 100 items and evaluates the chosen
+config exactly once on the held-out probes. (Suggested by a reviewer on the HF forum thread.)
+
 **Before the fixes (first GPU run, v3)** MCA+Qwen scored acc 0.75 with over-refusal **1.00** (every LLM-
 extracted referent hit R7) and MCA+DeepSeek acc 0.80 / over-refusal 0.76 (entropy computed on truncated
 `<think>` traces, plus LLM formal specs with infix `And`/`Or` failing to parse). Commit `05084ba` grounds
