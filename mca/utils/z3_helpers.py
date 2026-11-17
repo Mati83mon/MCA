@@ -112,7 +112,14 @@ class _Compiler:
             tree = ast.parse(normalize_expr(expr), mode="eval")
         except SyntaxError as exc:
             raise DSLError(f"syntax error in {expr!r}: {exc}") from exc
-        return self._node(tree.body)
+        try:
+            return self._node(tree.body)
+        except DSLError:
+            raise
+        except (TypeError, AttributeError, z3.Z3Exception) as exc:
+            # LLM-written formulas can call DSL functions with the wrong arity or mix sorts
+            # (e.g. ``If(a, b)``, ``x + (y > 0)``); that is an invalid spec, not a crash.
+            raise DSLError(f"ill-formed expression {expr!r}: {exc}") from exc
 
     def _node(self, node: ast.AST) -> Any:
         if isinstance(node, ast.Constant):

@@ -99,3 +99,21 @@ async def test_logic_engine_async():
     report = await engine.acheck(specs)
     assert report.status is LogicStatus.UNDERDETERMINED
     engine.close()
+
+
+def test_ill_formed_llm_formula_is_unknown_not_a_crash():
+    # Kaggle v14 crashed on an LLM spec calling If() with two arguments.
+    from mca.config import MCAConfig
+    from mca.core.logic_engine import LogicEngine
+    from mca.telemetry.schemas import LogicStatus
+    from mca.utils.z3_helpers import FormalSpec
+
+    engine = LogicEngine(MCAConfig(nli_backend="lexical", embedding_backend="hashing"))
+    try:
+        for expr in ("If(x > 0, x)", "ForAll(x, If(x > 0))", "Abs(x, x) == 1"):
+            spec = FormalSpec.model_validate({"label": "llm.formal", "vars": {"x": "Real"},
+                                              "assertions": [{"id": "a1", "expr": expr}], "target": "x"})
+            report = engine.check([spec])
+            assert report.status is LogicStatus.UNKNOWN, (expr, report)
+    finally:
+        engine.close()
