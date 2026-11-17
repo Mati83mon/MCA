@@ -44,7 +44,9 @@ class MCAConfig(BaseModel):
         ),
     )
     answerability_check: bool = Field(False, description="Ask the base model once (TAK/NIE) whether the question is answerable as posed.")
-    answerability_max_new_tokens: int = Field(8, ge=1)
+    answerability_max_new_tokens: int = Field(8, ge=1, description="Token budget for the TAK/NIE variants ('missing' uses at least 24).")
+    answerability_prompt: Literal["direct", "fewshot", "missing", "inverse"] = Field(
+        "direct", description="Probe wording: direct TAK/NIE, few-shot TAK/NIE, name-the-missing-data, or inverted polarity.")
 
     # --- Layer 2: semantic entropy -------------------------------------------
     n_samples: int = Field(5, ge=1, le=32)

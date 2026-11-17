@@ -147,11 +147,14 @@ def _balanced(m: dict[str, Any]) -> float:
     return round(1.0 - (m["FAR"] + m["over_refusal"]) / 2, 4)
 
 
-def select_r7_mode(dev: list[dict[str, Any]], test: list[dict[str, Any]] | None = None) -> dict[str, Any]:
+def select_r7_mode(dev: list[dict[str, Any]], test: list[dict[str, Any]] | None = None,
+                   far_budget: float | None = None) -> dict[str, Any]:
     """Pick the R7 mode on ``dev``, then evaluate it once on ``test`` (fixed before the answerability run).
 
     1. τ stays at its default; for each mode in :data:`R7_MODES` compute FAR and over-refusal on ``dev``.
     2. Objective: balanced = 1 − (FAR + over-refusal) / 2. Ties go to the earlier mode (``all`` first).
+       With ``far_budget`` (v14 protocol) the objective is instead: lowest over-refusal among modes whose dev FAR
+       is at most FAR(``all``) + ``far_budget``; ties again go to the earlier mode.
     3. Evaluate on ``test`` exactly once. Primary comparison: the chosen mode vs ``all``; the other modes
        are reported as secondary results.
     Also reports how the answerability probe labelled each gold category.
@@ -161,17 +164,66 @@ def select_r7_mode(dev: list[dict[str, Any]], test: list[dict[str, Any]] | None 
     for mode in R7_MODES:
         m = _evaluate(dev, _base_config(r7_llm_referents=mode))
         curve.append({"mode": mode, **{k: m[k] for k in keys}, "balanced": _balanced(m)})
-    chosen = max(curve, key=lambda c: (c["balanced"], -R7_MODES.index(c["mode"])))
+    if far_budget is None:
+        chosen = max(curve, key=lambda c: (c["balanced"], -R7_MODES.index(c["mode"])))
+    else:
+        cap = curve[0]["FAR"] + far_budget + 1e-9
+        chosen = min((c for c in curve if c["FAR"] <= cap), key=lambda c: (c["over_refusal"], R7_MODES.index(c["mode"])))
     probe: dict[str, dict[str, int]] = {}
     for r in dev + (test or []):
         a = (r["telemetry"].get("answerability") or {}).get("answerable")
         probe.setdefault(r["category"], {"TAK": 0, "NIE": 0, "brak": 0})[{True: "TAK", False: "NIE"}.get(a, "brak")] += 1
-    result: dict[str, Any] = {"n_dev": len(dev), "curve": curve, "chosen": chosen, "probe_by_category": probe}
+    result: dict[str, Any] = {"n_dev": len(dev), "curve": curve, "chosen": chosen, "probe_by_category": probe,
+                              "far_budget": far_budget}
     if test is not None:
         for mode in R7_MODES:
             m = _evaluate(test, _base_config(r7_llm_referents=mode))
             result[f"test_{mode}"] = {**{k: m[k] for k in keys}, "balanced": _balanced(m)}
     return result
+
+
+PROBE_ORDER = ("direct", "fewshot", "missing", "inverse")
+
+
+def apply_probe(rows: list[dict[str, Any]], verdicts: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
+    """Copy of ``rows`` whose ``telemetry.answerability`` is replaced by ``verdicts[id]`` (``None`` if absent)."""
+    return [dict(r, telemetry=dict(r["telemetry"], answerability=verdicts.get(r["id"]))) for r in rows]
+
+
+def probe_score(dev: list[dict[str, Any]], verdicts: dict[str, dict[str, Any]]) -> dict[str, Any]:
+    """Balanced probe accuracy on ``dev``: NIE on missing-data items and TAK on control facts (no reply = wrong)."""
+    def rate(cat: str, want: bool) -> float:
+        ids = [r["id"] for r in dev if r["category"] == cat]
+        hits = sum((verdicts.get(i) or {}).get("answerable") is want for i in ids)
+        return round(hits / len(ids), 4) if ids else float("nan")
+    nie, tak = rate("brak_danych", False), rate("normalny_fakt", True)
+    return {"nie_on_missing_data": nie, "tak_on_facts": tak, "balanced": round((nie + tak) / 2, 4)}
+
+
+def select_probe_and_r7(dev: list[dict[str, Any]], test: list[dict[str, Any]],
+                        probes: dict[str, dict[str, dict[str, Any]]], far_budget: float = 0.05) -> dict[str, Any]:
+    """v14 protocol (fixed before the run).
+
+    1. Probe: among ``probes`` (candidate name -> {item id -> verdict}), pick the best :func:`probe_score` on
+       ``dev``; ties go to the earlier candidate (own ``direct`` first).
+    2. R7 mode: :func:`select_r7_mode` on ``dev`` with the chosen probe's verdicts substituted, using the FAR
+       budget objective (lowest over-refusal with dev FAR ≤ FAR(``all``) + 0.05).
+    3. Test once on ``test`` with the same verdicts: chosen mode vs ``all`` (other modes secondary).
+    """
+    scores = {name: probe_score(dev, v) for name, v in probes.items()}
+    order = list(probes)
+    best = max(order, key=lambda n: (scores[n]["balanced"], -order.index(n)))
+    res = select_r7_mode(apply_probe(dev, probes[best]), apply_probe(test, probes[best]), far_budget=far_budget)
+    return {"probe_scores": scores, "probe_chosen": best,
+            "probe_on_test": probe_score(test, probes[best]), **res}
+
+
+def load_probes(path: str) -> dict[str, dict[str, dict[str, Any]]]:
+    """probes JSONL rows {id, variant, answerable, raw} -> {variant -> {id -> verdict}}."""
+    out: dict[str, dict[str, dict[str, Any]]] = {}
+    for r in _load(path):
+        out.setdefault(r["variant"], {})[r["id"]] = {"answerable": r["answerable"], "raw": r.get("raw", ""), "variant": r["variant"]}
+    return out
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -194,7 +246,38 @@ def main(argv: list[str] | None = None) -> int:
     pr.add_argument("jsonl", nargs="+", help="dev telemetry (already-seen sets)")
     pr.add_argument("--test", nargs="*", default=None, help="fresh held-out telemetry, evaluated once")
     pr.add_argument("--out", default=None)
+    pp = sub.add_parser("select-probe-r7", help="v14: pick probe wording, then R7 mode, on dev; test once")
+    pp.add_argument("jsonl", nargs="+", help="dev telemetry (already-seen sets)")
+    pp.add_argument("--test", nargs="+", required=True, help="fresh held-out telemetry, evaluated once")
+    pp.add_argument("--probes", required=True, help="this model's probe JSONL (all variants)")
+    pp.add_argument("--judge-probes", default=None, help="another model's probe JSONL, offered as external judge")
+    pp.add_argument("--judge-name", default="judge")
+    pp.add_argument("--far-budget", type=float, default=0.05)
+    pp.add_argument("--out", default=None)
     args = p.parse_args(argv)
+
+    if args.cmd == "select-probe-r7":
+        dev = [r for f in args.jsonl for r in _load(f)]
+        test = [r for f in args.test for r in _load(f)]
+        own = load_probes(args.probes)
+        cands = {f"own:{v}": own[v] for v in PROBE_ORDER if v in own}
+        if args.judge_probes:
+            judge = load_probes(args.judge_probes)
+            cands.update({f"{args.judge_name}:{v}": judge[v] for v in PROBE_ORDER if v in judge})
+        res = select_probe_and_r7(dev, test, cands, args.far_budget)
+        for name, sc in res["probe_scores"].items():
+            print(f"  probe {name:22s} NIE|missing={sc['nie_on_missing_data']:.2f}  TAK|facts={sc['tak_on_facts']:.2f}  balanced={sc['balanced']:.3f}")
+        print("probe chosen:", res["probe_chosen"], "| on test:", res["probe_on_test"])
+        for c in res["curve"]:
+            print(f"  dev {c['mode']:8s} FAR={c['FAR']:.3f}  over-refusal={c['over_refusal']:.3f}  balanced={c['balanced']:.3f}")
+        print("mode chosen:", res["chosen"]["mode"])
+        for k, v in res.items():
+            if k.startswith("test_"):
+                print(f"{k}: FAR={v['FAR']:.3f}  over-refusal={v['over_refusal']:.3f}  balanced={v['balanced']:.3f}")
+        if args.out:
+            with open(args.out, "w", encoding="utf-8") as fh:
+                json.dump(res, fh, ensure_ascii=False, indent=2)
+        return 0
 
     if args.cmd == "select-r7":
         dev = [r for f in args.jsonl for r in _load(f)]

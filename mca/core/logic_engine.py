@@ -18,6 +18,8 @@ import asyncio
 import logging
 from concurrent.futures import ThreadPoolExecutor
 
+import z3
+
 from mca.config import MCAConfig
 from mca.telemetry.schemas import LogicReport, LogicStatus
 from mca.utils.z3_helpers import (
@@ -120,7 +122,7 @@ class LogicEngine:
             if out.status == "sat":
                 return LogicReport(status=LogicStatus.SAT, formulas=formulas, model=out.model, explanation="Założenia są niesprzeczne.")
             return LogicReport(status=LogicStatus.UNKNOWN, formulas=formulas, explanation="Z3 nie rozstrzygnął w limicie czasu.")
-        except DSLError as exc:
+        except (DSLError, z3.Z3Exception) as exc:
             logger.warning("invalid formal spec %s: %s", spec.label, exc)
             return LogicReport(status=LogicStatus.UNKNOWN, formulas=formulas, explanation=f"Niepoprawna formalizacja: {exc}")
 

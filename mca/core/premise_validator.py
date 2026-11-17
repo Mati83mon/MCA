@@ -54,6 +54,40 @@ W przeciwnym razie odpowiedz TAK. Odpowiedz jednym słowem: TAK albo NIE.
 Pytanie: {query}
 Odpowiedź:"""
 
+ANSWERABILITY_FEWSHOT = """Oceń, czy na pytanie da się jednoznacznie odpowiedzieć wyłącznie na podstawie jego treści i wiedzy ogólnej.
+Jeśli brakuje liczby, wartości, kontekstu, dokumentu, osoby, miejsca albo czasu, odpowiedz NIE.
+Jeśli wystarczy wiedza ogólna, definicja albo rachunek, odpowiedz TAK. Odpowiadaj jednym słowem.
+
+Pytanie: Ile wynosi 6 razy 7?
+Odpowiedź: TAK
+Pytanie: Prostopadłościenne akwarium ma długość 50 cm. Ile litrów wody mieści?
+Odpowiedź: NIE
+Pytanie: Jak nazywa się stolica Hiszpanii?
+Odpowiedź: TAK
+Pytanie: Pan Nowak wysłał paczkę. Ile ważyła?
+Odpowiedź: NIE
+Pytanie: Ile dni ma tydzień?
+Odpowiedź: TAK
+Pytanie: Zdjęcie zrobiono w parku. O której godzinie je zrobiono?
+Odpowiedź: NIE
+
+Pytanie: {query}
+Odpowiedź:"""
+
+ANSWERABILITY_MISSING = """Sprawdź, czy pytanie zawiera wszystkie dane potrzebne do jednoznacznej odpowiedzi (wiedza ogólna,
+definicje i rachunki są dostępne). Nie odpowiadaj na samo pytanie. Jeśli niczego nie brakuje, napisz tylko: KOMPLETNE.
+Jeśli czegoś brakuje, wypisz krótko, czego (np. „cena biletu”, „treść pliku”).
+
+Pytanie: {query}
+Brakujące dane:"""
+
+ANSWERABILITY_INVERSE = """Czy w poniższym pytaniu brakuje danych potrzebnych do jednoznacznej odpowiedzi (konkretnych wartości,
+kontekstu, treści pliku, zdjęcia lub dokumentu, tożsamości osoby, miejsca albo czasu)? Wiedza ogólna, definicje i rachunki
+są dostępne. Odpowiedz jednym słowem: TAK (brakuje) albo NIE (niczego nie brakuje).
+
+Pytanie: {query}
+Odpowiedź:"""
+
 _YES = re.compile(r"\b(tak|yes)\b", re.IGNORECASE)
 _NO = re.compile(r"\b(nie|no)\b", re.IGNORECASE)
 
@@ -66,6 +100,37 @@ def parse_answerability(text: str) -> bool | None:
     if no:
         return False
     return None
+
+
+def parse_missing(text: str) -> bool | None:
+    """'KOMPLETNE' -> answerable; any other non-empty reply names missing data -> not answerable."""
+    t = text.strip()
+    if not t:
+        return None
+    return True if re.search(r"komplet", t, re.IGNORECASE) else False
+
+
+def _parse_inverse(text: str) -> bool | None:
+    v = parse_answerability(text)
+    return None if v is None else not v
+
+
+PROBE_VARIANTS = {  # variant -> (template, parser, minimum token budget)
+    "direct": (ANSWERABILITY_PROMPT, parse_answerability, 1),
+    "fewshot": (ANSWERABILITY_FEWSHOT, parse_answerability, 1),
+    "missing": (ANSWERABILITY_MISSING, parse_missing, 24),
+    "inverse": (ANSWERABILITY_INVERSE, _parse_inverse, 1),
+}
+
+
+async def probe_answerability(llm: LLMBackend, query: str, variant: str = "direct", max_new_tokens: int = 8) -> AnswerabilityReport:
+    """Ask ``llm`` once (greedy, no reasoning phase) whether ``query`` is answerable as posed."""
+    template, parse, min_tok = PROBE_VARIANTS[variant]
+    prompt, n_tok = template.format(query=query), max(max_new_tokens, min_tok)
+    many = getattr(llm, "generate_many", None)
+    raw = (await many(prompt, 1, temperature=0.0, max_new_tokens=n_tok))[0] if many else \
+        await llm.generate(prompt, temperature=0.0, max_new_tokens=n_tok)
+    return AnswerabilityReport(answerable=parse(raw), raw=raw.strip()[:200], variant=variant)
 
 
 _UPPER = "A-ZĄĆĘŁŃÓŚŹŻ"
@@ -214,19 +279,15 @@ class PremiseValidator:
         return out
 
     async def answerability(self, query: str) -> AnswerabilityReport | None:
-        """One greedy TAK/NIE probe; reasoning models answer without a thinking phase."""
+        """One greedy probe (wording from ``config.answerability_prompt``); reasoning models skip thinking."""
         if self.llm is None or not self.config.answerability_check:
             return None
-        prompt = ANSWERABILITY_PROMPT.format(query=query)
-        n_tok = self.config.answerability_max_new_tokens
         try:
-            many = getattr(self.llm, "generate_many", None)
-            raw = (await many(prompt, 1, temperature=0.0, max_new_tokens=n_tok))[0] if many else \
-                await self.llm.generate(prompt, temperature=0.0, max_new_tokens=n_tok)
+            return await probe_answerability(self.llm, query, self.config.answerability_prompt,
+                                             self.config.answerability_max_new_tokens)
         except Exception as exc:  # noqa: BLE001 - the probe must not break validation
             logger.warning("answerability probe failed: %s", exc)
             return None
-        return AnswerabilityReport(answerable=parse_answerability(raw), raw=raw.strip()[:200])
 
     async def decompose(self, query: str) -> Decomposition:
         llm_part = await self._llm_decompose(query)
