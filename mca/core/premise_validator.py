@@ -49,6 +49,25 @@ JSON:"""
 _UPPER = "A-ZĄĆĘŁŃÓŚŹŻ"
 _POSSESSIVE = re.compile(r"\b(?:m[óo]j|moja|moje|mojego|mojej|moim|mojemu|mych|moich|nasz\w*)\s+(\w+(?:\.\w+)?)", re.IGNORECASE)
 _DEIXIS = re.compile(r"\b(stąd|dotąd|tutaj|wczoraj\w*|dzisiejsz\w*|jutrzejsz\w*|przedwczoraj\w*|ubieg\w+\s+tygodni\w*)\b", re.IGNORECASE)
+_DEMONSTRATIVE = re.compile(r"^\s*(?:ten|ta|to|tego|tej|tym|tę|tą|tamt\w+|ów|owa|owe|this|that|these|those)\b", re.IGNORECASE)
+
+
+def is_specific_referent(text: str, query: str) -> bool:
+    """True when ``text`` names something only the user's context can resolve.
+
+    That covers possessives, deixis, a leading demonstrative, or a word that ``query`` capitalises
+    mid-sentence (a proper name). Generic noun phrases ("samochód", "kolor piłki") are not specific.
+    """
+    if _POSSESSIVE.search(text) or _DEIXIS.search(text) or _DEMONSTRATIVE.search(text):
+        return True
+    words = set(re.findall(r"\w+", text))
+    for sentence in re.split(r"(?<=[.!?])\s+", query):
+        tokens = re.findall(r"\w+", sentence)[1:]
+        if any(tok in words and len(tok) >= 3 and tok[0].isupper() for tok in tokens):
+            return True
+    return False
+
+
 _DEIXIS_MISSING = {
     "stąd": "lokalizacja punktu startowego (i sposób pomiaru odległości)",
     "tutaj": "lokalizacja, do której odnosi się pytanie",

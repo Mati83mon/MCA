@@ -202,7 +202,36 @@ The test set is held-out v1 + v2: 88 items, of which 65 are traps and 23 are con
   - For DeepSeek and Llama, 0.6 lies on or next to the plateau of the stage curve. The balanced score at the default is 0.76 vs 0.79 at the best τ for DeepSeek, and 0.82 at both for Llama.
   - The Qwen choice rests on 5 items and is not meaningful.
 * **The stage set is far smaller on GPU than offline** (offline 30/33 traps reach it; on GPU 3, 20 and 14). The cause is R7. With an LLM premise extractor, ordinary common nouns become "referents" ("bąk", "samochód", "róża", "próżnia"), and anything outside the KB counts as unresolved. R7 fires first on 31/33 rebuilt control facts for Qwen, 8/33 for DeepSeek and 16/33 for Llama.
-* **R7 is the dominant over-refusal source on held-out**: it refuses 9, 5 and 11 of the 23 held-out control facts. Held-out v2 over-refusal is 0.59 for all three models. R7 precision, not τ, is the next thing to fix: restrict it to proper names, possessives and deixis, as the offline extractor does.
+* **R7 is the dominant over-refusal source on held-out**: it refuses 9, 5 and 11 of the 23 held-out control facts. Held-out v2 over-refusal is 0.59 for all three models.
+
+**Follow-up: restricting R7 is a trade-off, not a free fix.** v12 recorded every layer on every item, so the
+R7 variants below are exact offline rescorings of the same telemetry. No new model calls were made.
+They are exploratory: the held-out items had already been seen in the v12 run.
+`MCAConfig.r7_llm_referents` selects which LLM-proposed referents may trigger R7:
+
+- `all` (default): any LLM-proposed referent not grounded in the KB triggers R7;
+- `specific`: only possessives, deixis, demonstratives and names capitalised in the query;
+- `off`: only rule-detected referents.
+
+| R7 LLM referents | Model | Stage set (traps / ctrl) | Chosen τ | Test, τ = 0.6: FAR / over-refusal | Test, chosen τ: FAR / over-refusal |
+|---|---|---|---|---|---|
+| `all` | Qwen2.5-7B | 3 / 2 | 0.95 | 0.092 / 0.478 | 0.139 / 0.435 |
+| `all` | DeepSeek-R1-7B | 20 / 25 | 0.55 | 0.092 / 0.478 | 0.077 / 0.478 |
+| `all` | Llama-3-8B | 14 / 17 | 0.80 | 0.031 / 0.609 | 0.046 / 0.609 |
+| `specific` | Qwen2.5-7B | 28 / 32 | 0.30 | 0.231 / 0.130 | 0.169 / 0.348 |
+| `specific` | DeepSeek-R1-7B | 30 / 33 | 0.55 | 0.123 / 0.348 | 0.108 / 0.348 |
+| `specific` | Llama-3-8B | 30 / 33 | 0.65 | 0.154 / 0.391 | 0.154 / 0.391 |
+| `off` | Qwen2.5-7B | 30 / 33 | 0.30 | 0.262 / 0.130 | 0.185 / 0.348 |
+| `off` | DeepSeek-R1-7B | 30 / 33 | 0.55 | 0.123 / 0.304 | 0.108 / 0.304 |
+| `off` | Llama-3-8B | 30 / 33 | 0.65 | 0.154 / 0.348 | 0.154 / 0.348 |
+
+* **The diagnosis holds.** Without LLM referents, 28–30 of the 33 rebuilt traps reach the entropy stage, as they do offline. Over-refusal falls sharply (Qwen 0.48 → 0.13).
+* **The cost is FAR**, which rises from 0.09 / 0.09 / 0.03 to 0.26 / 0.12 / 0.15.
+  - The largest group of leaking traps (9 of 21 across the three models) are missing-data questions where the LLM names the unknown quantity ("kolor piłki", "recall dla klasy pozytywnej", "patogen"). The rest are false-premise and paradox items that R7 caught only incidentally.
+  - The model answers these with near-zero entropy, so R8 cannot catch them at any τ.
+  - In this mode the LLM-referent path of R7 works as an implicit "is this answerable?" detector. The same mechanism refuses controls ("bąk", "samochód").
+* **With R7 restricted, the stage calibration becomes stable.** DeepSeek again picks τ = 0.55. For Llama, τ = 0.65 ties with the default. Qwen picks τ = 0.30, trading FAR 0.26 → 0.19 for over-refusal 0.13 → 0.35. No setting dominates `all` with τ = 0.6 on FAR, so the default stays.
+* **What is needed is a direct answerability signal** that separates "Ile obrotów wykona bąk?" from "Jakiego koloru jest piłka w zamkniętym pudełku?". It must be validated on a fresh held-out split, not on v1 + v2.
 
 **Before the fixes (first GPU run, v3)** MCA+Qwen scored acc 0.75 with over-refusal **1.00** (every LLM-
 extracted referent hit R7) and MCA+DeepSeek acc 0.80 / over-refusal 0.76 (entropy computed on truncated

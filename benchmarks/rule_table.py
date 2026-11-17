@@ -103,7 +103,7 @@ def at_entropy_stage(t: MetacognitiveTelemetry, ctl: DecisionController) -> bool
     return not any(verdicts[r] for r in EARLY_RULES)
 
 
-def calibrate_stage(tune: list[dict[str, Any]], test: list[dict[str, Any]] | None = None) -> dict[str, Any]:
+def calibrate_stage(tune: list[dict[str, Any]], test: list[dict[str, Any]] | None = None, **fixed: Any) -> dict[str, Any]:
     """Stage-restricted calibration of τ (fixed before any audit result was seen).
 
     1. Stage set = items of ``tune`` on which R1–R7 all stay silent under the default config.
@@ -111,14 +111,16 @@ def calibrate_stage(tune: list[dict[str, Any]], test: list[dict[str, Any]] | Non
        pass rate (decision = PASS on stage controls); objective = their mean (balanced accuracy).
     3. Pick the best τ; ties go to the higher τ (fewer refusals). R8b thresholds stay at their defaults.
     4. Evaluate the chosen τ and the default τ exactly once on ``test`` with the full pipeline.
+
+    ``fixed`` holds config fields kept constant throughout (e.g. ``r7_llm_referents="off"``).
     """
-    ctl0 = DecisionController(_base_config())
+    ctl0 = DecisionController(_base_config(**fixed))
     stage = [r for r in tune if at_entropy_stage(MetacognitiveTelemetry.model_validate(r["telemetry"]), ctl0)]
     traps = [r for r in stage if r["gold"] != "PASS"]
     ctrls = [r for r in stage if r["gold"] == "PASS"]
     curve = []
     for tau in STAGE_TAUS:
-        ctl = DecisionController(_base_config(entropy_tau=tau))
+        ctl = DecisionController(_base_config(entropy_tau=tau, **fixed))
         dec = {r["id"]: ctl.decide(MetacognitiveTelemetry.model_validate(r["telemetry"])).decision.value for r in stage}
         catch = sum(dec[r["id"]] != "PASS" for r in traps) / len(traps) if traps else float("nan")
         passed = sum(dec[r["id"]] == "PASS" for r in ctrls) / len(ctrls) if ctrls else float("nan")
@@ -131,8 +133,9 @@ def calibrate_stage(tune: list[dict[str, Any]], test: list[dict[str, Any]] | Non
                               "curve": curve, "chosen": chosen, "default_tau": default_tau,
                               "default_on_stage": next((c for c in curve if abs(c["entropy_tau"] - default_tau) < 1e-9), None)}
     if test is not None and chosen is not None:
-        result["test_chosen"] = _evaluate(test, _base_config(entropy_tau=chosen["entropy_tau"]))
-        result["test_default"] = _evaluate(test, _base_config())
+        result["test_chosen"] = _evaluate(test, _base_config(entropy_tau=chosen["entropy_tau"], **fixed))
+        result["test_default"] = _evaluate(test, _base_config(**fixed))
+    result["fixed"] = fixed
     return result
 
 
@@ -150,13 +153,14 @@ def main(argv: list[str] | None = None) -> int:
     ps = sub.add_parser("calibrate-stage", help="stage-restricted τ calibration on rebuilt traps")
     ps.add_argument("jsonl", nargs="+", help="tuning telemetry (rebuilt traps + their controls)")
     ps.add_argument("--test", nargs="*", default=None, help="untouched held-out telemetry, evaluated once")
+    ps.add_argument("--r7-llm-referents", choices=("all", "specific", "off"), default="all")
     ps.add_argument("--out", default=None)
     args = p.parse_args(argv)
 
     if args.cmd == "calibrate-stage":
         tune = [r for f in args.jsonl for r in _load(f)]
         test = [r for f in args.test for r in _load(f)] if args.test else None
-        res = calibrate_stage(tune, test)
+        res = calibrate_stage(tune, test, r7_llm_referents=args.r7_llm_referents)
         print(f"stage set: {res['n_stage_traps']} traps, {res['n_stage_controls']} controls (of {res['n_tune']} tuning items)")
         for c in res["curve"]:
             print(f"  τ={c['entropy_tau']:.2f}  catch={c['trap_catch']:.2f}  pass={c['control_pass']:.2f}  balanced={c['balanced']:.2f}")
