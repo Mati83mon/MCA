@@ -233,6 +233,8 @@ They are exploratory: the held-out items had already been seen in the v12 run.
 * **With R7 restricted, the stage calibration becomes stable.** DeepSeek again picks τ = 0.55. For Llama, τ = 0.65 ties with the default. Qwen picks τ = 0.30, trading FAR 0.26 → 0.19 for over-refusal 0.13 → 0.35. No setting dominates `all` with τ = 0.6 on FAR, so the default stays.
 * **What is needed is a direct answerability signal** that separates "Ile obrotów wykona bąk?" from "Jakiego koloru jest piłka w zamkniętym pudełku?". It must be validated on a fresh held-out split, not on v1 + v2.
 
+**Held-out v3** ([`heldout_v3_paczka_022b.json`](benchmarks/datasets/heldout_v3_paczka_022b.json)) is that fresh split. It contains 26 items: 2 paradoxes, 8 false premises, 7 missing-data items and 9 control facts. The source was a new 100-item package; 74 of its items repeated a problem already in the benchmark, held-out v1/v2 or the rebuilt traps, or another item of the package, and were removed. `metadane.usuniete_duplikaty` maps each removed item to the one it repeats. No model has seen v3 yet.
+
 **Before the fixes (first GPU run, v3)** MCA+Qwen scored acc 0.75 with over-refusal **1.00** (every LLM-
 extracted referent hit R7) and MCA+DeepSeek acc 0.80 / over-refusal 0.76 (entropy computed on truncated
 `<think>` traces, plus LLM formal specs with infix `And`/`Or` failing to parse). Commit `05084ba` grounds
