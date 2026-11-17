@@ -1,0 +1,16 @@
+,accuracy,macro_f1,FAR,FAR_abstain,over_refusal,paradox_identification_accuracy,ECE,latency_ms_p50
+raw_heldout_v3/Qwen2.5-7B-Instruct,0.5769,0.4108,0.4706,0.2857,0.0,0.0,,3154.29
+heldout_v3/Qwen2.5-7B-Instruct,0.5,0.4799,0.0,0.0,0.4444,0.5,0.4542,15836.57
+heldout/Qwen2.5-7B-Instruct,0.7917,0.8023,0.0556,0.1667,0.1667,0.6667,0.1577,18876.68
+heldout_v2/Qwen2.5-7B-Instruct,0.4531,0.333,0.1277,0.1,0.5882,0.0,0.3899,19376.08
+rebuilt/Qwen2.5-7B-Instruct,0.2121,0.1742,0.0606,0.0,0.9697,0.1,0.6253,18895.85
+raw_heldout_v3/Meta-Llama-3-8B-Instruct,0.3462,0.1286,1.0,1.0,0.0,0.0,,2010.29
+heldout_v3/Meta-Llama-3-8B-Instruct,0.3462,0.3535,0.1765,0.1429,0.7778,0.5,0.5199,16966.11
+heldout/Meta-Llama-3-8B-Instruct,0.75,0.7515,0.0,0.0,0.5,0.6667,0.198,22701.47
+heldout_v2/Meta-Llama-3-8B-Instruct,0.4219,0.2933,0.0851,0.05,0.7059,0.0,0.4044,20066.84
+rebuilt/Meta-Llama-3-8B-Instruct,0.3182,0.2625,0.0303,0.0,0.7576,0.1,0.6072,20265.83
+raw_heldout_v3/DeepSeek-R1-Distill-Qwen-7B,0.5385,0.3915,0.6471,0.5714,0.0,0.0,,12590.67
+heldout_v3/DeepSeek-R1-Distill-Qwen-7B,0.5,0.4733,0.0588,0.0,0.4444,0.5,0.4358,44733.16
+heldout/DeepSeek-R1-Distill-Qwen-7B,0.75,0.7624,0.1111,0.3333,0.1667,0.6667,0.1294,46798.67
+heldout_v2/DeepSeek-R1-Distill-Qwen-7B,0.5312,0.3975,0.1064,0.05,0.3529,0.0,0.3371,44893.51
+rebuilt/DeepSeek-R1-Distill-Qwen-7B,0.4394,0.3352,0.0909,0.0909,0.4848,0.1,0.5082,44796.79

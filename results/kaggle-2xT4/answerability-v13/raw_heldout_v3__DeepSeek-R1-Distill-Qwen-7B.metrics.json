@@ -1,0 +1,75 @@
+{
+  "n": 26,
+  "accuracy": 0.5385,
+  "macro_f1": 0.3915,
+  "FAR": 0.6471,
+  "FAR_abstain": 0.5714,
+  "over_refusal": 0.0,
+  "paradox_identification_accuracy": 0.0,
+  "ECE": null,
+  "per_class": {
+    "PASS": {
+      "precision": 0.45,
+      "recall": 1.0,
+      "f1": 0.6207,
+      "support": 9
+    },
+    "CHALLENGE": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "support": 8
+    },
+    "ABSTAIN": {
+      "precision": 0.75,
+      "recall": 0.4286,
+      "f1": 0.5455,
+      "support": 7
+    },
+    "EXPLAIN_PARADOX": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 2
+    }
+  },
+  "labels": [
+    "PASS",
+    "CHALLENGE",
+    "ABSTAIN",
+    "EXPLAIN_PARADOX"
+  ],
+  "confusion_matrix": [
+    [
+      9,
+      0,
+      0,
+      0
+    ],
+    [
+      5,
+      2,
+      1,
+      0
+    ],
+    [
+      4,
+      0,
+      3,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      0
+    ]
+  ],
+  "accuracy_by_category": {
+    "paradoks": 0.0,
+    "falszywe_zalozenie": 0.25,
+    "brak_danych": 0.4286,
+    "normalny_fakt": 1.0
+  },
+  "latency_ms_p50": 12590.67
+}
