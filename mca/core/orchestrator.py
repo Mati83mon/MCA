@@ -91,6 +91,7 @@ class MCAOrchestrator:
         """Layers 1, 3, 4 (no sampling). Typically a few ms with the offline backends."""
         lat: dict[str, float] = {}
         t0 = time.perf_counter()
+        probe = asyncio.create_task(self.premises.answerability(query))
         decomposition = await self.premises.decompose(query)
         lat["decompose"] = _ms(t0)
         t1 = time.perf_counter()
@@ -101,9 +102,10 @@ class MCAOrchestrator:
         t2 = time.perf_counter()
         evidence = await asyncio.to_thread(self.evidence.verify, query, decomposition.premises, verdicts, logic)
         lat["evidence"] = _ms(t2)
+        answerability = await probe
         lat["fast_path_total"] = _ms(t0)
         return MetacognitiveTelemetry(query=query, premises=decomposition.premises, premise_verdicts=verdicts,
-                                      logic=logic, evidence=evidence, latency_ms=lat)
+                                      logic=logic, evidence=evidence, answerability=answerability, latency_ms=lat)
 
     async def _slow_path(self, query: str) -> Any:
         t0 = time.perf_counter()

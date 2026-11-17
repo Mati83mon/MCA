@@ -235,6 +235,37 @@ They are exploratory: the held-out items had already been seen in the v12 run.
 
 **Held-out v3** ([`heldout_v3_paczka_022b.json`](benchmarks/datasets/heldout_v3_paczka_022b.json)) is that fresh split. It contains 26 items: 2 paradoxes, 8 false premises, 7 missing-data items and 9 control facts. The source was a new 100-item package; 74 of its items repeated a problem already in the benchmark, held-out v1/v2 or the rebuilt traps, or another item of the package, and were removed. `metadane.usuniete_duplikaty` maps each removed item to the one it repeats. No model has seen v3 yet.
 
+**Answerability probe (pre-registered; result below).** With `answerability_check=True` the base model gets one greedy TAK/NIE question per item: can it be answered from its content and general knowledge alone? The reply is stored in `telemetry.answerability`. A new R7 mode, `gated`, lets LLM-proposed referents trigger R7 only when the probe says NIE. The selection rule was fixed before the GPU run:
+
+1. Use the three already-seen sets as dev: rebuilt traps + controls, held-out v1 and held-out v2 (154 items per model).
+2. Keep τ = 0.6. For each R7 mode (`all`, `gated`, `specific`, `off`), compute balanced = 1 − (FAR + over-refusal) / 2. Ties go to `all`, then `gated`.
+3. Evaluate exactly once on held-out v3. The primary comparison is the chosen mode vs `all`; the other modes are secondary.
+
+The command is `python -m benchmarks.rule_table select-r7 rebuilt__X.jsonl heldout__X.jsonl heldout_v2__X.jsonl --test heldout_v3__X.jsonl`.
+
+**Result (Kaggle v13, [`results/kaggle-2xT4/answerability-v13/`](results/kaggle-2xT4/answerability-v13/)).**
+Held-out v3 has 17 traps and 9 controls. One trap shifts FAR by 0.059 and one control shifts over-refusal by 0.111.
+
+| Model | Mode chosen on dev | v3 FAR / over-refusal, chosen | v3, `all` | v3, `gated` (secondary) | v3 raw model FAR |
+|---|---|---|---|---|---|
+| Qwen2.5-7B | `specific` (dev 0.747 vs `gated` 0.733) | 0.353 / 0.222 | 0.000 / 0.444 | 0.059 / 0.222 | 0.471 |
+| DeepSeek-R1-7B | `gated` | 0.059 / 0.333 | 0.059 / 0.444 | same as chosen | 0.647 |
+| Llama-3-8B | `gated` | 0.294 / 0.333 | 0.176 / 0.778 | same as chosen | 1.000 |
+
+* **Primary comparison (chosen vs `all`): mixed.**
+  - DeepSeek improves cleanly: same FAR, one more control answered.
+  - Llama trades 2 more leaked traps for 4 more answered controls.
+  - For Qwen the rule picked `specific`, which loses on v3: 6 more leaked traps, 2 more answered controls.
+* **Secondary comparison (`gated` vs `all`): better or equal on balanced score for all three models.**
+  - For Qwen, `gated` costs 1 leaked trap and answers 2 more controls.
+  - On dev, `gated` cuts Qwen's over-refusal from 0.77 to 0.41 with FAR 0.09 → 0.12. The pre-registered objective, which weighs FAR and over-refusal equally, still preferred `specific` by 0.014.
+* **The probe works for Qwen and DeepSeek, and is weak for Llama.**
+  - Counting all 180 items per model (dev + v3), it says NIE on 44/44 (Qwen) and 43/44 (DeepSeek) missing-data items. On the v3 items alone it says NIE on 7/7 for both.
+  - On control facts it says TAK on 49/65 and 54/65 of all items, and on 9/9 and 8/9 of the v3 items.
+  - Llama says NIE on only 18/44 missing-data items (4/7 on v3), so for Llama `gated` behaves almost like `off`.
+* **Safety against the raw model holds on fresh data.** v3 FAR goes from 0.47 / 0.65 / 1.00 without MCA to 0.06 / 0.06 / 0.29 with MCA in `gated` mode.
+* **The default stays `all`.** v3 is small and the pre-registered primary result is mixed. `gated` is the candidate for the next default; it needs a larger fresh split to confirm, and Llama needs a better probe (or a different probe model).
+
 **Before the fixes (first GPU run, v3)** MCA+Qwen scored acc 0.75 with over-refusal **1.00** (every LLM-
 extracted referent hit R7) and MCA+DeepSeek acc 0.80 / over-refusal 0.76 (entropy computed on truncated
 `<think>` traces, plus LLM formal specs with infix `And`/`Or` failing to parse). Commit `05084ba` grounds

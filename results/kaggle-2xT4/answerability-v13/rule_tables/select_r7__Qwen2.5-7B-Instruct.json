@@ -1,0 +1,86 @@
+{
+  "n_dev": 154,
+  "curve": [
+    {
+      "mode": "all",
+      "accuracy": 0.4026,
+      "FAR": 0.0918,
+      "over_refusal": 0.7679,
+      "balanced": 0.5701
+    },
+    {
+      "mode": "gated",
+      "accuracy": 0.5325,
+      "FAR": 0.1224,
+      "over_refusal": 0.4107,
+      "balanced": 0.7334
+    },
+    {
+      "mode": "specific",
+      "accuracy": 0.5455,
+      "FAR": 0.2551,
+      "over_refusal": 0.25,
+      "balanced": 0.7474
+    },
+    {
+      "mode": "off",
+      "accuracy": 0.5519,
+      "FAR": 0.2857,
+      "over_refusal": 0.2321,
+      "balanced": 0.7411
+    }
+  ],
+  "chosen": {
+    "mode": "specific",
+    "accuracy": 0.5455,
+    "FAR": 0.2551,
+    "over_refusal": 0.25,
+    "balanced": 0.7474
+  },
+  "probe_by_category": {
+    "paradoks": {
+      "TAK": 8,
+      "NIE": 17,
+      "brak": 0
+    },
+    "normalny_fakt": {
+      "TAK": 49,
+      "NIE": 16,
+      "brak": 0
+    },
+    "falszywe_zalozenie": {
+      "TAK": 2,
+      "NIE": 44,
+      "brak": 0
+    },
+    "brak_danych": {
+      "TAK": 0,
+      "NIE": 44,
+      "brak": 0
+    }
+  },
+  "test_all": {
+    "accuracy": 0.5,
+    "FAR": 0.0,
+    "over_refusal": 0.4444,
+    "balanced": 0.7778
+  },
+  "test_gated": {
+    "accuracy": 0.5769,
+    "FAR": 0.0588,
+    "over_refusal": 0.2222,
+    "balanced": 0.8595
+  },
+  "test_specific": {
+    "accuracy": 0.5,
+    "FAR": 0.3529,
+    "over_refusal": 0.2222,
+    "balanced": 0.7125
+  },
+  "test_off": {
+    "accuracy": 0.5,
+    "FAR": 0.4118,
+    "over_refusal": 0.2222,
+    "balanced": 0.683
+  }
+}

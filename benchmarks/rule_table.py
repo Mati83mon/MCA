@@ -51,6 +51,7 @@ def signals(t: MetacognitiveTelemetry) -> dict[str, float | None]:
         "normalized_entropy": u.normalized_entropy if u is not None and u.n_samples > 1 else None,
         "best_evidence_similarity": max((v.evidence[0].score for v in supported), default=None),
         "best_evidence_entailment": max((v.nli_scores.get(NLILabel.ENTAILMENT, 0.0) for v in supported), default=None),
+        "answerable": t.answerability.answerable if t.answerability is not None else None,
     }
 
 
@@ -139,6 +140,40 @@ def calibrate_stage(tune: list[dict[str, Any]], test: list[dict[str, Any]] | Non
     return result
 
 
+R7_MODES = ("all", "gated", "specific", "off")  # tie order: status quo first
+
+
+def _balanced(m: dict[str, Any]) -> float:
+    return round(1.0 - (m["FAR"] + m["over_refusal"]) / 2, 4)
+
+
+def select_r7_mode(dev: list[dict[str, Any]], test: list[dict[str, Any]] | None = None) -> dict[str, Any]:
+    """Pick the R7 mode on ``dev``, then evaluate it once on ``test`` (fixed before the answerability run).
+
+    1. τ stays at its default; for each mode in :data:`R7_MODES` compute FAR and over-refusal on ``dev``.
+    2. Objective: balanced = 1 − (FAR + over-refusal) / 2. Ties go to the earlier mode (``all`` first).
+    3. Evaluate on ``test`` exactly once. Primary comparison: the chosen mode vs ``all``; the other modes
+       are reported as secondary results.
+    Also reports how the answerability probe labelled each gold category.
+    """
+    keys = ("accuracy", "FAR", "over_refusal")
+    curve = []
+    for mode in R7_MODES:
+        m = _evaluate(dev, _base_config(r7_llm_referents=mode))
+        curve.append({"mode": mode, **{k: m[k] for k in keys}, "balanced": _balanced(m)})
+    chosen = max(curve, key=lambda c: (c["balanced"], -R7_MODES.index(c["mode"])))
+    probe: dict[str, dict[str, int]] = {}
+    for r in dev + (test or []):
+        a = (r["telemetry"].get("answerability") or {}).get("answerable")
+        probe.setdefault(r["category"], {"TAK": 0, "NIE": 0, "brak": 0})[{True: "TAK", False: "NIE"}.get(a, "brak")] += 1
+    result: dict[str, Any] = {"n_dev": len(dev), "curve": curve, "chosen": chosen, "probe_by_category": probe}
+    if test is not None:
+        for mode in R7_MODES:
+            m = _evaluate(test, _base_config(r7_llm_referents=mode))
+            result[f"test_{mode}"] = {**{k: m[k] for k in keys}, "balanced": _balanced(m)}
+    return result
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -153,9 +188,30 @@ def main(argv: list[str] | None = None) -> int:
     ps = sub.add_parser("calibrate-stage", help="stage-restricted τ calibration on rebuilt traps")
     ps.add_argument("jsonl", nargs="+", help="tuning telemetry (rebuilt traps + their controls)")
     ps.add_argument("--test", nargs="*", default=None, help="untouched held-out telemetry, evaluated once")
-    ps.add_argument("--r7-llm-referents", choices=("all", "specific", "off"), default="all")
+    ps.add_argument("--r7-llm-referents", choices=("all", "specific", "off", "gated"), default="all")
     ps.add_argument("--out", default=None)
+    pr = sub.add_parser("select-r7", help="pick the R7 mode on dev telemetry, test once on fresh held-out")
+    pr.add_argument("jsonl", nargs="+", help="dev telemetry (already-seen sets)")
+    pr.add_argument("--test", nargs="*", default=None, help="fresh held-out telemetry, evaluated once")
+    pr.add_argument("--out", default=None)
     args = p.parse_args(argv)
+
+    if args.cmd == "select-r7":
+        dev = [r for f in args.jsonl for r in _load(f)]
+        test = [r for f in args.test for r in _load(f)] if args.test else None
+        res = select_r7_mode(dev, test)
+        print(f"dev: {res['n_dev']} items")
+        for c in res["curve"]:
+            print(f"  {c['mode']:8s} FAR={c['FAR']:.3f}  over-refusal={c['over_refusal']:.3f}  balanced={c['balanced']:.3f}")
+        print("chosen:", res["chosen"]["mode"])
+        print("probe (TAK/NIE/brak) by category:", res["probe_by_category"])
+        for k, v in res.items():
+            if k.startswith("test_"):
+                print(f"{k}: FAR={v['FAR']:.3f}  over-refusal={v['over_refusal']:.3f}  balanced={v['balanced']:.3f}")
+        if args.out:
+            with open(args.out, "w", encoding="utf-8") as fh:
+                json.dump(res, fh, ensure_ascii=False, indent=2)
+        return 0
 
     if args.cmd == "calibrate-stage":
         tune = [r for f in args.jsonl for r in _load(f)]
