@@ -204,6 +204,7 @@ class AnswerabilityReport(BaseModel):
 
     answerable: bool | None = Field(None, description="True = TAK, False = NIE, None = unparseable reply.")
     raw: str = ""
+    variant: str = "direct"
 
 
 class MetacognitiveTelemetry(BaseModel):

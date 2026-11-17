@@ -266,6 +266,24 @@ Held-out v3 has 17 traps and 9 controls. One trap shifts FAR by 0.059 and one co
 * **Safety against the raw model holds on fresh data.** v3 FAR goes from 0.47 / 0.65 / 1.00 without MCA to 0.06 / 0.06 / 0.29 with MCA in `gated` mode.
 * **The default stays `all`.** v3 is small and the pre-registered primary result is mixed. `gated` is the candidate for the next default; it needs a larger fresh split to confirm, and Llama needs a better probe (or a different probe model).
 
+**Probe wording and held-out v4 (pre-registered, run pending).**
+
+- **Held-out v4** ([`heldout_v4_nowe_tematy.json`](benchmarks/datasets/heldout_v4_nowe_tematy.json)) has 100 items: 18 paradoxes, 26 false premises, 26 missing-data items and 30 control facts.
+  - The items were written from scratch, on topics no earlier set uses: biology, chemistry, history, literature, music, sport, SQL/HTTP/git, finance and everyday situations, plus paradoxes outside the catalogue used so far.
+  - Many traps have a twin control fact from the same domain.
+  - They were checked automatically and by hand against all earlier sets, and no model has seen them.
+  - The author is an AI assistant (Claude), so they share no source with the earlier packages.
+- **Probe wordings** (`MCAConfig.answerability_prompt`):
+  - `direct`: the v13 prompt;
+  - `fewshot`: 6 worked TAK/NIE examples, none of them in any dataset (checked by a test);
+  - `missing`: "write KOMPLETNE or name what is missing";
+  - `inverse`: "is data missing?", with the polarity flipped.
+- **Protocol** (`python -m benchmarks.rule_table select-probe-r7 <dev telemetry> --test heldout_v4__X.jsonl --probes probes__X.jsonl --judge-probes probes__Qwen.jsonl`):
+  1. Dev = rebuilt traps, held-out v1, v2 and v3, using the v13 telemetry. Every probe wording is run on every dev and v4 item.
+  2. Pick the probe on dev by balanced probe accuracy = mean(NIE rate on missing-data items, TAK rate on control facts). Candidates are the model's own four wordings plus Qwen's four wordings as an external judge. Ties go to the model's own `direct`.
+  3. Pick the R7 mode on dev with that probe. This objective changed after v13: the lowest over-refusal among modes whose dev FAR is at most FAR(`all`) + 0.05. In v13 the equal-weight objective let Qwen pick a mode with 2.8× the FAR of `all`.
+  4. Evaluate exactly once on v4: the chosen mode vs `all` is primary; the other modes are secondary. v4 also gets raw vs MCA.
+
 **Before the fixes (first GPU run, v3)** MCA+Qwen scored acc 0.75 with over-refusal **1.00** (every LLM-
 extracted referent hit R7) and MCA+DeepSeek acc 0.80 / over-refusal 0.76 (entropy computed on truncated
 `<think>` traces, plus LLM formal specs with infix `And`/`Or` failing to parse). Commit `05084ba` grounds
