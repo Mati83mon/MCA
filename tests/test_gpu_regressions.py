@@ -41,3 +41,32 @@ def test_rule_referent_stays_unresolved():
     v = _validator()
     p = Premise(id="r1", text="moja siostra", kind=PremiseKind.REFERENT, missing_variable="kim jest siostra")
     assert v.validate([p], "Ile lat ma moja siostra?")[0].status is PremiseStatus.UNVERIFIED
+
+
+def test_is_specific_referent():
+    from mca.core.premise_validator import is_specific_referent
+
+    q = "Jan Kowalski kupił samochód. Ile lat ma mój brat Piotr?"
+    assert is_specific_referent("mój brat", q)
+    assert is_specific_referent("Piotr", q)
+    assert is_specific_referent("ten samochód", q)
+    assert is_specific_referent("wczorajszy mecz", q)
+    assert not is_specific_referent("samochód", q)
+    assert not is_specific_referent("kolor piłki", "W pudełku jest piłka. Jakiego jest koloru?")
+
+
+def test_r7_llm_referent_modes():
+    from mca.core.decision_controller import DecisionController
+    from mca.telemetry.schemas import MetacognitiveTelemetry, PremiseVerdict
+
+    q = "Bąk obraca się 10 razy na sekundę. Ile obrotów wykona w ciągu 3 sekund?"
+    hint = Premise(id="lr1", text="bąk", kind=PremiseKind.REFERENT, source="llm", missing_variable="bąk")
+    t = MetacognitiveTelemetry(query=q, premise_verdicts=[PremiseVerdict(premise=hint, status=PremiseStatus.UNVERIFIED)])
+
+    def first(mode):
+        return DecisionController(MCAConfig(nli_backend="lexical", embedding_backend="hashing",
+                                            r7_llm_referents=mode)).decide(t).triggered_rules[0]
+
+    assert first("all") == "R7:unresolved_referent"
+    assert first("specific") != "R7:unresolved_referent"
+    assert first("off") != "R7:unresolved_referent"

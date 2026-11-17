@@ -24,6 +24,7 @@ from __future__ import annotations
 
 from mca.config import MCAConfig
 from mca.core.evidence_verifier import EvidenceStore
+from mca.core.premise_validator import is_specific_referent
 from mca.telemetry.schemas import (
     DecisionEnum,
     LogicStatus,
@@ -45,14 +46,24 @@ class DecisionController:
         self.config = config
         self.store = store
 
+    def _unresolved(self, t: MetacognitiveTelemetry) -> list[PremiseVerdict]:
+        """Referents that trigger R7, filtered by :attr:`MCAConfig.r7_llm_referents`."""
+        unresolved = [v for v in t.premise_verdicts if v.premise.kind is PremiseKind.REFERENT and v.status is PremiseStatus.UNVERIFIED]
+        if any(v.status is PremiseStatus.SUPPORTED and v.premise.kind is not PremiseKind.REFERENT for v in t.premise_verdicts):
+            # A KB-grounded question: LLM referent hints alone must not trigger an epistemic-void abstention.
+            return [v for v in unresolved if v.premise.source != "llm"]
+        mode = self.config.r7_llm_referents
+        if mode == "off":
+            return [v for v in unresolved if v.premise.source != "llm"]
+        if mode == "specific":
+            return [v for v in unresolved if v.premise.source != "llm" or is_specific_referent(v.premise.text, t.query)]
+        return unresolved
+
     def decide(self, t: MetacognitiveTelemetry) -> PolicyDecision:
         logic, ev = t.logic, t.evidence
         oracle_refuted = [v for v in t.premise_verdicts if _challengeable(v) and v.oracle]
         nli_refuted = [v for v in t.premise_verdicts if _challengeable(v) and not v.oracle]
-        unresolved = [v for v in t.premise_verdicts if v.premise.kind is PremiseKind.REFERENT and v.status is PremiseStatus.UNVERIFIED]
-        if any(v.status is PremiseStatus.SUPPORTED and v.premise.kind is not PremiseKind.REFERENT for v in t.premise_verdicts):
-            # A KB-grounded question: LLM referent hints alone must not trigger an epistemic-void abstention.
-            unresolved = [v for v in unresolved if v.premise.source != "llm"]
+        unresolved = self._unresolved(t)
 
         if logic.status is LogicStatus.PARADOX_SELF_REF:
             return self._paradox(t, ["R1:z3_paradox_self_ref"], 0.97)
@@ -111,9 +122,7 @@ class DecisionController:
         """
         oracle_refuted = any(_challengeable(v) and v.oracle for v in t.premise_verdicts)
         nli_refuted = any(_challengeable(v) and not v.oracle for v in t.premise_verdicts)
-        unresolved = [v for v in t.premise_verdicts if v.premise.kind is PremiseKind.REFERENT and v.status is PremiseStatus.UNVERIFIED]
-        if any(v.status is PremiseStatus.SUPPORTED and v.premise.kind is not PremiseKind.REFERENT for v in t.premise_verdicts):
-            unresolved = [v for v in unresolved if v.premise.source != "llm"]
+        unresolved = self._unresolved(t)
         u = t.uncertainty
         observed = u is not None and u.n_samples > 1
         high = observed and u.normalized_entropy > self.config.entropy_tau

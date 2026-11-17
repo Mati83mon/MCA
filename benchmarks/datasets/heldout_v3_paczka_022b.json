@@ -1,0 +1,422 @@
+{
+  "metadane": {
+    "tytul": "Held-out v3: druga paczka 022 (17.11) po deduplikacji",
+    "jezyk": "pl",
+    "wersja": "1.0",
+    "liczba_pytan": 26,
+    "liczby_w_kategoriach": {
+      "paradoks": 2,
+      "falszywe_zalozenie": 8,
+      "brak_danych": 7,
+      "normalny_fakt": 9
+    },
+    "zrodlo": "raw_knowledge_paczka_022, wersja z 17.11 (100 pytań, id 1–100, w mapowaniu jako N001–N100); usunięto pytania identyczne lub będące tym samym problemem co pytania z benchmarku 100, held-out v1, held-out v2, rebuilt_traps_v1 albo innym pytaniem tej paczki",
+    "uwagi": [
+      "Pytania sformułowano autorsko po polsku; nie są dosłownymi kopiami artykułów.",
+      "Scenariusze umowne i fikcyjne są materiałem testowym, a nie opisem rzeczywistych osób i zdarzeń.",
+      "Oczekiwana odpowiedź jest wzorcem znaczeniowym, nie wymogiem identycznego brzmienia.",
+      "Przy testowaniu modelowi należy przekazać wyłącznie pole pytanie; kategoria i odpowiedź stanowią klucz oceny.",
+      "Zbiór jest celowo podzielony kategoriami; do ewaluacji warto przetasować kolejność pytań.",
+      "Brak zewnętrznego źródła oznacza odpowiedź uzasadnioną bezpośrednio treścią zadania, rachunkiem lub definicją."
+    ],
+    "opis_kategorii": {
+      "paradoks": "Paradoksy logiczne, semantyczne, filozoficzne oraz pozorne paradoksy z poprawnym rozwiązaniem; nie wszystkie są nierozstrzygalne.",
+      "falszywe_zalozenie": "Pytania zawierające założenie sprzeczne z faktami, definicją albo jawnym kontekstem.",
+      "brak_danych": "Pytania, na które nie ma jednoznacznej odpowiedzi na podstawie dostarczonych informacji; nie oznacza to nieistnienia odpowiedzi w rzeczywistości.",
+      "fakt": "Zwykłe pytania faktograficzne, definicyjne i elementarne zadania z jednoznaczną odpowiedzią."
+    },
+    "mapowanie_id": {
+      "Q401": "N018",
+      "Q402": "N023",
+      "Q403": "N029",
+      "Q404": "N036",
+      "Q405": "N042",
+      "Q406": "N043",
+      "Q407": "N045",
+      "Q408": "N046",
+      "Q409": "N047",
+      "Q410": "N050",
+      "Q411": "N053",
+      "Q412": "N054",
+      "Q413": "N055",
+      "Q414": "N061",
+      "Q415": "N064",
+      "Q416": "N069",
+      "Q417": "N072",
+      "Q418": "N082",
+      "Q419": "N083",
+      "Q420": "N091",
+      "Q421": "N092",
+      "Q422": "N093",
+      "Q423": "N095",
+      "Q424": "N096",
+      "Q425": "N099",
+      "Q426": "N100"
+    },
+    "usuniete_duplikaty": {
+      "N001": "Q001",
+      "N002": "Q002",
+      "N003": "Q003",
+      "N004": "Q004",
+      "N005": "Q005",
+      "N006": "Q007",
+      "N007": "Q008",
+      "N008": "Q009",
+      "N009": "Q010",
+      "N010": "Q010",
+      "N011": "Q006",
+      "N012": "Q016",
+      "N013": "Q017",
+      "N014": "Q018",
+      "N015": "Q019",
+      "N016": "Q020",
+      "N017": "Q021",
+      "N019": "Q013",
+      "N020": "Q011",
+      "N021": "Q012",
+      "N022": "Q014",
+      "N024": "Q015",
+      "N025": "Q025",
+      "N026": "Q208",
+      "N027": "Q044",
+      "N028": "Q045",
+      "N030": "N029",
+      "N031": "Q211",
+      "N032": "Q043",
+      "N033": "Q045",
+      "N034": "Q046",
+      "N035": "Q910",
+      "N037": "Q910",
+      "N038": "N035",
+      "N039": "Q028",
+      "N040": "Q030",
+      "N041": "Q027",
+      "N044": "Q039",
+      "N048": "Q040",
+      "N049": "Q041",
+      "N051": "Q228",
+      "N052": "Q052",
+      "N056": "Q057",
+      "N057": "Q056",
+      "N058": "Q239",
+      "N059": "Q053",
+      "N060": "Q072",
+      "N062": "Q059",
+      "N063": "Q240",
+      "N065": "Q233",
+      "N066": "Q231",
+      "N067": "Q237",
+      "N068": "Q063",
+      "N070": "Q067",
+      "N071": "Q247",
+      "N073": "Q071",
+      "N074": "Q246",
+      "N075": "Q052",
+      "N076": "Q248",
+      "N077": "Q077",
+      "N078": "Q079",
+      "N079": "Q080",
+      "N080": "Q076",
+      "N081": "Q083",
+      "N084": "Q085",
+      "N085": "Q087",
+      "N086": "Q086",
+      "N087": "Q088",
+      "N088": "Q089",
+      "N089": "Q090",
+      "N090": "Q091",
+      "N094": "Q263",
+      "N097": "Q261",
+      "N098": "Q260"
+    }
+  },
+  "pytania": [
+    {
+      "id": "Q401",
+      "kategoria": "paradoks",
+      "temat": "Kruki",
+      "pytanie": "Zdania „Wszystkie kruki są czarne” i „Wszystko, co nie jest czarne, nie jest krukiem” są równoważne. Czy obejrzenie zielonego jabłka dowodzi pierwszego zdania?",
+      "odpowiedz_wzorcowa": "Nie dowodzi; to paradoks potwierdzania, a ewentualny stopień potwierdzenia zależy od modelu i sposobu doboru obserwacji.",
+      "wyjasnienie": "Logiczna równoważność hipotez nie zamienia pojedynczej obserwacji w dowód ogólnego twierdzenia. Typ paradoksu: Kruki.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://plato.stanford.edu/entries/formal-epistemology/"
+      ]
+    },
+    {
+      "id": "Q402",
+      "kategoria": "paradoks",
+      "temat": "Condorcet",
+      "pytanie": "Trzej wyborcy mają preferencje: A>B>C, B>C>A oraz C>A>B. Czy głosowanie większościowe parami musi wskazać kandydata pokonującego obu rywali?",
+      "odpowiedz_wzorcowa": "Nie: większość woli A od B, B od C i C od A.",
+      "wyjasnienie": "Indywidualnie przechodnie preferencje mogą dawać cykl większościowy. Typ paradoksu: Condorcet.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://plato.stanford.edu/entries/voting-methods/"
+      ]
+    },
+    {
+      "id": "Q403",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Planety",
+      "pytanie": "Który z naturalnych księżyców Wenus jest największy?",
+      "odpowiedz_wzorcowa": "Wenus nie ma znanych naturalnych księżyców.",
+      "wyjasnienie": "Pytanie zakłada istnienie obiektów, których Wenus nie ma; quasi-satelita nie jest jej księżycem.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/solar-system-facts/"
+      ]
+    },
+    {
+      "id": "Q404",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "SI",
+      "pytanie": "Kto ustalił, że symbolem kelwina w SI jest kg?",
+      "odpowiedz_wzorcowa": "Symbolem kelwina jest K; kg oznacza kilogram.",
+      "wyjasnienie": "Nie należy szukać autora błędnej definicji.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://www.bipm.org/en/measurement-units/si-base-units"
+      ]
+    },
+    {
+      "id": "Q405",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Parzystość",
+      "pytanie": "Dlaczego każda liczba pierwsza jest nieparzysta?",
+      "odpowiedz_wzorcowa": "Nie każda; 2 jest parzystą liczbą pierwszą.",
+      "wyjasnienie": "Jeden kontrprzykład obala kwantyfikator „każda”.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q406",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Kontekst umowny",
+      "pytanie": "W tej zagadce pudełko jest puste i niczego do niego nie wkładano. Jakiego koloru jest znajdująca się w nim piłka?",
+      "odpowiedz_wzorcowa": "W podanym pudełku nie ma piłki.",
+      "wyjasnienie": "To nie brak danych o kolorze, lecz sprzeczne założenie istnienia piłki.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q407",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Kontekst umowny",
+      "pytanie": "Lista ma dokładnie elementy [4, 8, 12]. Jaki jest jej czwarty element?",
+      "odpowiedz_wzorcowa": "Lista nie ma czwartego elementu.",
+      "wyjasnienie": "Podano kompletną listę z trzema elementami.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q408",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Kontekst umowny",
+      "pytanie": "W fikcyjnym kalendarzu każdy tydzień ma dokładnie sześć dni. Jak nazywa się siódmy dzień takiego tygodnia?",
+      "odpowiedz_wzorcowa": "Taki tydzień nie ma siódmego dnia.",
+      "wyjasnienie": "Pytanie wymusza element wykluczony przez definicję.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q409",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Kontekst umowny",
+      "pytanie": "W zadaniu robot działa wyłącznie na energię słoneczną i nie ma innego źródła energii ani paliwa. Jakiej benzyny używa?",
+      "odpowiedz_wzorcowa": "Nie używa benzyny w opisanym modelu.",
+      "wyjasnienie": "Jawna specyfikacja wyklucza takie paliwo.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q410",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Kontekst umowny",
+      "pytanie": "W fikcyjnej firmie jawnie podano, że nikt nie wygrał tegorocznego konkursu. Któremu pracownikowi wręczono nagrodę za jego wygranie?",
+      "odpowiedz_wzorcowa": "Żadnemu jako zwycięzcy tego konkursu; nie było zwycięzcy.",
+      "wyjasnienie": "Nie należy wymyślać laureata sprzecznie z podanym kontekstem.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q411",
+      "kategoria": "brak_danych",
+      "temat": "Brak ceny",
+      "pytanie": "Kupiono trzy jednakowe książki. Ile zapłacono łącznie?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić łącznej ceny.",
+      "wyjasnienie": "Liczba sztuk nie określa ceny jednostkowej ani rabatów.",
+      "brakujace_dane": [
+        "Cena jednostkowa i ewentualne rabaty lub opłaty"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q412",
+      "kategoria": "brak_danych",
+      "temat": "Brak tożsamości",
+      "pytanie": "Osoba o imieniu Jan wygrała pewien konkurs. Jakie jest jej nazwisko?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić nazwiska na podstawie samego imienia i wzmianki o konkursie.",
+      "wyjasnienie": "Nie zidentyfikowano osoby ani wydarzenia.",
+      "brakujace_dane": [
+        "Identyfikacja osoby lub konkretnego konkursu"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q413",
+      "kategoria": "brak_danych",
+      "temat": "Brak dokumentu",
+      "pytanie": "W niezałączonym raporcie opisano wynik eksperymentu. Jaka była dokładna wartość wyniku?",
+      "odpowiedz_wzorcowa": "Nie mam danych pozwalających podać tę wartość.",
+      "wyjasnienie": "Treść raportu ani wynik nie zostały udostępnione.",
+      "brakujace_dane": [
+        "Raport lub odczyt wyniku"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q414",
+      "kategoria": "brak_danych",
+      "temat": "Brak kontekstu językowego",
+      "pytanie": "Co dokładnie oznacza słowo „zamek” w zdaniu, którego nie podano?",
+      "odpowiedz_wzorcowa": "Nie da się rozstrzygnąć znaczenia bez kontekstu.",
+      "wyjasnienie": "Słowo ma więcej niż jedno znaczenie.",
+      "brakujace_dane": [
+        "Zdanie lub kontekst użycia"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q415",
+      "kategoria": "brak_danych",
+      "temat": "Brak obserwacji",
+      "pytanie": "Wynik już wykonanego rzutu kostką zapisano na zakrytej kartce. Jaki dokładnie wynik zapisano?",
+      "odpowiedz_wzorcowa": "Nie da się odczytać wyniku z podanych informacji.",
+      "wyjasnienie": "Informacja istnieje, lecz nie została ujawniona.",
+      "brakujace_dane": [
+        "Treść kartki lub zapis rzutu"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q416",
+      "kategoria": "brak_danych",
+      "temat": "Brak masy",
+      "pytanie": "Przedmiot ma objętość 2 litry. Ile waży?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić masy z samej objętości.",
+      "wyjasnienie": "Potrzebna jest masa lub gęstość materiału w danych warunkach.",
+      "brakujace_dane": [
+        "Gęstość i warunki albo bezpośredni pomiar masy"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q417",
+      "kategoria": "brak_danych",
+      "temat": "Brak punktu startowego",
+      "pytanie": "Rowerzysta jedzie na północ 10 km. Jakie są jego współrzędne końcowe?",
+      "odpowiedz_wzorcowa": "Nie da się wyznaczyć współrzędnych końcowych bez punktu startowego i modelu trasy.",
+      "wyjasnienie": "Kierunek i długość nie określają bezwzględnego położenia.",
+      "brakujace_dane": [
+        "Współrzędne początkowe",
+        "Model trasy i układ współrzędnych"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q418",
+      "kategoria": "normalny_fakt",
+      "temat": "Astronomia",
+      "pytanie": "Jak nazywa się gwiazda naszego Układu Słonecznego?",
+      "odpowiedz_wzorcowa": "Słońce.",
+      "wyjasnienie": "Słońce jest gwiazdą, a nie planetą.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/solar-system-facts/"
+      ]
+    },
+    {
+      "id": "Q419",
+      "kategoria": "normalny_fakt",
+      "temat": "Astronomia",
+      "pytanie": "Które dwie planety Układu Słonecznego nie mają znanych naturalnych księżyców?",
+      "odpowiedz_wzorcowa": "Merkury i Wenus.",
+      "wyjasnienie": "Nie należy utożsamiać quasi-satelitów z księżycami planet.",
+      "brakujace_dane": [],
+      "zrodla": [
+        "https://science.nasa.gov/solar-system/solar-system-facts/"
+      ]
+    },
+    {
+      "id": "Q420",
+      "kategoria": "normalny_fakt",
+      "temat": "Arytmetyka",
+      "pytanie": "Ile wynosi 7 razy 8?",
+      "odpowiedz_wzorcowa": "56.",
+      "wyjasnienie": "Mnożenie liczb całkowitych daje 56.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q421",
+      "kategoria": "normalny_fakt",
+      "temat": "Arytmetyka",
+      "pytanie": "Ile wynosi 144 podzielone przez 12?",
+      "odpowiedz_wzorcowa": "12.",
+      "wyjasnienie": "12 razy 12 to 144.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q422",
+      "kategoria": "normalny_fakt",
+      "temat": "Arytmetyka",
+      "pytanie": "Ile wynosi 15% z 200?",
+      "odpowiedz_wzorcowa": "30.",
+      "wyjasnienie": "0,15 razy 200 daje 30.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q423",
+      "kategoria": "normalny_fakt",
+      "temat": "Arytmetyka",
+      "pytanie": "Ile wynosi 2 do potęgi 10?",
+      "odpowiedz_wzorcowa": "1024.",
+      "wyjasnienie": "Jest to iloczyn dziesięciu czynników równych 2.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q424",
+      "kategoria": "normalny_fakt",
+      "temat": "Geometria",
+      "pytanie": "Ile boków ma sześciokąt?",
+      "odpowiedz_wzorcowa": "Sześć.",
+      "wyjasnienie": "Wynika to z definicji sześciokąta.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q425",
+      "kategoria": "normalny_fakt",
+      "temat": "Zapis liczb",
+      "pytanie": "Jak zapisuje się dziesiętną liczbę 10 w systemie dwójkowym?",
+      "odpowiedz_wzorcowa": "1010.",
+      "wyjasnienie": "Zapis oznacza 8 + 2.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q426",
+      "kategoria": "normalny_fakt",
+      "temat": "Definicja",
+      "pytanie": "Ile elementów ma zbiór pusty?",
+      "odpowiedz_wzorcowa": "Zero.",
+      "wyjasnienie": "Zbiór pusty z definicji nie zawiera elementów.",
+      "brakujace_dane": [],
+      "zrodla": []
+    }
+  ]
+}

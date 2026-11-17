@@ -1,0 +1,257 @@
+{
+  "n_tune": 66,
+  "n_stage_traps": 30,
+  "n_stage_controls": 33,
+  "curve": [
+    {
+      "entropy_tau": 0.3,
+      "trap_catch": 0.9667,
+      "control_pass": 0.303,
+      "balanced": 0.6348
+    },
+    {
+      "entropy_tau": 0.35,
+      "trap_catch": 0.9667,
+      "control_pass": 0.3939,
+      "balanced": 0.6803
+    },
+    {
+      "entropy_tau": 0.4,
+      "trap_catch": 0.9667,
+      "control_pass": 0.3939,
+      "balanced": 0.6803
+    },
+    {
+      "entropy_tau": 0.45,
+      "trap_catch": 0.9667,
+      "control_pass": 0.4545,
+      "balanced": 0.7106
+    },
+    {
+      "entropy_tau": 0.5,
+      "trap_catch": 0.9667,
+      "control_pass": 0.4545,
+      "balanced": 0.7106
+    },
+    {
+      "entropy_tau": 0.55,
+      "trap_catch": 0.9667,
+      "control_pass": 0.4545,
+      "balanced": 0.7106
+    },
+    {
+      "entropy_tau": 0.6,
+      "trap_catch": 0.9667,
+      "control_pass": 0.6667,
+      "balanced": 0.8167
+    },
+    {
+      "entropy_tau": 0.65,
+      "trap_catch": 0.9667,
+      "control_pass": 0.6667,
+      "balanced": 0.8167
+    },
+    {
+      "entropy_tau": 0.7,
+      "trap_catch": 0.9333,
+      "control_pass": 0.6667,
+      "balanced": 0.8
+    },
+    {
+      "entropy_tau": 0.75,
+      "trap_catch": 0.9333,
+      "control_pass": 0.6667,
+      "balanced": 0.8
+    },
+    {
+      "entropy_tau": 0.8,
+      "trap_catch": 0.9333,
+      "control_pass": 0.6667,
+      "balanced": 0.8
+    },
+    {
+      "entropy_tau": 0.85,
+      "trap_catch": 0.6,
+      "control_pass": 0.7273,
+      "balanced": 0.6636
+    },
+    {
+      "entropy_tau": 0.9,
+      "trap_catch": 0.6,
+      "control_pass": 0.7273,
+      "balanced": 0.6636
+    },
+    {
+      "entropy_tau": 0.95,
+      "trap_catch": 0.6,
+      "control_pass": 0.7273,
+      "balanced": 0.6636
+    }
+  ],
+  "chosen": {
+    "entropy_tau": 0.65,
+    "trap_catch": 0.9667,
+    "control_pass": 0.6667,
+    "balanced": 0.8167
+  },
+  "default_tau": 0.6,
+  "default_on_stage": {
+    "entropy_tau": 0.6,
+    "trap_catch": 0.9667,
+    "control_pass": 0.6667,
+    "balanced": 0.8167
+  },
+  "test_chosen": {
+    "n": 88,
+    "accuracy": 0.5568,
+    "macro_f1": 0.5329,
+    "FAR": 0.1538,
+    "FAR_abstain": 0.1538,
+    "over_refusal": 0.3478,
+    "paradox_identification_accuracy": 0.3077,
+    "ECE": 0.2782,
+    "per_class": {
+      "PASS": {
+        "precision": 0.6,
+        "recall": 0.6522,
+        "f1": 0.625,
+        "support": 23
+      },
+      "CHALLENGE": {
+        "precision": 0.8889,
+        "recall": 0.3077,
+        "f1": 0.4571,
+        "support": 26
+      },
+      "ABSTAIN": {
+        "precision": 0.44,
+        "recall": 0.8462,
+        "f1": 0.5789,
+        "support": 26
+      },
+      "EXPLAIN_PARADOX": {
+        "precision": 1.0,
+        "recall": 0.3077,
+        "f1": 0.4706,
+        "support": 13
+      }
+    },
+    "labels": [
+      "PASS",
+      "CHALLENGE",
+      "ABSTAIN",
+      "EXPLAIN_PARADOX"
+    ],
+    "confusion_matrix": [
+      [
+        15,
+        1,
+        7,
+        0
+      ],
+      [
+        4,
+        8,
+        14,
+        0
+      ],
+      [
+        4,
+        0,
+        22,
+        0
+      ],
+      [
+        2,
+        0,
+        7,
+        4
+      ]
+    ],
+    "accuracy_by_category": {
+      "paradoks": 0.3077,
+      "falszywe_zalozenie": 0.3077,
+      "brak_danych": 0.8462,
+      "normalny_fakt": 0.6522
+    },
+    "latency_ms_p50": 20057.26
+  },
+  "test_default": {
+    "n": 88,
+    "accuracy": 0.5568,
+    "macro_f1": 0.5329,
+    "FAR": 0.1538,
+    "FAR_abstain": 0.1538,
+    "over_refusal": 0.3478,
+    "paradox_identification_accuracy": 0.3077,
+    "ECE": 0.2782,
+    "per_class": {
+      "PASS": {
+        "precision": 0.6,
+        "recall": 0.6522,
+        "f1": 0.625,
+        "support": 23
+      },
+      "CHALLENGE": {
+        "precision": 0.8889,
+        "recall": 0.3077,
+        "f1": 0.4571,
+        "support": 26
+      },
+      "ABSTAIN": {
+        "precision": 0.44,
+        "recall": 0.8462,
+        "f1": 0.5789,
+        "support": 26
+      },
+      "EXPLAIN_PARADOX": {
+        "precision": 1.0,
+        "recall": 0.3077,
+        "f1": 0.4706,
+        "support": 13
+      }
+    },
+    "labels": [
+      "PASS",
+      "CHALLENGE",
+      "ABSTAIN",
+      "EXPLAIN_PARADOX"
+    ],
+    "confusion_matrix": [
+      [
+        15,
+        1,
+        7,
+        0
+      ],
+      [
+        4,
+        8,
+        14,
+        0
+      ],
+      [
+        4,
+        0,
+        22,
+        0
+      ],
+      [
+        2,
+        0,
+        7,
+        4
+      ]
+    ],
+    "accuracy_by_category": {
+      "paradoks": 0.3077,
+      "falszywe_zalozenie": 0.3077,
+      "brak_danych": 0.8462,
+      "normalny_fakt": 0.6522
+    },
+    "latency_ms_p50": 20057.26
+  },
+  "fixed": {
+    "r7_llm_referents": "off"
+  }
+}
