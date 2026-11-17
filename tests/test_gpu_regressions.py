@@ -70,3 +70,46 @@ def test_r7_llm_referent_modes():
     assert first("all") == "R7:unresolved_referent"
     assert first("specific") != "R7:unresolved_referent"
     assert first("off") != "R7:unresolved_referent"
+
+
+def test_parse_answerability():
+    from mca.core.premise_validator import parse_answerability
+
+    assert parse_answerability("TAK") is True
+    assert parse_answerability("Nie.") is False
+    assert parse_answerability("NIE, brakuje ceny") is False
+    assert parse_answerability("Tak, bo ...") is True
+    assert parse_answerability("Trudno powiedzieć") is None
+
+
+def test_r7_gated_mode_follows_probe():
+    from mca.core.decision_controller import DecisionController
+    from mca.telemetry.schemas import AnswerabilityReport, MetacognitiveTelemetry, PremiseVerdict
+
+    hint = Premise(id="lr1", text="kolor piłki", kind=PremiseKind.REFERENT, source="llm", missing_variable="kolor")
+    base = dict(query="W pudełku jest piłka. Jakiego jest koloru?",
+                premise_verdicts=[PremiseVerdict(premise=hint, status=PremiseStatus.UNVERIFIED)])
+    ctl = DecisionController(MCAConfig(nli_backend="lexical", embedding_backend="hashing", r7_llm_referents="gated"))
+
+    def first(**kw):
+        return ctl.decide(MetacognitiveTelemetry(**base, **kw)).triggered_rules[0]
+
+    assert first(answerability=AnswerabilityReport(answerable=False)) == "R7:unresolved_referent"
+    assert first(answerability=AnswerabilityReport(answerable=True)) != "R7:unresolved_referent"
+    assert first() == "R7:unresolved_referent"  # no probe -> same as "all"
+
+
+def test_answerability_probe_in_fast_path():
+    import asyncio
+
+    from mca.core.orchestrator import MCAOrchestrator
+    from mca.llm.scripted import ScriptedLLM
+
+    def reply(prompt: str) -> str:
+        return "NIE" if "TAK albo NIE" in prompt else "{}"
+
+    cfg = MCAConfig(nli_backend="lexical", embedding_backend="hashing", answerability_check=True)
+    orch = MCAOrchestrator(ScriptedLLM(reply), cfg, enable_uncertainty=False)
+    t = asyncio.run(orch.fast_path("Kupiono trzy książki. Ile zapłacono?"))
+    orch.close()
+    assert t.answerability is not None and t.answerability.answerable is False

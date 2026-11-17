@@ -33,14 +33,18 @@ class MCAConfig(BaseModel):
     # --- Layer 1: premise validation -----------------------------------------
     nli_threshold: float = Field(0.5, ge=0.0, le=1.0)
     use_llm_decomposition: bool = True
-    r7_llm_referents: Literal["all", "specific", "off"] = Field(
+    r7_llm_referents: Literal["all", "specific", "off", "gated"] = Field(
         "all",
         description=(
             "Which LLM-proposed referents can trigger R7. 'all': any not grounded in the KB (default; also catches "
             "missing-data traps, at the cost of over-refusal). 'specific': only possessives, deixis, demonstratives "
-            "and names capitalised in the query. 'off': only rule-detected referents."
+            "and names capitalised in the query. 'off': only rule-detected referents. 'gated': LLM referents count only "
+            "when the answerability probe says the question cannot be answered as posed (falls back to 'all' when "
+            "no probe verdict is available)."
         ),
     )
+    answerability_check: bool = Field(False, description="Ask the base model once (TAK/NIE) whether the question is answerable as posed.")
+    answerability_max_new_tokens: int = Field(8, ge=1)
 
     # --- Layer 2: semantic entropy -------------------------------------------
     n_samples: int = Field(5, ge=1, le=32)

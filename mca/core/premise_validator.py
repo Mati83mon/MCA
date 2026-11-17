@@ -26,7 +26,7 @@ from mca.core.evidence_verifier import EvidenceStore
 from mca.core.formalizer import RuleBasedFormalizer
 from mca.core.oracles import DEFAULT_ORACLES, NumberTheoryOracle, PythonSemanticsOracle
 from mca.llm.base import LLMBackend, extract_json
-from mca.telemetry.schemas import NLILabel, Premise, PremiseKind, PremiseStatus, PremiseVerdict
+from mca.telemetry.schemas import AnswerabilityReport, NLILabel, Premise, PremiseKind, PremiseStatus, PremiseVerdict
 from mca.utils.nli_client import NLIClient
 from mca.utils.z3_helpers import FormalSpec
 
@@ -45,6 +45,28 @@ szukaną wielkość, jeśli pytanie prosi o wartość liczbową.
 
 Pytanie: {query}
 JSON:"""
+
+ANSWERABILITY_PROMPT = """Czy na poniższe pytanie da się udzielić jednoznacznej odpowiedzi wyłącznie na podstawie jego treści
+i powszechnej wiedzy (faktów, definicji, rachunków)? Odpowiedz NIE, jeśli brakuje danych, których nie ma w pytaniu
+(konkretnych wartości, kontekstu, treści pliku, zdjęcia lub dokumentu, tożsamości osoby, miejsca albo czasu).
+W przeciwnym razie odpowiedz TAK. Odpowiedz jednym słowem: TAK albo NIE.
+
+Pytanie: {query}
+Odpowiedź:"""
+
+_YES = re.compile(r"\b(tak|yes)\b", re.IGNORECASE)
+_NO = re.compile(r"\b(nie|no)\b", re.IGNORECASE)
+
+
+def parse_answerability(text: str) -> bool | None:
+    """TAK -> True, NIE -> False; whichever comes first wins, ``None`` when neither appears."""
+    yes, no = _YES.search(text), _NO.search(text)
+    if yes and (not no or yes.start() < no.start()):
+        return True
+    if no:
+        return False
+    return None
+
 
 _UPPER = "A-ZĄĆĘŁŃÓŚŹŻ"
 _POSSESSIVE = re.compile(r"\b(?:m[óo]j|moja|moje|mojego|mojej|moim|mojemu|mych|moich|nasz\w*)\s+(\w+(?:\.\w+)?)", re.IGNORECASE)
@@ -190,6 +212,21 @@ class PremiseValidator:
             except ValidationError as exc:
                 logger.info("discarding invalid LLM formal spec: %s", exc)
         return out
+
+    async def answerability(self, query: str) -> AnswerabilityReport | None:
+        """One greedy TAK/NIE probe; reasoning models answer without a thinking phase."""
+        if self.llm is None or not self.config.answerability_check:
+            return None
+        prompt = ANSWERABILITY_PROMPT.format(query=query)
+        n_tok = self.config.answerability_max_new_tokens
+        try:
+            many = getattr(self.llm, "generate_many", None)
+            raw = (await many(prompt, 1, temperature=0.0, max_new_tokens=n_tok))[0] if many else \
+                await self.llm.generate(prompt, temperature=0.0, max_new_tokens=n_tok)
+        except Exception as exc:  # noqa: BLE001 - the probe must not break validation
+            logger.warning("answerability probe failed: %s", exc)
+            return None
+        return AnswerabilityReport(answerable=parse_answerability(raw), raw=raw.strip()[:200])
 
     async def decompose(self, query: str) -> Decomposition:
         llm_part = await self._llm_decompose(query)

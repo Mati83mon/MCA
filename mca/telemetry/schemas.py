@@ -199,6 +199,13 @@ class EvidenceReport(BaseModel):
     paradox_match: RetrievedEvidence | None = None
 
 
+class AnswerabilityReport(BaseModel):
+    """The base model's own verdict on whether the question can be answered as posed."""
+
+    answerable: bool | None = Field(None, description="True = TAK, False = NIE, None = unparseable reply.")
+    raw: str = ""
+
+
 class MetacognitiveTelemetry(BaseModel):
     """Everything the Policy Gate is allowed to look at."""
 
@@ -210,6 +217,7 @@ class MetacognitiveTelemetry(BaseModel):
     uncertainty: UncertaintyReport | None = None
     logic: LogicReport = Field(default_factory=LogicReport)
     evidence: EvidenceReport = Field(default_factory=EvidenceReport)
+    answerability: AnswerabilityReport | None = None
     latency_ms: dict[str, float] = Field(default_factory=dict)
 
     @property

@@ -235,6 +235,14 @@ They are exploratory: the held-out items had already been seen in the v12 run.
 
 **Held-out v3** ([`heldout_v3_paczka_022b.json`](benchmarks/datasets/heldout_v3_paczka_022b.json)) is that fresh split. It contains 26 items: 2 paradoxes, 8 false premises, 7 missing-data items and 9 control facts. The source was a new 100-item package; 74 of its items repeated a problem already in the benchmark, held-out v1/v2 or the rebuilt traps, or another item of the package, and were removed. `metadane.usuniete_duplikaty` maps each removed item to the one it repeats. No model has seen v3 yet.
 
+**Answerability probe (pre-registered, run pending).** With `answerability_check=True` the base model gets one greedy TAK/NIE question per item: can it be answered from its content and general knowledge alone? The reply is stored in `telemetry.answerability`. A new R7 mode, `gated`, lets LLM-proposed referents trigger R7 only when the probe says NIE. The selection rule was fixed before the GPU run:
+
+1. Use the three already-seen sets as dev: rebuilt traps + controls, held-out v1 and held-out v2 (154 items per model).
+2. Keep τ = 0.6. For each R7 mode (`all`, `gated`, `specific`, `off`), compute balanced = 1 − (FAR + over-refusal) / 2. Ties go to `all`, then `gated`.
+3. Evaluate exactly once on held-out v3. The primary comparison is the chosen mode vs `all`; the other modes are secondary.
+
+The command is `python -m benchmarks.rule_table select-r7 rebuilt__X.jsonl heldout__X.jsonl heldout_v2__X.jsonl --test heldout_v3__X.jsonl`.
+
 **Before the fixes (first GPU run, v3)** MCA+Qwen scored acc 0.75 with over-refusal **1.00** (every LLM-
 extracted referent hit R7) and MCA+DeepSeek acc 0.80 / over-refusal 0.76 (entropy computed on truncated
 `<think>` traces, plus LLM formal specs with infix `And`/`Or` failing to parse). Commit `05084ba` grounds

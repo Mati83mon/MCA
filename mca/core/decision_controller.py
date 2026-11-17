@@ -57,6 +57,8 @@ class DecisionController:
             return [v for v in unresolved if v.premise.source != "llm"]
         if mode == "specific":
             return [v for v in unresolved if v.premise.source != "llm" or is_specific_referent(v.premise.text, t.query)]
+        if mode == "gated" and t.answerability is not None and t.answerability.answerable is not None:
+            return unresolved if t.answerability.answerable is False else [v for v in unresolved if v.premise.source != "llm"]
         return unresolved
 
     def decide(self, t: MetacognitiveTelemetry) -> PolicyDecision:
