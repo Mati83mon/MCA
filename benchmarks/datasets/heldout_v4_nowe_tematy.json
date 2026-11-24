@@ -1,0 +1,1085 @@
+{
+  "metadane": {
+    "tytul": "Held-out v4: pytania napisane od zera na nowych tematach",
+    "jezyk": "pl",
+    "wersja": "1.0",
+    "liczba_pytan": 100,
+    "liczby_w_kategoriach": {
+      "paradoks": 18,
+      "falszywe_zalozenie": 26,
+      "brak_danych": 26,
+      "normalny_fakt": 30
+    },
+    "zrodlo": "Napisane przez asystenta AI (Claude) 17.11.2026 na prośbę autora projektu, przed jakimkolwiek uruchomieniem modelu na tych pytaniach. Tematy wybrano tak, by nie pokrywały się z benchmarkiem 100, held-out v1–v3 ani rebuilt_traps_v1 (sprawdzone automatycznie i ręcznie). Odpowiedzi wzorcowe to wiedza powszechna; źródeł nie podano.",
+    "uwagi": [
+      "Modelowi przekazuje się wyłącznie pole pytanie.",
+      "Paradoksy obejmują także paradoksy pozorne z poprawnym rozwiązaniem oraz problemy sporne (bez jednej odpowiedzi).",
+      "Część fałszywych założeń ma bliźniacze pytanie kontrolne z tej samej dziedziny (np. Q519/Q571: bambus)."
+    ]
+  },
+  "pytania": [
+    {
+      "id": "Q501",
+      "kategoria": "paradoks",
+      "temat": "Newcomb",
+      "pytanie": "Wyrocznia, która niemal zawsze trafnie przewiduje wybory, włożyła milion złotych do nieprzezroczystego pudełka B tylko wtedy, gdy przewidziała, że weźmiesz wyłącznie B. W przezroczystym pudełku A leży tysiąc złotych. Czy racjonalnie jest wziąć oba pudełka?",
+      "odpowiedz_wzorcowa": "Nie ma jednej przyjętej odpowiedzi: zasada dominacji każe wziąć oba, maksymalizacja oczekiwanej użyteczności przy trafnej wyroczni – tylko B.",
+      "wyjasnienie": "Paradoks Newcomba; spór teorii decyzji przyczynowej i ewidencyjnej.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q502",
+      "kategoria": "paradoks",
+      "temat": "Śpiąca Królewna",
+      "pytanie": "Królewnę usypia się w niedzielę i rzuca monetą: przy orle budzi się ją raz, przy reszce dwa razy, za każdym razem wymazując pamięć poprzedniego przebudzenia. Jak bardzo po przebudzeniu powinna wierzyć, że wypadł orzeł?",
+      "odpowiedz_wzorcowa": "Brak konsensusu: „halferzy” odpowiadają 1/2, „thirderzy” 1/3; odpowiedź zależy od przyjętej zasady aktualizacji przekonań.",
+      "wyjasnienie": "Paradoks Śpiącej Królewny w epistemologii formalnej.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q503",
+      "kategoria": "paradoks",
+      "temat": "Curry",
+      "pytanie": "Zdanie C brzmi: „Jeśli zdanie C jest prawdziwe, to Księżyc jest zrobiony z sera”. Czy wynika z tego, że Księżyc jest zrobiony z sera?",
+      "odpowiedz_wzorcowa": "Nie; to paradoks Curry'ego – przy naiwnym predykacie prawdy i standardowej implikacji można „udowodnić” dowolne zdanie, co pokazuje wadę tych założeń.",
+      "wyjasnienie": "Samoodniesienie z implikacją zamiast negacji.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q504",
+      "kategoria": "paradoks",
+      "temat": "Cantor",
+      "pytanie": "Czy istnieje zbiór wszystkich zbiorów, skoro zbiór potęgowy każdego zbioru ma większą moc niż on sam?",
+      "odpowiedz_wzorcowa": "W standardowej teorii mnogości (ZFC) taki zbiór nie istnieje; założenie jego istnienia prowadzi do sprzeczności (paradoks Cantora).",
+      "wyjasnienie": "Twierdzenie Cantora wyklucza zbiór uniwersalny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q505",
+      "kategoria": "paradoks",
+      "temat": "Bertrand",
+      "pytanie": "Na okręgu losujemy cięciwę „całkowicie losowo”. Jakie jest prawdopodobieństwo, że będzie dłuższa od boku trójkąta równobocznego wpisanego w ten okrąg?",
+      "odpowiedz_wzorcowa": "Odpowiedź zależy od metody losowania (np. 1/3, 1/2 albo 1/4); pytanie bez jej określenia jest niedookreślone.",
+      "wyjasnienie": "Paradoks Bertranda.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q506",
+      "kategoria": "paradoks",
+      "temat": "Braess",
+      "pytanie": "Czy dobudowanie nowej drogi w sieci miejskiej może wydłużyć czas dojazdu wszystkich kierowców, choć nikt nie musi z niej korzystać?",
+      "odpowiedz_wzorcowa": "Tak; w równowadze, gdy każdy wybiera najszybszą dla siebie trasę, nowa droga może pogorszyć sytuację wszystkich (paradoks Braessa).",
+      "wyjasnienie": "Równowaga Nasha nie musi być optymalna społecznie.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q507",
+      "kategoria": "paradoks",
+      "temat": "Olbers",
+      "pytanie": "Gdyby Wszechświat był nieskończony, wieczny, statyczny i równomiernie wypełniony gwiazdami, każda linia wzroku kończyłaby się na gwieździe. Dlaczego więc nocne niebo jest ciemne?",
+      "odpowiedz_wzorcowa": "Bo przesłanki są fałszywe: Wszechświat ma skończony wiek i się rozszerza, więc światło z dostatecznie dalekich obszarów do nas nie dotarło lub jest przesunięte ku czerwieni.",
+      "wyjasnienie": "Paradoks Olbersa.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q508",
+      "kategoria": "paradoks",
+      "temat": "Bliźnięta",
+      "pytanie": "Jeden z bliźniaków leci w podróż z prędkością bliską prędkości światła i wraca na Ziemię. Skoro ruch jest względny, dlaczego to on jest młodszy, a nie brat, który został?",
+      "odpowiedz_wzorcowa": "Sytuacja nie jest symetryczna: podróżnik zmienia inercjalny układ odniesienia (zawraca), więc to jego czas własny jest krótszy.",
+      "wyjasnienie": "Paradoks bliźniąt w szczególnej teorii względności.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q509",
+      "kategoria": "paradoks",
+      "temat": "Osioł Buridana",
+      "pytanie": "Idealnie racjonalny osioł stoi dokładnie pośrodku między dwiema identycznymi wiązkami siana. Czy z braku powodu, by wybrać jedną z nich, musi umrzeć z głodu?",
+      "odpowiedz_wzorcowa": "Nie musi; paradoks pokazuje granice zasady racji dostatecznej – racjonalne jest wybrać dowolną, np. losowo.",
+      "wyjasnienie": "Osioł Buridana.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q510",
+      "kategoria": "paradoks",
+      "temat": "Grue",
+      "pytanie": "Wszystkie dotąd obserwowane szmaragdy są zielone, ale też „zielebieskie” (zielone przed rokiem 2100, potem niebieskie). Dlaczego obserwacje mają potwierdzać raczej „szmaragdy są zielone” niż „szmaragdy są zielebieskie”?",
+      "odpowiedz_wzorcowa": "Sama logika tego nie rozstrzyga; to nowa zagadka indukcji Goodmana – potrzebne jest kryterium projektowalności predykatów.",
+      "wyjasnienie": "Paradoks Goodmana.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q511",
+      "kategoria": "paradoks",
+      "temat": "Krokodyl",
+      "pytanie": "Krokodyl porwał dziecko i obiecał je oddać, jeśli matka trafnie przewidzi, czy je odda. Matka mówi: „Nie oddasz”. Co powinien zrobić krokodyl, żeby dotrzymać obietnicy?",
+      "odpowiedz_wzorcowa": "Nie ma takiego działania: oddanie dziecka czyni przewidywanie fałszywym, a nieoddanie – prawdziwym, co zobowiązuje do oddania.",
+      "wyjasnienie": "Dylemat krokodyla, antynomia samoodniesienia.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q512",
+      "kategoria": "paradoks",
+      "temat": "Protagoras i Euatlos",
+      "pytanie": "Uczeń miał zapłacić nauczycielowi prawa dopiero po wygraniu pierwszej sprawy. Nie prowadzi żadnej, więc nauczyciel pozywa go o zapłatę. Kto powinien wygrać ten proces?",
+      "odpowiedz_wzorcowa": "Nie ma rozstrzygnięcia wynikającego z samej umowy; każda strona ma argument z obu możliwych wyroków. Rozwiązanie zależy od przyjętej reguły (np. ocena stanu sprzed wyroku).",
+      "wyjasnienie": "Paradoks sądu (Protagoras–Euatlos).",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q513",
+      "kategoria": "paradoks",
+      "temat": "Pinokio",
+      "pytanie": "Nos Pinokia rośnie wtedy i tylko wtedy, gdy Pinokio mówi nieprawdę. Pinokio mówi: „Mój nos teraz urośnie”. Czy nos urośnie?",
+      "odpowiedz_wzorcowa": "Żadna odpowiedź nie jest spójna: jeśli urośnie, zdanie było prawdziwe, więc nie powinien; jeśli nie urośnie, zdanie było fałszywe, więc powinien.",
+      "wyjasnienie": "Paradoks Pinokia, wariant kłamcy.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q514",
+      "kategoria": "paradoks",
+      "temat": "Paradoks inspekcji",
+      "pytanie": "Autobusy odjeżdżają średnio co 10 minut, ale nieregularnie. Pasażer przychodzi na przystanek w losowej chwili. Czy jego średni czas oczekiwania wynosi 5 minut?",
+      "odpowiedz_wzorcowa": "Na ogół nie: losowy pasażer częściej trafia na dłuższe przerwy, więc średnie oczekiwanie jest co najmniej 5 minut i rośnie wraz ze zmiennością odstępów.",
+      "wyjasnienie": "Paradoks inspekcji (wydłużonego odcinka).",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q515",
+      "kategoria": "paradoks",
+      "temat": "Chłopiec czy dziewczynka",
+      "pytanie": "Pewna rodzina ma dwoje dzieci i wiadomo, że co najmniej jedno z nich jest chłopcem. Jakie jest prawdopodobieństwo, że oboje są chłopcami?",
+      "odpowiedz_wzorcowa": "Zależy od tego, jak uzyskano informację: przy losowaniu spośród rodzin z co najmniej jednym chłopcem 1/3, przy zobaczeniu losowego dziecka będącego chłopcem 1/2.",
+      "wyjasnienie": "Paradoks chłopca i dziewczynki.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q516",
+      "kategoria": "paradoks",
+      "temat": "Berkson",
+      "pytanie": "Wśród pacjentów szpitala dwie choroby występują razem rzadziej, niż można by oczekiwać. Czy dowodzi to, że jedna choroba chroni przed drugą?",
+      "odpowiedz_wzorcowa": "Nie; to może być skutek selekcji – do szpitala trafiają osoby z którąkolwiek chorobą (paradoks Berksona).",
+      "wyjasnienie": "Błąd selekcji tworzący pozorną ujemną korelację.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q517",
+      "kategoria": "paradoks",
+      "temat": "Parrondo",
+      "pytanie": "Dwie gry hazardowe są każda z osobna przegrywające. Czy przeplatanie ich może dawać średnio zysk?",
+      "odpowiedz_wzorcowa": "Tak; przy odpowiedniej konstrukcji gier (paradoks Parrondo) naprzemienne granie daje dodatnią wartość oczekiwaną.",
+      "wyjasnienie": "Paradoks Parrondo.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q518",
+      "kategoria": "paradoks",
+      "temat": "Fitch",
+      "pytanie": "Jeśli każda prawda jest poznawalna, czy wynika z tego, że każda prawda jest już znana?",
+      "odpowiedz_wzorcowa": "W standardowej logice epistemicznej tak (paradoks poznawalności Fitcha), co uważa się za kłopotliwy wniosek; spór dotyczy przyjętych założeń.",
+      "wyjasnienie": "Paradoks Fitcha.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q519",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Bambus",
+      "pytanie": "Dlaczego bambus jest drzewem iglastym?",
+      "odpowiedz_wzorcowa": "Bambus nie jest drzewem iglastym; to roślina z rodziny traw (wiechlinowatych).",
+      "wyjasnienie": "Fałszywe założenie botaniczne.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q520",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Kolumb",
+      "pytanie": "W którym roku Krzysztof Kolumb dotarł do Australii?",
+      "odpowiedz_wzorcowa": "Kolumb nigdy nie dotarł do Australii; jego wyprawy dotyczyły Ameryk.",
+      "wyjasnienie": "Fałszywe założenie historyczne.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q521",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Kangury",
+      "pytanie": "Dlaczego kangury żyją naturalnie w Afryce?",
+      "odpowiedz_wzorcowa": "Kangury żyją naturalnie w Australii (i na Nowej Gwinei), nie w Afryce.",
+      "wyjasnienie": "Fałszywe założenie o zasięgu występowania.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q522",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Pan Tadeusz",
+      "pytanie": "W którym roku XX wieku Adam Mickiewicz napisał „Pana Tadeusza”?",
+      "odpowiedz_wzorcowa": "„Pan Tadeusz” powstał w XIX wieku (wydany w 1834 r.); Mickiewicz zmarł w 1855 r.",
+      "wyjasnienie": "Fałszywe założenie co do stulecia.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q523",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Szachy",
+      "pytanie": "Dlaczego w szachach partię rozpoczynają czarne?",
+      "odpowiedz_wzorcowa": "Partię rozpoczynają białe.",
+      "wyjasnienie": "Fałszywe założenie o regułach.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q524",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Tenis",
+      "pytanie": "Ile goli trzeba zdobyć w tenisie ziemnym, żeby wygrać seta?",
+      "odpowiedz_wzorcowa": "W tenisie nie zdobywa się goli; seta wygrywa się gemami (zwykle co najmniej 6, z przewagą dwóch lub tie-breakiem).",
+      "wyjasnienie": "Pomylenie dyscyplin.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q525",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Złoto",
+      "pytanie": "Dlaczego złoto jest silnie przyciągane przez magnes?",
+      "odpowiedz_wzorcowa": "Złoto nie jest ferromagnetyczne; jest diamagnetykiem i zwykły magnes go nie przyciąga.",
+      "wyjasnienie": "Fałszywe założenie fizyczne.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q526",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Wisła",
+      "pytanie": "Dlaczego Wisła uchodzi do Morza Czarnego?",
+      "odpowiedz_wzorcowa": "Wisła uchodzi do Morza Bałtyckiego.",
+      "wyjasnienie": "Fałszywe założenie geograficzne.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q527",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Trzustka",
+      "pytanie": "W której części mózgu znajduje się trzustka?",
+      "odpowiedz_wzorcowa": "Trzustka nie jest częścią mózgu; to narząd jamy brzusznej.",
+      "wyjasnienie": "Fałszywe założenie anatomiczne.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q528",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Krew",
+      "pytanie": "Dlaczego krew w żyłach człowieka jest niebieska?",
+      "odpowiedz_wzorcowa": "Krew żylna jest ciemnoczerwona; niebieski odcień żył widocznych przez skórę to efekt optyczny.",
+      "wyjasnienie": "Popularny mit.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q529",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Everest",
+      "pytanie": "Dlaczego Mount Everest leży w Andach?",
+      "odpowiedz_wzorcowa": "Mount Everest leży w Himalajach, na granicy Nepalu i Chin.",
+      "wyjasnienie": "Fałszywe założenie geograficzne.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q530",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Diament",
+      "pytanie": "Dlaczego diament przewodzi prąd elektryczny lepiej niż miedź?",
+      "odpowiedz_wzorcowa": "Diament jest izolatorem elektrycznym; miedź przewodzi prąd znacznie lepiej.",
+      "wyjasnienie": "Fałszywe założenie fizyczne.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q531",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Deklaracja Niepodległości",
+      "pytanie": "Który polski król podpisał Deklarację Niepodległości Stanów Zjednoczonych?",
+      "odpowiedz_wzorcowa": "Żaden; deklarację podpisali delegaci kolonii amerykańskich w 1776 r.",
+      "wyjasnienie": "Fałszywe założenie historyczne.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q532",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "DNA",
+      "pytanie": "Dlaczego DNA zawiera sześć rodzajów zasad azotowych?",
+      "odpowiedz_wzorcowa": "DNA zawiera cztery zasady: adeninę, tyminę, cytozynę i guaninę.",
+      "wyjasnienie": "Fałszywe założenie biologiczne.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q533",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "SQL",
+      "pytanie": "Dlaczego w SQL instrukcja SELECT usuwa wiersze z tabeli?",
+      "odpowiedz_wzorcowa": "SELECT tylko odczytuje dane; wiersze usuwa instrukcja DELETE.",
+      "wyjasnienie": "Fałszywe założenie techniczne.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q534",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "HTTP",
+      "pytanie": "Dlaczego protokół HTTP domyślnie używa portu 21?",
+      "odpowiedz_wzorcowa": "Domyślnym portem HTTP jest 80; port 21 to FTP.",
+      "wyjasnienie": "Fałszywe założenie techniczne.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q535",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "git",
+      "pytanie": "Dlaczego polecenie git commit wysyła zmiany na zdalny serwer?",
+      "odpowiedz_wzorcowa": "git commit zapisuje zmiany lokalnie; na serwer wysyła je git push.",
+      "wyjasnienie": "Fałszywe założenie techniczne.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q536",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Liczba 91",
+      "pytanie": "Dlaczego liczba 91 jest liczbą pierwszą?",
+      "odpowiedz_wzorcowa": "91 nie jest pierwsza: 91 = 7 · 13.",
+      "wyjasnienie": "Fałszywe założenie arytmetyczne.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q537",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "0,(9)",
+      "pytanie": "Dlaczego liczba 0,999… (z dziewiątką w okresie) jest mniejsza od 1?",
+      "odpowiedz_wzorcowa": "Nie jest mniejsza; 0,(9) = 1.",
+      "wyjasnienie": "Fałszywe założenie o liczbach rzeczywistych.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q538",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Antybiotyki",
+      "pytanie": "Dlaczego antybiotyki niszczą wirusa grypy?",
+      "odpowiedz_wzorcowa": "Antybiotyki działają na bakterie, nie na wirusy; na grypę nie działają.",
+      "wyjasnienie": "Fałszywe założenie medyczne.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q539",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Don Kichot",
+      "pytanie": "Dlaczego William Szekspir napisał „Don Kichota”?",
+      "odpowiedz_wzorcowa": "„Don Kichota” napisał Miguel de Cervantes.",
+      "wyjasnienie": "Fałszywe przypisanie autorstwa.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q540",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Skrzypce",
+      "pytanie": "Dlaczego skrzypce mają sześć strun?",
+      "odpowiedz_wzorcowa": "Skrzypce mają cztery struny.",
+      "wyjasnienie": "Fałszywe założenie o instrumencie.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q541",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Euro w Polsce",
+      "pytanie": "W którym roku Polska zastąpiła złotego euro?",
+      "odpowiedz_wzorcowa": "Polska nie przyjęła euro; walutą jest złoty.",
+      "wyjasnienie": "Fałszywe założenie ekonomiczne.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q542",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Sód",
+      "pytanie": "Dlaczego sód jest gazem szlachetnym?",
+      "odpowiedz_wzorcowa": "Sód jest metalem alkalicznym, nie gazem szlachetnym.",
+      "wyjasnienie": "Fałszywe założenie chemiczne.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q543",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Piłka nożna",
+      "pytanie": "Dlaczego w piłce nożnej każda drużyna gra na boisku dwunastoma zawodnikami?",
+      "odpowiedz_wzorcowa": "Każda drużyna ma na boisku jedenastu zawodników.",
+      "wyjasnienie": "Fałszywe założenie o regułach.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q544",
+      "kategoria": "falszywe_zalozenie",
+      "temat": "Chromosomy",
+      "pytanie": "Dlaczego typowa komórka somatyczna człowieka ma 48 chromosomów?",
+      "odpowiedz_wzorcowa": "Ma 46 chromosomów (23 pary).",
+      "wyjasnienie": "Fałszywe założenie biologiczne.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q545",
+      "kategoria": "brak_danych",
+      "temat": "Stężenie roztworu",
+      "pytanie": "Zmieszano dwa roztwory soli kuchennej. Jakie jest stężenie otrzymanej mieszaniny?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić bez stężeń i ilości obu roztworów.",
+      "wyjasnienie": "Brak danych wejściowych.",
+      "brakujace_dane": [
+        "Stężenia obu roztworów",
+        "Masy lub objętości roztworów"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q546",
+      "kategoria": "brak_danych",
+      "temat": "Rata kredytu",
+      "pytanie": "Kredyt ma oprocentowanie 7% w skali roku. Ile wynosi miesięczna rata?",
+      "odpowiedz_wzorcowa": "Nie da się obliczyć bez kwoty, okresu spłaty i rodzaju rat.",
+      "wyjasnienie": "Brak parametrów kredytu.",
+      "brakujace_dane": [
+        "Kwota kredytu",
+        "Okres spłaty",
+        "Rodzaj rat i opłaty"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q547",
+      "kategoria": "brak_danych",
+      "temat": "Okres półtrwania leku",
+      "pytanie": "Pacjentowi podano lek. Po jakim czasie jego stężenie we krwi spadnie o połowę?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić bez wskazania leku i parametrów pacjenta.",
+      "wyjasnienie": "Brak identyfikacji leku.",
+      "brakujace_dane": [
+        "Nazwa leku i dawka",
+        "Parametry farmakokinetyczne pacjenta"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q548",
+      "kategoria": "brak_danych",
+      "temat": "Liczba chłopców",
+      "pytanie": "W klasie są dziewczęta i chłopcy. Ilu jest chłopców?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić bez liczebności klasy i proporcji.",
+      "wyjasnienie": "Brak liczb.",
+      "brakujace_dane": [
+        "Liczba uczniów",
+        "Liczba dziewcząt lub proporcja"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q549",
+      "kategoria": "brak_danych",
+      "temat": "Wydruk",
+      "pytanie": "Drukarka zaczęła drukować dokument. Ile minut potrwa wydruk?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić bez liczby stron i szybkości drukarki.",
+      "wyjasnienie": "Brak parametrów wydruku.",
+      "brakujace_dane": [
+        "Liczba stron",
+        "Szybkość drukarki"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q550",
+      "kategoria": "brak_danych",
+      "temat": "Wzrost zatrudnienia",
+      "pytanie": "Firma zatrudniła nowych pracowników. O ile procent wzrosło zatrudnienie?",
+      "odpowiedz_wzorcowa": "Nie da się obliczyć bez liczby pracowników przed i po.",
+      "wyjasnienie": "Brak liczb bazowych.",
+      "brakujace_dane": [
+        "Zatrudnienie przed",
+        "Liczba nowych pracowników"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q551",
+      "kategoria": "brak_danych",
+      "temat": "Ruch skoczka",
+      "pytanie": "Gracz wykonał ruch skoczkiem. Na jakie pole przesunął figurę?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić bez pozycji na szachownicy i zapisu ruchu.",
+      "wyjasnienie": "Brak pozycji.",
+      "brakujace_dane": [
+        "Pole startowe skoczka",
+        "Zapis ruchu lub pozycja"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q552",
+      "kategoria": "brak_danych",
+      "temat": "Średnia w tabeli",
+      "pytanie": "Tabela w bazie danych ma kolumnę „wiek”. Jaka jest średnia wartość w tej kolumnie?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić bez zawartości tabeli.",
+      "wyjasnienie": "Brak danych tabeli.",
+      "brakujace_dane": [
+        "Wiersze tabeli"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q553",
+      "kategoria": "brak_danych",
+      "temat": "Opóźnienie serwera",
+      "pytanie": "Serwer odpowiada wolno. Ile wynosi opóźnienie w milisekundach?",
+      "odpowiedz_wzorcowa": "Nie da się podać bez pomiaru.",
+      "wyjasnienie": "Brak pomiaru.",
+      "brakujace_dane": [
+        "Pomiar czasu odpowiedzi"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q554",
+      "kategoria": "brak_danych",
+      "temat": "Ostatnia gałąź",
+      "pytanie": "Repozytorium git ma kilka gałęzi. Na której z nich ostatnio wprowadzano zmiany?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić bez dostępu do historii repozytorium.",
+      "wyjasnienie": "Brak dostępu do repozytorium.",
+      "brakujace_dane": [
+        "Historia commitów lub reflog"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q555",
+      "kategoria": "brak_danych",
+      "temat": "Wzrost rośliny",
+      "pytanie": "Roślina doniczkowa urosła w tym tygodniu. O ile centymetrów?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić bez pomiarów.",
+      "wyjasnienie": "Brak pomiaru.",
+      "brakujace_dane": [
+        "Wysokość na początku i na końcu tygodnia"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q556",
+      "kategoria": "brak_danych",
+      "temat": "Fahrenheit",
+      "pytanie": "Termometr pokazuje temperaturę w stopniach Celsjusza. Ile to stopni Fahrenheita?",
+      "odpowiedz_wzorcowa": "Nie da się przeliczyć bez odczytu termometru; wzór to F = 1,8·C + 32.",
+      "wyjasnienie": "Brak wartości do przeliczenia.",
+      "brakujace_dane": [
+        "Odczyt termometru"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q557",
+      "kategoria": "brak_danych",
+      "temat": "Przepis",
+      "pytanie": "Przepis na ciasto wymaga mąki. Ile gramów mąki potrzeba na 6 porcji?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić bez proporcji z przepisu.",
+      "wyjasnienie": "Brak proporcji.",
+      "brakujace_dane": [
+        "Ilość mąki na porcję lub na cały przepis"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q558",
+      "kategoria": "brak_danych",
+      "temat": "Ocena",
+      "pytanie": "Uczeń napisał klasówkę z historii. Jaką dostał ocenę?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić bez wyników i skali oceniania.",
+      "wyjasnienie": "Brak wyniku.",
+      "brakujace_dane": [
+        "Wynik klasówki i skala"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q559",
+      "kategoria": "brak_danych",
+      "temat": "Czynsz",
+      "pytanie": "Wynajęto mieszkanie w Krakowie. Ile wynosi miesięczny czynsz?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić bez umowy lub ogłoszenia.",
+      "wyjasnienie": "Brak danych o mieszkaniu.",
+      "brakujace_dane": [
+        "Umowa najmu lub cena z ogłoszenia"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q560",
+      "kategoria": "brak_danych",
+      "temat": "Wakacje",
+      "pytanie": "Rodzina pojechała na wakacje nad morze. Ile wydała na noclegi?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić bez cen, liczby nocy i rachunków.",
+      "wyjasnienie": "Brak danych o kosztach.",
+      "brakujace_dane": [
+        "Cena noclegu",
+        "Liczba nocy i osób"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q561",
+      "kategoria": "brak_danych",
+      "temat": "Mediana czasu reakcji",
+      "pytanie": "W eksperymencie zmierzono czas reakcji uczestników. Jaka była mediana?",
+      "odpowiedz_wzorcowa": "Nie da się podać bez wyników pomiarów.",
+      "wyjasnienie": "Brak danych pomiarowych.",
+      "brakujace_dane": [
+        "Wyniki pomiarów"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q562",
+      "kategoria": "brak_danych",
+      "temat": "Koncert",
+      "pytanie": "Zespół zagrał koncert w hali widowiskowej. Ile osób przyszło?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić bez danych o sprzedaży biletów lub frekwencji.",
+      "wyjasnienie": "Brak danych o frekwencji.",
+      "brakujace_dane": [
+        "Liczba sprzedanych biletów lub frekwencja"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q563",
+      "kategoria": "brak_danych",
+      "temat": "Autostrada",
+      "pytanie": "Dwa miasta łączy autostrada. Ile kilometrów ma ta autostrada?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić bez wskazania miast lub trasy.",
+      "wyjasnienie": "Brak identyfikacji miast.",
+      "brakujace_dane": [
+        "Nazwy miast lub trasy"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q564",
+      "kategoria": "brak_danych",
+      "temat": "Głosowanie radnych",
+      "pytanie": "Rada gminy przyjęła uchwałę w głosowaniu. Ilu radnych głosowało za?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić bez protokołu głosowania.",
+      "wyjasnienie": "Brak wyników głosowania.",
+      "brakujace_dane": [
+        "Protokół głosowania"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q565",
+      "kategoria": "brak_danych",
+      "temat": "Karma dla psa",
+      "pytanie": "Kupiono worek karmy dla psa o masie 10 kg. Na ile dni wystarczy?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić bez dziennej porcji.",
+      "wyjasnienie": "Brak dziennego zużycia.",
+      "brakujace_dane": [
+        "Dzienna porcja karmy"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q566",
+      "kategoria": "brak_danych",
+      "temat": "Dawkowanie",
+      "pytanie": "Lekarz przepisał antybiotyk. Ile tabletek dziennie należy przyjmować?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić bez recepty lub zaleceń lekarza.",
+      "wyjasnienie": "Brak zaleceń.",
+      "brakujace_dane": [
+        "Treść recepty lub zalecenia"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q567",
+      "kategoria": "brak_danych",
+      "temat": "Maraton",
+      "pytanie": "Maraton ukończyło kilkuset biegaczy. Jaki był czas zwycięzcy?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić bez wyników zawodów.",
+      "wyjasnienie": "Brak wyników.",
+      "brakujace_dane": [
+        "Oficjalne wyniki"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q568",
+      "kategoria": "brak_danych",
+      "temat": "Czajnik",
+      "pytanie": "Woda w czajniku grzeje się od dwóch minut. Jaką ma teraz temperaturę?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić bez mocy czajnika, ilości wody i temperatury początkowej.",
+      "wyjasnienie": "Brak parametrów.",
+      "brakujace_dane": [
+        "Moc czajnika",
+        "Ilość wody",
+        "Temperatura początkowa"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q569",
+      "kategoria": "brak_danych",
+      "temat": "Pasażerowie",
+      "pytanie": "Samolot leci z Warszawy do Nowego Jorku. Ilu pasażerów jest na pokładzie?",
+      "odpowiedz_wzorcowa": "Nie da się ustalić bez danych o konkretnym locie.",
+      "wyjasnienie": "Brak identyfikacji lotu.",
+      "brakujace_dane": [
+        "Numer lotu i lista pasażerów"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q570",
+      "kategoria": "brak_danych",
+      "temat": "Księgozbiór",
+      "pytanie": "W bibliotece szkolnej są książki po polsku i po angielsku. Jaki procent stanowią książki po angielsku?",
+      "odpowiedz_wzorcowa": "Nie da się obliczyć bez liczby książek w każdym języku.",
+      "wyjasnienie": "Brak liczb.",
+      "brakujace_dane": [
+        "Liczba książek po polsku i po angielsku"
+      ],
+      "zrodla": []
+    },
+    {
+      "id": "Q571",
+      "kategoria": "normalny_fakt",
+      "temat": "Bambus",
+      "pytanie": "Do jakiej rodziny roślin należy bambus?",
+      "odpowiedz_wzorcowa": "Do traw (wiechlinowatych).",
+      "wyjasnienie": "Fakt botaniczny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q572",
+      "kategoria": "normalny_fakt",
+      "temat": "Kangury",
+      "pytanie": "Na jakim kontynencie naturalnie żyją kangury?",
+      "odpowiedz_wzorcowa": "W Australii.",
+      "wyjasnienie": "Fakt biologiczny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q573",
+      "kategoria": "normalny_fakt",
+      "temat": "Pan Tadeusz",
+      "pytanie": "Kto napisał „Pana Tadeusza”?",
+      "odpowiedz_wzorcowa": "Adam Mickiewicz.",
+      "wyjasnienie": "Fakt literacki.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q574",
+      "kategoria": "normalny_fakt",
+      "temat": "Szachy",
+      "pytanie": "Który kolor rozpoczyna partię szachów?",
+      "odpowiedz_wzorcowa": "Białe.",
+      "wyjasnienie": "Reguła gry.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q575",
+      "kategoria": "normalny_fakt",
+      "temat": "Wisła",
+      "pytanie": "Do jakiego morza uchodzi Wisła?",
+      "odpowiedz_wzorcowa": "Do Morza Bałtyckiego.",
+      "wyjasnienie": "Fakt geograficzny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q576",
+      "kategoria": "normalny_fakt",
+      "temat": "Everest",
+      "pytanie": "W jakich górach leży Mount Everest?",
+      "odpowiedz_wzorcowa": "W Himalajach.",
+      "wyjasnienie": "Fakt geograficzny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q577",
+      "kategoria": "normalny_fakt",
+      "temat": "DNA",
+      "pytanie": "Ile rodzajów zasad azotowych występuje w DNA?",
+      "odpowiedz_wzorcowa": "Cztery (A, T, C, G).",
+      "wyjasnienie": "Fakt biologiczny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q578",
+      "kategoria": "normalny_fakt",
+      "temat": "SQL",
+      "pytanie": "Która instrukcja SQL usuwa wiersze z tabeli?",
+      "odpowiedz_wzorcowa": "DELETE.",
+      "wyjasnienie": "Fakt techniczny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q579",
+      "kategoria": "normalny_fakt",
+      "temat": "HTTP",
+      "pytanie": "Jaki port domyślnie używa protokół HTTP?",
+      "odpowiedz_wzorcowa": "Port 80.",
+      "wyjasnienie": "Fakt techniczny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q580",
+      "kategoria": "normalny_fakt",
+      "temat": "git",
+      "pytanie": "Które polecenie git wysyła lokalne commity do zdalnego repozytorium?",
+      "odpowiedz_wzorcowa": "git push.",
+      "wyjasnienie": "Fakt techniczny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q581",
+      "kategoria": "normalny_fakt",
+      "temat": "Liczba 97",
+      "pytanie": "Czy liczba 97 jest liczbą pierwszą?",
+      "odpowiedz_wzorcowa": "Tak.",
+      "wyjasnienie": "97 nie dzieli się przez 2, 3, 5 ani 7.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q582",
+      "kategoria": "normalny_fakt",
+      "temat": "Krew",
+      "pytanie": "Jaki kolor ma krew żylna człowieka?",
+      "odpowiedz_wzorcowa": "Ciemnoczerwony.",
+      "wyjasnienie": "Fakt fizjologiczny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q583",
+      "kategoria": "normalny_fakt",
+      "temat": "Skrzypce",
+      "pytanie": "Ile strun mają skrzypce?",
+      "odpowiedz_wzorcowa": "Cztery.",
+      "wyjasnienie": "Fakt muzyczny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q584",
+      "kategoria": "normalny_fakt",
+      "temat": "Waluta",
+      "pytanie": "Jaka jest waluta Polski?",
+      "odpowiedz_wzorcowa": "Złoty (PLN).",
+      "wyjasnienie": "Fakt ekonomiczny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q585",
+      "kategoria": "normalny_fakt",
+      "temat": "Sód",
+      "pytanie": "Do jakiej grupy pierwiastków należy sód?",
+      "odpowiedz_wzorcowa": "Do metali alkalicznych.",
+      "wyjasnienie": "Fakt chemiczny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q586",
+      "kategoria": "normalny_fakt",
+      "temat": "Piłka nożna",
+      "pytanie": "Ilu zawodników jednej drużyny gra jednocześnie na boisku w piłce nożnej?",
+      "odpowiedz_wzorcowa": "Jedenastu.",
+      "wyjasnienie": "Reguła gry.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q587",
+      "kategoria": "normalny_fakt",
+      "temat": "Don Kichot",
+      "pytanie": "Kto napisał „Don Kichota”?",
+      "odpowiedz_wzorcowa": "Miguel de Cervantes.",
+      "wyjasnienie": "Fakt literacki.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q588",
+      "kategoria": "normalny_fakt",
+      "temat": "Antybiotyki",
+      "pytanie": "Czy antybiotyki działają na wirusy?",
+      "odpowiedz_wzorcowa": "Nie; działają na bakterie.",
+      "wyjasnienie": "Fakt medyczny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q589",
+      "kategoria": "normalny_fakt",
+      "temat": "Fotosynteza",
+      "pytanie": "Jaki gaz rośliny pobierają z powietrza w procesie fotosyntezy?",
+      "odpowiedz_wzorcowa": "Dwutlenek węgla.",
+      "wyjasnienie": "Fakt biologiczny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q590",
+      "kategoria": "normalny_fakt",
+      "temat": "Chromosomy",
+      "pytanie": "Ile chromosomów ma typowa komórka somatyczna człowieka?",
+      "odpowiedz_wzorcowa": "46.",
+      "wyjasnienie": "Fakt biologiczny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q591",
+      "kategoria": "normalny_fakt",
+      "temat": "Woda",
+      "pytanie": "Jaki jest wzór chemiczny wody?",
+      "odpowiedz_wzorcowa": "H₂O.",
+      "wyjasnienie": "Fakt chemiczny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q592",
+      "kategoria": "normalny_fakt",
+      "temat": "Unia Europejska",
+      "pytanie": "W którym roku Polska wstąpiła do Unii Europejskiej?",
+      "odpowiedz_wzorcowa": "W 2004 roku.",
+      "wyjasnienie": "Fakt historyczny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q593",
+      "kategoria": "normalny_fakt",
+      "temat": "Szachownica",
+      "pytanie": "Ile pól ma szachownica?",
+      "odpowiedz_wzorcowa": "64.",
+      "wyjasnienie": "8 × 8.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q594",
+      "kategoria": "normalny_fakt",
+      "temat": "Kolumb",
+      "pytanie": "W którym roku Krzysztof Kolumb po raz pierwszy dopłynął do Ameryki?",
+      "odpowiedz_wzorcowa": "W 1492 roku.",
+      "wyjasnienie": "Fakt historyczny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q595",
+      "kategoria": "normalny_fakt",
+      "temat": "Mecz",
+      "pytanie": "Ile minut trwa mecz piłki nożnej bez doliczonego czasu?",
+      "odpowiedz_wzorcowa": "90 minut.",
+      "wyjasnienie": "Dwie połowy po 45 minut.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q596",
+      "kategoria": "normalny_fakt",
+      "temat": "Insulina",
+      "pytanie": "Który narząd wytwarza insulinę?",
+      "odpowiedz_wzorcowa": "Trzustka.",
+      "wyjasnienie": "Komórki beta wysp trzustkowych.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q597",
+      "kategoria": "normalny_fakt",
+      "temat": "Ułamek",
+      "pytanie": "Ile to jest 3/4 wyrażone w procentach?",
+      "odpowiedz_wzorcowa": "75%.",
+      "wyjasnienie": "3/4 = 0,75.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q598",
+      "kategoria": "normalny_fakt",
+      "temat": "Rtęć",
+      "pytanie": "Który metal jest ciekły w temperaturze pokojowej (ok. 20 °C)?",
+      "odpowiedz_wzorcowa": "Rtęć.",
+      "wyjasnienie": "Fakt chemiczny.",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q599",
+      "kategoria": "normalny_fakt",
+      "temat": "Bajt",
+      "pytanie": "Ile bitów ma bajt?",
+      "odpowiedz_wzorcowa": "Osiem.",
+      "wyjasnienie": "Standardowa definicja (oktet).",
+      "brakujace_dane": [],
+      "zrodla": []
+    },
+    {
+      "id": "Q600",
+      "kategoria": "normalny_fakt",
+      "temat": "0,(9)",
+      "pytanie": "Czy liczba 0,999… (z dziewiątką w okresie) jest równa 1?",
+      "odpowiedz_wzorcowa": "Tak.",
+      "wyjasnienie": "1/3 = 0,(3), więc 3 · 1/3 = 0,(9) = 1.",
+      "brakujace_dane": [],
+      "zrodla": []
+    }
+  ]
+}

@@ -113,3 +113,45 @@ def test_answerability_probe_in_fast_path():
     t = asyncio.run(orch.fast_path("Kupiono trzy książki. Ile zapłacono?"))
     orch.close()
     assert t.answerability is not None and t.answerability.answerable is False
+
+
+def test_probe_variant_parsers():
+    from mca.core.premise_validator import PROBE_VARIANTS
+
+    assert PROBE_VARIANTS["missing"][1]("KOMPLETNE") is True
+    assert PROBE_VARIANTS["missing"][1]("cena biletu") is False
+    assert PROBE_VARIANTS["missing"][1]("  ") is None
+    assert PROBE_VARIANTS["inverse"][1]("TAK") is False   # "yes, data is missing"
+    assert PROBE_VARIANTS["inverse"][1]("NIE") is True
+
+
+def test_fewshot_examples_are_not_test_items():
+    import json
+    from pathlib import Path
+
+    from mca.core.premise_validator import ANSWERABILITY_FEWSHOT
+
+    shots = {line.split(":", 1)[1].strip() for line in ANSWERABILITY_FEWSHOT.splitlines() if line.startswith("Pytanie: ") and "{query}" not in line}
+    ds = Path(__file__).resolve().parents[1] / "benchmarks" / "datasets"
+    for f in ds.glob("*.json"):
+        data = json.loads(f.read_text(encoding="utf-8"))
+        items = data["pytania"] if isinstance(data, dict) else data
+        assert not shots & {i["pytanie"] for i in items}, f.name
+
+
+def test_select_r7_far_budget_prefers_safe_mode():
+    from benchmarks import rule_table as rt
+
+    curve_fars = {"all": (0.10, 0.70), "gated": (0.13, 0.40), "specific": (0.25, 0.20), "off": (0.28, 0.18)}
+
+    def fake_eval(rows, cfg):
+        far, ore = curve_fars[cfg.r7_llm_referents]
+        return {"accuracy": 0.5, "FAR": far, "over_refusal": ore}
+
+    orig = rt._evaluate
+    rt._evaluate = fake_eval
+    try:
+        assert rt.select_r7_mode([], far_budget=0.05)["chosen"]["mode"] == "gated"
+        assert rt.select_r7_mode([])["chosen"]["mode"] == "specific"
+    finally:
+        rt._evaluate = orig

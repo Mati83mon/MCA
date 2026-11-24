@@ -1,0 +1,1120 @@
+{"id": "Q301", "set": "rebuilt", "category": "paradoks", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q301", "set": "rebuilt", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q301", "set": "rebuilt", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Czy ta osoba jest mieszkańcem wyspy?"}
+{"id": "Q301", "set": "rebuilt", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q302", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q302", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q302", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": false, "raw": "Czy osoba jest inteligentna i ma możliwość przypomnieć sobie o terminach?"}
+{"id": "Q302", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q303", "set": "rebuilt", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q303", "set": "rebuilt", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q303", "set": "rebuilt", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Czy nazwa firmy jest identyczna?"}
+{"id": "Q303", "set": "rebuilt", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q304", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q304", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q304", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q304", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q305", "set": "rebuilt", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q305", "set": "rebuilt", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q305", "set": "rebuilt", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Czas."}
+{"id": "Q305", "set": "rebuilt", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q306", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q306", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q306", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q306", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q307", "set": "rebuilt", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q307", "set": "rebuilt", "category": "paradoks", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q307", "set": "rebuilt", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Czas i przestrzeń."}
+{"id": "Q307", "set": "rebuilt", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q308", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q308", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q308", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q308", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q309", "set": "rebuilt", "category": "paradoks", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q309", "set": "rebuilt", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q309", "set": "rebuilt", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Czas podróży, sposób podróży, cel podróży."}
+{"id": "Q309", "set": "rebuilt", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q310", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q310", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q310", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": false, "raw": "Księgarnia."}
+{"id": "Q310", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q311", "set": "rebuilt", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q311", "set": "rebuilt", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q311", "set": "rebuilt", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Cena biletu"}
+{"id": "Q311", "set": "rebuilt", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q312", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q312", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q312", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q312", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q313", "set": "rebuilt", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q313", "set": "rebuilt", "category": "paradoks", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q313", "set": "rebuilt", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q313", "set": "rebuilt", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q314", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q314", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q314", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": false, "raw": "Czas i miejsce."}
+{"id": "Q314", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q315", "set": "rebuilt", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q315", "set": "rebuilt", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q315", "set": "rebuilt", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Cena argumentacji."}
+{"id": "Q315", "set": "rebuilt", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q316", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q316", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q316", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": false, "raw": "Czas."}
+{"id": "Q316", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q317", "set": "rebuilt", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q317", "set": "rebuilt", "category": "paradoks", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q317", "set": "rebuilt", "category": "paradoks", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q317", "set": "rebuilt", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q318", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q318", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q318", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q318", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q319", "set": "rebuilt", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q319", "set": "rebuilt", "category": "paradoks", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q319", "set": "rebuilt", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Cena losowania."}
+{"id": "Q319", "set": "rebuilt", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q320", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q320", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q320", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q320", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q321", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q321", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q321", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q321", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q322", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q322", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q322", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q322", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q323", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q323", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q323", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q323", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q324", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q324", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q324", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q324", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q325", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q325", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q325", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Brakujące dane: definicja ssaka."}
+{"id": "Q325", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q326", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q326", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q326", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q326", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q327", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q327", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q327", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q327", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q328", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q328", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q328", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q328", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q329", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q329", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q329", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Brakujące dane: nazwa miesiąca."}
+{"id": "Q329", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q330", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q330", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q330", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q330", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q331", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q331", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q331", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Brakujące dane: informacja o tym, czy pingwiny w ogóle odlatują na po"}
+{"id": "Q331", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q332", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q332", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q332", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q332", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q333", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q333", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q333", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Czasowe układanie mięśniowe."}
+{"id": "Q333", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q334", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q334", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q334", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q334", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q335", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q335", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q335", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Czy definicja \"kwiat\" jest dostępna?"}
+{"id": "Q335", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q336", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q336", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q336", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q336", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q337", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q337", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q337", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Czasem."}
+{"id": "Q337", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q338", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q338", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q338", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q338", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q339", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q339", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q339", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q339", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q340", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q340", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q340", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q340", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q341", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q341", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q341", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q341", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q342", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q342", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q342", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q342", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q343", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q343", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q343", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q343", "set": "rebuilt", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q344", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q344", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q344", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q344", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q345", "set": "rebuilt", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q345", "set": "rebuilt", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q345", "set": "rebuilt", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Wiek sąsiadki."}
+{"id": "Q345", "set": "rebuilt", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q346", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q346", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q346", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q346", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q347", "set": "rebuilt", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q347", "set": "rebuilt", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q347", "set": "rebuilt", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q347", "set": "rebuilt", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q348", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q348", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q348", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q348", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q349", "set": "rebuilt", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q349", "set": "rebuilt", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q349", "set": "rebuilt", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q349", "set": "rebuilt", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q350", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q350", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q350", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q350", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q351", "set": "rebuilt", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q351", "set": "rebuilt", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q351", "set": "rebuilt", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q351", "set": "rebuilt", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q352", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q352", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q352", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q352", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q353", "set": "rebuilt", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q353", "set": "rebuilt", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q353", "set": "rebuilt", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q353", "set": "rebuilt", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q354", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q354", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q354", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q354", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q355", "set": "rebuilt", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q355", "set": "rebuilt", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q355", "set": "rebuilt", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Czas podróży."}
+{"id": "Q355", "set": "rebuilt", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q356", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q356", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q356", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q356", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q357", "set": "rebuilt", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q357", "set": "rebuilt", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q357", "set": "rebuilt", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cena towaru."}
+{"id": "Q357", "set": "rebuilt", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q358", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q358", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q358", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q358", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q359", "set": "rebuilt", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q359", "set": "rebuilt", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q359", "set": "rebuilt", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q359", "set": "rebuilt", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q360", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q360", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q360", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q360", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q361", "set": "rebuilt", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q361", "set": "rebuilt", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q361", "set": "rebuilt", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cena głosu."}
+{"id": "Q361", "set": "rebuilt", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q362", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q362", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q362", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q362", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q363", "set": "rebuilt", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q363", "set": "rebuilt", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q363", "set": "rebuilt", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Czas, w którym potrzebujesz na przeczytanie powieści."}
+{"id": "Q363", "set": "rebuilt", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q364", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q364", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q364", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q364", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q365", "set": "rebuilt", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q365", "set": "rebuilt", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q365", "set": "rebuilt", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q365", "set": "rebuilt", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q366", "set": "rebuilt", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q366", "set": "rebuilt", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q366", "set": "rebuilt", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q366", "set": "rebuilt", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q901", "set": "heldout", "category": "paradoks", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q901", "set": "heldout", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q901", "set": "heldout", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Czy definicja katalogu jest dostępna?"}
+{"id": "Q901", "set": "heldout", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q902", "set": "heldout", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q902", "set": "heldout", "category": "paradoks", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q902", "set": "heldout", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Czy zdanie na odwrocie jest prawdziwe?"}
+{"id": "Q902", "set": "heldout", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q903", "set": "heldout", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q903", "set": "heldout", "category": "paradoks", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q903", "set": "heldout", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q903", "set": "heldout", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q904", "set": "heldout", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q904", "set": "heldout", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q904", "set": "heldout", "category": "paradoks", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q904", "set": "heldout", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q905", "set": "heldout", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q905", "set": "heldout", "category": "paradoks", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q905", "set": "heldout", "category": "paradoks", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q905", "set": "heldout", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q906", "set": "heldout", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q906", "set": "heldout", "category": "paradoks", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q906", "set": "heldout", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Czas."}
+{"id": "Q906", "set": "heldout", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q907", "set": "heldout", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q907", "set": "heldout", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q907", "set": "heldout", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q907", "set": "heldout", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q908", "set": "heldout", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q908", "set": "heldout", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q908", "set": "heldout", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q908", "set": "heldout", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q909", "set": "heldout", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q909", "set": "heldout", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q909", "set": "heldout", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q909", "set": "heldout", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q910", "set": "heldout", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q910", "set": "heldout", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q910", "set": "heldout", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q910", "set": "heldout", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q911", "set": "heldout", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q911", "set": "heldout", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q911", "set": "heldout", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Brakujące dane: liczby boków."}
+{"id": "Q911", "set": "heldout", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q912", "set": "heldout", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q912", "set": "heldout", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q912", "set": "heldout", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Brakujące dane: data urodzenia Alberta Einsteina."}
+{"id": "Q912", "set": "heldout", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q913", "set": "heldout", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q913", "set": "heldout", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q913", "set": "heldout", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Wiek, rasa, płeć i rozmiar."}
+{"id": "Q913", "set": "heldout", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q914", "set": "heldout", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q914", "set": "heldout", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q914", "set": "heldout", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Prędkość pociągu."}
+{"id": "Q914", "set": "heldout", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q915", "set": "heldout", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q915", "set": "heldout", "category": "brak_danych", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q915", "set": "heldout", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cecha powierzchni i długość boku."}
+{"id": "Q915", "set": "heldout", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q916", "set": "heldout", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q916", "set": "heldout", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q916", "set": "heldout", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q916", "set": "heldout", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q917", "set": "heldout", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q917", "set": "heldout", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q917", "set": "heldout", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Brakuje informacji o równości, w której występują x i y."}
+{"id": "Q917", "set": "heldout", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q918", "set": "heldout", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q918", "set": "heldout", "category": "brak_danych", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q918", "set": "heldout", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q918", "set": "heldout", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q919", "set": "heldout", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q919", "set": "heldout", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q919", "set": "heldout", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q919", "set": "heldout", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q920", "set": "heldout", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q920", "set": "heldout", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q920", "set": "heldout", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE."}
+{"id": "Q920", "set": "heldout", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q921", "set": "heldout", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q921", "set": "heldout", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q921", "set": "heldout", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q921", "set": "heldout", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q922", "set": "heldout", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q922", "set": "heldout", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q922", "set": "heldout", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q922", "set": "heldout", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q923", "set": "heldout", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q923", "set": "heldout", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q923", "set": "heldout", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q923", "set": "heldout", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q924", "set": "heldout", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q924", "set": "heldout", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q924", "set": "heldout", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q924", "set": "heldout", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q201", "set": "heldout_v2", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q201", "set": "heldout_v2", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q201", "set": "heldout_v2", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q201", "set": "heldout_v2", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK."}
+{"id": "Q202", "set": "heldout_v2", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q202", "set": "heldout_v2", "category": "paradoks", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q202", "set": "heldout_v2", "category": "paradoks", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q202", "set": "heldout_v2", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q203", "set": "heldout_v2", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q203", "set": "heldout_v2", "category": "paradoks", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q203", "set": "heldout_v2", "category": "paradoks", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q203", "set": "heldout_v2", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q204", "set": "heldout_v2", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q204", "set": "heldout_v2", "category": "paradoks", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q204", "set": "heldout_v2", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q204", "set": "heldout_v2", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q205", "set": "heldout_v2", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q205", "set": "heldout_v2", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q205", "set": "heldout_v2", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q205", "set": "heldout_v2", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q206", "set": "heldout_v2", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q206", "set": "heldout_v2", "category": "paradoks", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q206", "set": "heldout_v2", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q206", "set": "heldout_v2", "category": "paradoks", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q207", "set": "heldout_v2", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q207", "set": "heldout_v2", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q207", "set": "heldout_v2", "category": "paradoks", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q207", "set": "heldout_v2", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q208", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q208", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q208", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "CENA BILETU"}
+{"id": "Q208", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q209", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q209", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q209", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q209", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q210", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q210", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q210", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q210", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q211", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q211", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q211", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q211", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q212", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q212", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q212", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Czasowy układ planetarny."}
+{"id": "Q212", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q213", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q213", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q213", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q213", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q214", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q214", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q214", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Brakujące dane: nazwa księżyca."}
+{"id": "Q214", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q215", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q215", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q215", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q215", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q216", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q216", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q216", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q216", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q217", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q217", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q217", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q217", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q218", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q218", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q218", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q218", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q219", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q219", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q219", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q219", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q220", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q220", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q220", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q220", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q221", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q221", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q221", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Brakujące dane: lista duplikatów."}
+{"id": "Q221", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q222", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q222", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q222", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q222", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q223", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q223", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q223", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q223", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q224", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q224", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q224", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q224", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q225", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q225", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q225", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q225", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q226", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q226", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q226", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q226", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q227", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q227", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q227", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q227", "set": "heldout_v2", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q228", "set": "heldout_v2", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q228", "set": "heldout_v2", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q228", "set": "heldout_v2", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q228", "set": "heldout_v2", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q229", "set": "heldout_v2", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q229", "set": "heldout_v2", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q229", "set": "heldout_v2", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q229", "set": "heldout_v2", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q230", "set": "heldout_v2", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q230", "set": "heldout_v2", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q230", "set": "heldout_v2", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cena biletu"}
+{"id": "Q230", "set": "heldout_v2", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q231", "set": "heldout_v2", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q231", "set": "heldout_v2", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q231", "set": "heldout_v2", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q231", "set": "heldout_v2", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q232", "set": "heldout_v2", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q232", "set": "heldout_v2", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q232", "set": "heldout_v2", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q232", "set": "heldout_v2", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q233", "set": "heldout_v2", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q233", "set": "heldout_v2", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q233", "set": "heldout_v2", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q233", "set": "heldout_v2", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q234", "set": "heldout_v2", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q234", "set": "heldout_v2", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q234", "set": "heldout_v2", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q234", "set": "heldout_v2", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q235", "set": "heldout_v2", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q235", "set": "heldout_v2", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q235", "set": "heldout_v2", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Czas baterii."}
+{"id": "Q235", "set": "heldout_v2", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q236", "set": "heldout_v2", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q236", "set": "heldout_v2", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q236", "set": "heldout_v2", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Obniżka."}
+{"id": "Q236", "set": "heldout_v2", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q237", "set": "heldout_v2", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q237", "set": "heldout_v2", "category": "brak_danych", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q237", "set": "heldout_v2", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cena początkowa."}
+{"id": "Q237", "set": "heldout_v2", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q238", "set": "heldout_v2", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q238", "set": "heldout_v2", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q238", "set": "heldout_v2", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q238", "set": "heldout_v2", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q239", "set": "heldout_v2", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q239", "set": "heldout_v2", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q239", "set": "heldout_v2", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Czas podróży."}
+{"id": "Q239", "set": "heldout_v2", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q240", "set": "heldout_v2", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q240", "set": "heldout_v2", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q240", "set": "heldout_v2", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q240", "set": "heldout_v2", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q241", "set": "heldout_v2", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q241", "set": "heldout_v2", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q241", "set": "heldout_v2", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Strefa czasowa."}
+{"id": "Q241", "set": "heldout_v2", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q242", "set": "heldout_v2", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q242", "set": "heldout_v2", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q242", "set": "heldout_v2", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Wiek Oli."}
+{"id": "Q242", "set": "heldout_v2", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q243", "set": "heldout_v2", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q243", "set": "heldout_v2", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q243", "set": "heldout_v2", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q243", "set": "heldout_v2", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q244", "set": "heldout_v2", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q244", "set": "heldout_v2", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q244", "set": "heldout_v2", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q244", "set": "heldout_v2", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q245", "set": "heldout_v2", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q245", "set": "heldout_v2", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q245", "set": "heldout_v2", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Czas i miejsce, w którym pacjent zdiagnozono gorączkę."}
+{"id": "Q245", "set": "heldout_v2", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q246", "set": "heldout_v2", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q246", "set": "heldout_v2", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q246", "set": "heldout_v2", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Brak zdjęcia mostu."}
+{"id": "Q246", "set": "heldout_v2", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q247", "set": "heldout_v2", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q247", "set": "heldout_v2", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q247", "set": "heldout_v2", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cena biletu"}
+{"id": "Q247", "set": "heldout_v2", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q248", "set": "heldout_v2", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q248", "set": "heldout_v2", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q248", "set": "heldout_v2", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q248", "set": "heldout_v2", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q249", "set": "heldout_v2", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q249", "set": "heldout_v2", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q249", "set": "heldout_v2", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q249", "set": "heldout_v2", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q250", "set": "heldout_v2", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q250", "set": "heldout_v2", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q250", "set": "heldout_v2", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q250", "set": "heldout_v2", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q251", "set": "heldout_v2", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q251", "set": "heldout_v2", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q251", "set": "heldout_v2", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q251", "set": "heldout_v2", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q252", "set": "heldout_v2", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q252", "set": "heldout_v2", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q252", "set": "heldout_v2", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q252", "set": "heldout_v2", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q253", "set": "heldout_v2", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q253", "set": "heldout_v2", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q253", "set": "heldout_v2", "category": "normalny_fakt", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q253", "set": "heldout_v2", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q254", "set": "heldout_v2", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q254", "set": "heldout_v2", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q254", "set": "heldout_v2", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q254", "set": "heldout_v2", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q255", "set": "heldout_v2", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q255", "set": "heldout_v2", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q255", "set": "heldout_v2", "category": "normalny_fakt", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q255", "set": "heldout_v2", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q256", "set": "heldout_v2", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q256", "set": "heldout_v2", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q256", "set": "heldout_v2", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q256", "set": "heldout_v2", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q257", "set": "heldout_v2", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q257", "set": "heldout_v2", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q257", "set": "heldout_v2", "category": "normalny_fakt", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q257", "set": "heldout_v2", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q258", "set": "heldout_v2", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q258", "set": "heldout_v2", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q258", "set": "heldout_v2", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q258", "set": "heldout_v2", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q259", "set": "heldout_v2", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q259", "set": "heldout_v2", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q259", "set": "heldout_v2", "category": "normalny_fakt", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q259", "set": "heldout_v2", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q260", "set": "heldout_v2", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q260", "set": "heldout_v2", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q260", "set": "heldout_v2", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q260", "set": "heldout_v2", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q261", "set": "heldout_v2", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q261", "set": "heldout_v2", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q261", "set": "heldout_v2", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q261", "set": "heldout_v2", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q262", "set": "heldout_v2", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q262", "set": "heldout_v2", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q262", "set": "heldout_v2", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q262", "set": "heldout_v2", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q263", "set": "heldout_v2", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q263", "set": "heldout_v2", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q263", "set": "heldout_v2", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q263", "set": "heldout_v2", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q264", "set": "heldout_v2", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q264", "set": "heldout_v2", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q264", "set": "heldout_v2", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q264", "set": "heldout_v2", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q401", "set": "heldout_v3", "category": "paradoks", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q401", "set": "heldout_v3", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q401", "set": "heldout_v3", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Czy definicja kruki?"}
+{"id": "Q401", "set": "heldout_v3", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q402", "set": "heldout_v3", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q402", "set": "heldout_v3", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q402", "set": "heldout_v3", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q402", "set": "heldout_v3", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q403", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q403", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q403", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q403", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q404", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q404", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q404", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q404", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q405", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q405", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q405", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q405", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q406", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q406", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q406", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q406", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q407", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q407", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q407", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q407", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q408", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q408", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q408", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Brakujące dane: definicja tygodnia."}
+{"id": "Q408", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q409", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q409", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q409", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Benzyny."}
+{"id": "Q409", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q410", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q410", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q410", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Brakujące dane: informacja o tym, kto wygrał konkurs."}
+{"id": "Q410", "set": "heldout_v3", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q411", "set": "heldout_v3", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q411", "set": "heldout_v3", "category": "brak_danych", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q411", "set": "heldout_v3", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cena książki."}
+{"id": "Q411", "set": "heldout_v3", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q412", "set": "heldout_v3", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q412", "set": "heldout_v3", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q412", "set": "heldout_v3", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Nazwisko."}
+{"id": "Q412", "set": "heldout_v3", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q413", "set": "heldout_v3", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q413", "set": "heldout_v3", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q413", "set": "heldout_v3", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Brakujący raport."}
+{"id": "Q413", "set": "heldout_v3", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q414", "set": "heldout_v3", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q414", "set": "heldout_v3", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q414", "set": "heldout_v3", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q414", "set": "heldout_v3", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q415", "set": "heldout_v3", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q415", "set": "heldout_v3", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q415", "set": "heldout_v3", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q415", "set": "heldout_v3", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q416", "set": "heldout_v3", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q416", "set": "heldout_v3", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q416", "set": "heldout_v3", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Gęstość materiału."}
+{"id": "Q416", "set": "heldout_v3", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q417", "set": "heldout_v3", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q417", "set": "heldout_v3", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q417", "set": "heldout_v3", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q417", "set": "heldout_v3", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q418", "set": "heldout_v3", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q418", "set": "heldout_v3", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q418", "set": "heldout_v3", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q418", "set": "heldout_v3", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q419", "set": "heldout_v3", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q419", "set": "heldout_v3", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q419", "set": "heldout_v3", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q419", "set": "heldout_v3", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q420", "set": "heldout_v3", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q420", "set": "heldout_v3", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q420", "set": "heldout_v3", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q420", "set": "heldout_v3", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q421", "set": "heldout_v3", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q421", "set": "heldout_v3", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q421", "set": "heldout_v3", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q421", "set": "heldout_v3", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q422", "set": "heldout_v3", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q422", "set": "heldout_v3", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q422", "set": "heldout_v3", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q422", "set": "heldout_v3", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q423", "set": "heldout_v3", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q423", "set": "heldout_v3", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q423", "set": "heldout_v3", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q423", "set": "heldout_v3", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q424", "set": "heldout_v3", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q424", "set": "heldout_v3", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q424", "set": "heldout_v3", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q424", "set": "heldout_v3", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q425", "set": "heldout_v3", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q425", "set": "heldout_v3", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q425", "set": "heldout_v3", "category": "normalny_fakt", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q425", "set": "heldout_v3", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q426", "set": "heldout_v3", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q426", "set": "heldout_v3", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q426", "set": "heldout_v3", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q426", "set": "heldout_v3", "category": "normalny_fakt", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q501", "set": "heldout_v4", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q501", "set": "heldout_v4", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q501", "set": "heldout_v4", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q501", "set": "heldout_v4", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q502", "set": "heldout_v4", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q502", "set": "heldout_v4", "category": "paradoks", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q502", "set": "heldout_v4", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Czas losowania."}
+{"id": "Q502", "set": "heldout_v4", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q503", "set": "heldout_v4", "category": "paradoks", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q503", "set": "heldout_v4", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q503", "set": "heldout_v4", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "CZĘŚĆ."}
+{"id": "Q503", "set": "heldout_v4", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q504", "set": "heldout_v4", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q504", "set": "heldout_v4", "category": "paradoks", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q504", "set": "heldout_v4", "category": "paradoks", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q504", "set": "heldout_v4", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK."}
+{"id": "Q505", "set": "heldout_v4", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q505", "set": "heldout_v4", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q505", "set": "heldout_v4", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q505", "set": "heldout_v4", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q506", "set": "heldout_v4", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q506", "set": "heldout_v4", "category": "paradoks", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q506", "set": "heldout_v4", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Czas ruchu na skrzyżowaniach i/lub węzłach komunikacyjnych."}
+{"id": "Q506", "set": "heldout_v4", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q507", "set": "heldout_v4", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q507", "set": "heldout_v4", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q507", "set": "heldout_v4", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Ciemność."}
+{"id": "Q507", "set": "heldout_v4", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q508", "set": "heldout_v4", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q508", "set": "heldout_v4", "category": "paradoks", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q508", "set": "heldout_v4", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Czas podróży."}
+{"id": "Q508", "set": "heldout_v4", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q509", "set": "heldout_v4", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q509", "set": "heldout_v4", "category": "paradoks", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q509", "set": "heldout_v4", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Cena osioła."}
+{"id": "Q509", "set": "heldout_v4", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q510", "set": "heldout_v4", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q510", "set": "heldout_v4", "category": "paradoks", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q510", "set": "heldout_v4", "category": "paradoks", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q510", "set": "heldout_v4", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q511", "set": "heldout_v4", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q511", "set": "heldout_v4", "category": "paradoks", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q511", "set": "heldout_v4", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Czas!"}
+{"id": "Q511", "set": "heldout_v4", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q512", "set": "heldout_v4", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q512", "set": "heldout_v4", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q512", "set": "heldout_v4", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Cena sądu."}
+{"id": "Q512", "set": "heldout_v4", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q513", "set": "heldout_v4", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q513", "set": "heldout_v4", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q513", "set": "heldout_v4", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "CENA ZASADY FIZYKI"}
+{"id": "Q513", "set": "heldout_v4", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q514", "set": "heldout_v4", "category": "paradoks", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q514", "set": "heldout_v4", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q514", "set": "heldout_v4", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Czas oczekiwania pasażera zależy od momentu jego przyjazdu na przyst"}
+{"id": "Q514", "set": "heldout_v4", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q515", "set": "heldout_v4", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q515", "set": "heldout_v4", "category": "paradoks", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q515", "set": "heldout_v4", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q515", "set": "heldout_v4", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q516", "set": "heldout_v4", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q516", "set": "heldout_v4", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q516", "set": "heldout_v4", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q516", "set": "heldout_v4", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q517", "set": "heldout_v4", "category": "paradoks", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q517", "set": "heldout_v4", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q517", "set": "heldout_v4", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Cena gier hazardowych."}
+{"id": "Q517", "set": "heldout_v4", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q518", "set": "heldout_v4", "category": "paradoks", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q518", "set": "heldout_v4", "category": "paradoks", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q518", "set": "heldout_v4", "category": "paradoks", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q518", "set": "heldout_v4", "category": "paradoks", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q519", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q519", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q519", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q519", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q520", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q520", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q520", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q520", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q521", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q521", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q521", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Brakujące dane: informacja o żywieniu, środowisku, itp."}
+{"id": "Q521", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q522", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q522", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q522", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q522", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q523", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q523", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q523", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q523", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q524", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q524", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q524", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q524", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q525", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q525", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q525", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q525", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q526", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q526", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q526", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q526", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q527", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q527", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q527", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q527", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q528", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q528", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q528", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q528", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q529", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q529", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q529", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "GEOGRAFIA"}
+{"id": "Q529", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q530", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q530", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q530", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q530", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q531", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q531", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q531", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Brakujące dane: nazwa króla, data podpisania deklaracji."}
+{"id": "Q531", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q532", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q532", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q532", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "CENA BILETU"}
+{"id": "Q532", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q533", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q533", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q533", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Brakujące dane: instrukcja SQL."}
+{"id": "Q533", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q534", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q534", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q534", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q534", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q535", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q535", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q535", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q535", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q536", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q536", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q536", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q536", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q537", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q537", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q537", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q537", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q538", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q538", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q538", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Brakujące dane: rodzaj antybiotyków, wirusa grypy."}
+{"id": "Q538", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q539", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q539", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q539", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Brakujące dane: autor, dzieło („Don Kichot” to dzieło Miguela de C"}
+{"id": "Q539", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q540", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q540", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q540", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q540", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q541", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q541", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q541", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "Brakująca informacja: data wprowadzenia euro w Polsce."}
+{"id": "Q541", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q542", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q542", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q542", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q542", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q543", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q543", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q543", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q543", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q544", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q544", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q544", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "missing", "answerable": false, "raw": "CENA BILETU"}
+{"id": "Q544", "set": "heldout_v4", "category": "falszywe_zalozenie", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q545", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q545", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q545", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cena roztworów soli kuchennej."}
+{"id": "Q545", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q546", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q546", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q546", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cena kredytu."}
+{"id": "Q546", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q547", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q547", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q547", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q547", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q548", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q548", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q548", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q548", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q549", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q549", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q549", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Czas wydruku."}
+{"id": "Q549", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q550", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q550", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q550", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q550", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q551", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q551", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q551", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Czas i pole startowe skoczka."}
+{"id": "Q551", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q552", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q552", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q552", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q552", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q553", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q553", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q553", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Czas odpowiedzi na serwer."}
+{"id": "Q553", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q554", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q554", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q554", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q554", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q555", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q555", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q555", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q555", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q556", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q556", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q556", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q556", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q557", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q557", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q557", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cena przepisu na ciasto."}
+{"id": "Q557", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q558", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q558", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q558", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cena oceny."}
+{"id": "Q558", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q559", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q559", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q559", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cena czynszu."}
+{"id": "Q559", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q560", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q560", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q560", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cena noclegów."}
+{"id": "Q560", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q561", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q561", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q561", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Czas reakcji uczestników."}
+{"id": "Q561", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q562", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q562", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q562", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q562", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q563", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q563", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q563", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Czas trasy."}
+{"id": "Q563", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q564", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q564", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q564", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q564", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q565", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q565", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q565", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Cena karmy na kg, ilość karmy w woreku."}
+{"id": "Q565", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q566", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q566", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q566", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Czy ilość tabletek przepisana przez lekarza?"}
+{"id": "Q566", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q567", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q567", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q567", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Czas biegacza zwycięzcy."}
+{"id": "Q567", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q568", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q568", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q568", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": false, "raw": "Czas startu grzania wody i temperatura początkowa wody."}
+{"id": "Q568", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q569", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q569", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q569", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q569", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q570", "set": "heldout_v4", "category": "brak_danych", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q570", "set": "heldout_v4", "category": "brak_danych", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q570", "set": "heldout_v4", "category": "brak_danych", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q570", "set": "heldout_v4", "category": "brak_danych", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q571", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q571", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q571", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q571", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q572", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q572", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q572", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q572", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q573", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q573", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q573", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q573", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q574", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q574", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q574", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q574", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q575", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q575", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q575", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q575", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q576", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q576", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q576", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q576", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q577", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q577", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q577", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q577", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q578", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q578", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q578", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": false, "raw": "DELETE."}
+{"id": "Q578", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q579", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q579", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q579", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q579", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q580", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q580", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q580", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q580", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q581", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q581", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q581", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q581", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q582", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q582", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q582", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q582", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q583", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q583", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q583", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q583", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q584", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q584", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q584", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q584", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q585", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q585", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q585", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q585", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q586", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q586", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q586", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q586", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q587", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q587", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q587", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q587", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q588", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": false, "raw": "NIE"}
+{"id": "Q588", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q588", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q588", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": false, "raw": "TAK"}
+{"id": "Q589", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q589", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q589", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q589", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q590", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q590", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q590", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q590", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q591", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q591", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q591", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q591", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q592", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q592", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q592", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q592", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q593", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q593", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q593", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q593", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q594", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q594", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q594", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q594", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
+{"id": "Q595", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q595", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": false, "raw": "NIE"}
+{"id": "Q595", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q595", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q596", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q596", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q596", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q596", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q597", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q597", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q597", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": false, "raw": "Cena."}
+{"id": "Q597", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q598", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q598", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q598", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": false, "raw": "Cena biletu."}
+{"id": "Q598", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q599", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q599", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q599", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q599", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE"}
+{"id": "Q600", "set": "heldout_v4", "category": "normalny_fakt", "variant": "direct", "answerable": true, "raw": "TAK"}
+{"id": "Q600", "set": "heldout_v4", "category": "normalny_fakt", "variant": "fewshot", "answerable": true, "raw": "TAK"}
+{"id": "Q600", "set": "heldout_v4", "category": "normalny_fakt", "variant": "missing", "answerable": true, "raw": "KOMPLETNE"}
+{"id": "Q600", "set": "heldout_v4", "category": "normalny_fakt", "variant": "inverse", "answerable": true, "raw": "NIE."}
