@@ -266,7 +266,7 @@ Held-out v3 has 17 traps and 9 controls. One trap shifts FAR by 0.059 and one co
 * **Safety against the raw model holds on fresh data.** v3 FAR goes from 0.47 / 0.65 / 1.00 without MCA to 0.06 / 0.06 / 0.29 with MCA in `gated` mode.
 * **The default stays `all`.** v3 is small and the pre-registered primary result is mixed. `gated` is the candidate for the next default; it needs a larger fresh split to confirm, and Llama needs a better probe (or a different probe model).
 
-**Probe wording and held-out v4 (pre-registered, run pending).**
+**Probe wording and held-out v4 (pre-registered; results below, DeepSeek pending).**
 
 - **Held-out v4** ([`heldout_v4_nowe_tematy.json`](benchmarks/datasets/heldout_v4_nowe_tematy.json)) has 100 items: 18 paradoxes, 26 false premises, 26 missing-data items and 30 control facts.
   - The items were written from scratch, on topics no earlier set uses: biology, chemistry, history, literature, music, sport, SQL/HTTP/git, finance and everyday situations, plus paradoxes outside the catalogue used so far.
@@ -283,6 +283,24 @@ Held-out v3 has 17 traps and 9 controls. One trap shifts FAR by 0.059 and one co
   2. Pick the probe on dev by balanced probe accuracy = mean(NIE rate on missing-data items, TAK rate on control facts). Candidates are the model's own four wordings plus Qwen's four wordings as an external judge. Ties go to the model's own `direct`.
   3. Pick the R7 mode on dev with that probe. This objective changed after v13: the lowest over-refusal among modes whose dev FAR is at most FAR(`all`) + 0.05. In v13 the equal-weight objective let Qwen pick a mode with 2.8× the FAR of `all`.
   4. Evaluate exactly once on v4: the chosen mode vs `all` is primary; the other modes are secondary. v4 also gets raw vs MCA.
+
+**Result (Kaggle v15, [`results/kaggle-2xT4/probe-v15/`](results/kaggle-2xT4/probe-v15/)): Qwen and Llama complete, DeepSeek pending.**
+v15 stopped on a CUDA out-of-memory error during DeepSeek's v4 MCA run. DeepSeek's probes and raw baseline are saved, and v16 reruns only the missing step. Held-out v4 has 70 traps and 30 controls: one trap shifts FAR by 0.014 and one control shifts over-refusal by 0.033.
+
+| Model | Probe chosen on dev (NIE on missing data / TAK on facts) | Probe on v4 | Mode chosen | v4 FAR / over-refusal, chosen | v4, `all` | v4, `gated` | v4 raw FAR |
+|---|---|---|---|---|---|---|---|
+| Qwen2.5-7B | own `missing` (0.95 / 0.89) | 1.00 / 0.93 | `all` (dev FAR of `gated` 0.165 > budget 0.128) | 0.014 / 0.833 | = chosen | 0.029 / 0.433 | 0.671 |
+| Llama-3-8B | own `fewshot` (0.91 / 0.94; `direct` was 0.41 / 1.00) | 0.92 / 0.87 | `gated` | 0.129 / 0.567 | 0.086 / 0.900 | = chosen | 0.971 |
+
+* **The few-shot wording fixes Llama's probe.** On dev it says NIE on 91% of missing-data items instead of 41%; on v4 the rate is 92%.
+* **Primary comparison.**
+  - For Llama, `gated` answers 10 more of the 30 controls at a cost of 3 more of the 70 traps.
+  - For Qwen the FAR budget kept `all`. As a secondary result, `gated` would answer 12 more controls for 1 more trap.
+* **v4 exposes a larger over-refusal problem.** Under `all`, MCA refuses 25 and 27 of the 30 v4 control facts. Most of those refusals are R7.
+  - Under `gated`, R7 still refuses 7 controls per model. In 5 of them the referent was detected by the rules: a proper name outside the KB (Wisła, Mount Everest, Polska, Unia Europejska, Krzysztof Kolumb). On new topics, any capitalised name the KB lacks makes MCA abstain.
+  - The rest are R8 refusals: 5 for Qwen and 9 for Llama.
+  - KB coverage, not the probe, is now the main source of over-refusal.
+* **Safety against the raw model holds.** v4 FAR goes from 0.67 / 0.97 (raw) to 0.01–0.13 with MCA.
 
 **Before the fixes (first GPU run, v3)** MCA+Qwen scored acc 0.75 with over-refusal **1.00** (every LLM-
 extracted referent hit R7) and MCA+DeepSeek acc 0.80 / over-refusal 0.76 (entropy computed on truncated
